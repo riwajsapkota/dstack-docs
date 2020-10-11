@@ -17,19 +17,17 @@ docker run -d --name <dstack container name> \
 dstackai/dstack:latest
 ```
 
-To stop, the server, make sure to use this code:
+By default, it uses the built-in SQLite database to store data. If you want, you can connect the Docker image to your existing Cassandra cluster. To do that, use the following environment variables:
 
-```bash
-docker stop <dstack container name>
-```
+`-e dstack_cassandra_hosts=<comma-separated list of hosts> -e dstack_cassandra_port=<port> -e dstack_cassandra_user=<user> -e dstack_cassandra_password=<password>`
 
-If you'd like to re-run the server after it was stopped, make sure to delete it before running again using this command:
-
-```bash
-docker rm <dstack container name>
-```
+In this case the Docker image will use the `dstack` keyspace. If it doesn't exist, it will create it. The Docker image handles schema evolution automatically.
 
 {% hint style="info" %}
 If you'd like to test how the Docker image works without configuring an SMTP server, you can try to run it via the [docker-compose.yml](https://github.com/dstackai/dstack-docker/blob/master/docker-compose.yaml).
 {% endhint %}
+
+In case you don't want to use Docker or the multi-user version of dstack, you also can use [github.com/dstackai/dstack](https://github.com/dstackai/dstack) to start a dstack server locally via command line.
+
+
 

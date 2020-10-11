@@ -28,3 +28,7 @@
 
 * [Running in Docker](dstack.ai-on-premises/docker.md)
 
+---
+
+* [DockerHub](https://hub.docker.com/r/dstackai/dstack)
+
