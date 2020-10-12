@@ -3,12 +3,12 @@
 Once you've pushed your data to dstack.ai using the`dstack` packages for Python and R, you can combine your datasets and visualizations into interactive dashboards – with just a few clicks.
 
 {% hint style="success" %}
-Dashboards are a great way to build great-looking interactive reports. In order to build a dashboard, you only need to push your visualizations via Python or R API and then combine them into one dashboard with a few clicks. 
+Dashboards are a great way to build great-looking interactive reports. In order to build a dashboard, you only need to push your visualizations via Python or R API and then combine them into one dashboard with a few clicks.
 
 Here's an example of a simple dashboard: [https://dstack.ai/cheptsov/d/505d2087-9adc-49e3-88de-6b46079c394f](https://dstack.ai/cheptsov/d/505d2087-9adc-49e3-88de-6b46079c394f)
 {% endhint %}
 
-If a _Stack_ displays each moment a single visualization that corresponds to the selected parameters, a _Dashboard_ displays multiple visualizations at once – also based on selected parameters. 
+If a _Stack_ displays each moment a single visualization that corresponds to the selected parameters, a _Dashboard_ displays multiple visualizations at once – also based on selected parameters.
 
 Here's how to create a _Dashboard_:
 

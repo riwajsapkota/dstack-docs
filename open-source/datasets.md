@@ -3,10 +3,10 @@
 Effective collaboration on datasets is the key ingredient of any data science project. dstack.ai offers APIs and services to upload datasets, track their revisions and to share these datasets securely within teams \(or publicly if needed\).
 
 {% hint style="info" %}
-Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python and R scripts  and applications. [Learn how to install dstack package](../in-cloud/installation.md)
+Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python and R scripts and applications. [Learn how to install dstack package](../in-cloud/installation.md)
 {% endhint %}
 
-#### Pushing single datasets
+## Pushing single datasets
 
 Here's an example of the code that pushes a single dataset to dstack.ai:
 
@@ -39,7 +39,7 @@ push_frame("simple", midwest, "My first dataset")
 The API supports datasets of any size. You can work with small datasets as well as with very large datasets.
 {% endhint %}
 
-#### Pushing multiple datasets <a id="pushing-interactive-visualizations-and-datasets"></a>
+## Pushing multiple datasets <a id="pushing-interactive-visualizations-and-datasets"></a>
 
 In some cases, you want to push multiple datasets at once and associate each with particular parameter. Suppose you'd to publish multiple datasets on players for every parameter`College`:
 
@@ -70,7 +70,7 @@ Once the dataset is pushed to dstack.ai, it can be accessed by the URL specified
 All datasets pushed to dstack.ai follow the privacy settings specified for the registered profile. You can make all data submitted to dstack.ai either public or private. You also can change the privacy settings for individual datasets to either public or private, or share them only with selected users. [Learn more on sharing and collaboration](../in-cloud/collaboration.md)
 {% endhint %}
 
-#### Pulling datasets
+## Pulling datasets
 
 Imagine a scenario that you would like to use a dataset published earlier or from someone else. In this case, you have two options to obtain the dataset to use it:
 
@@ -122,6 +122,6 @@ head(df)
 {% endtabs %}
 
 {% hint style="info" %}
-The `dstack` package is compatible with`pandas.core.frame.DataFrame`, `data.frame`, `data.table`,  and`tibble.`
+The `dstack` package is compatible with`pandas.core.frame.DataFrame`, `data.frame`, `data.table`, and`tibble.`
 {% endhint %}
 

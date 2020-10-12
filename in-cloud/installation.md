@@ -1,12 +1,12 @@
 # Configuration
 
-Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python and R scripts  and applications. 
+Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python and R scripts and applications.
 
 {% hint style="success" %}
 Once you've pushed your data to dstack.ai using the `dstack` packages for Python and R, you can combine your datasets and visualizations into a great-looking interactive dashboards with just a few clicks. [Learn more on how to push your data to dstack.ai](../open-source/pushing-visualizations.md)
 {% endhint %}
 
-#### Installing dstack package
+## Installing dstack package
 
 The `dstack` package can be easily installed on of the following ways:
 
@@ -43,7 +43,7 @@ install.packages('https://drive.google.com/uc?export=download&id=1RREfEk_rZFvZN-
 ```
 {% endhint %}
 
-#### Configuring dstack.ai profile
+## Configuring dstack.ai profile
 
 {% hint style="info" %}
 Note, before using the dstack for Python or R, you have to configure it with your dstack.ai profile by specifying your [dstack.ai](https://dstack.ai) username and token:
@@ -73,5 +73,5 @@ Note, by default, the server stores all the data under `.dstack` in the user hom
 dstack server start --home <other_directory>
 ```
 
-In this case, the server will store all the data in `<other_directory>/.dstack/`. 
+In this case, the server will store all the data in `<other_directory>/.dstack/`.
 

@@ -1,6 +1,6 @@
 # Running in Docker
 
-The [Docker image](https://hub.docker.com/repository/docker/dstackai/dstack) can be used to host the enterprise version of dstack.ai on own servers or in own AWS/Azure/Google Cloud account. 
+The [Docker image](https://hub.docker.com/repository/docker/dstackai/dstack) can be used to host the enterprise version of dstack.ai on own servers or in own AWS/Azure/Google Cloud account.
 
 You can run dstack.ai in Docker using the following command:
 
@@ -28,6 +28,4 @@ If you'd like to test how the Docker image works without configuring an SMTP ser
 {% endhint %}
 
 In case you don't want to use Docker or the multi-user version of dstack, you also can use [github.com/dstackai/dstack](https://github.com/dstackai/dstack) to start a dstack server locally via command line.
-
-
 

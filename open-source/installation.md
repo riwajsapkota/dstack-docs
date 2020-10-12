@@ -15,7 +15,7 @@ pip install dstack
 {% endtab %}
 
 {% tab title="conda" %}
-```
+```text
 conda install dstack -c dstack.ai
 ```
 {% endtab %}
@@ -29,7 +29,7 @@ If you're using R and don't need the command-line tool, you can install the clie
 install.packages("dstack")
 ```
 
-#### Run a server
+## Run a server
 
 In order to run a server locally, one must run this command line:
 
@@ -41,16 +41,16 @@ You'll see the following output:
 
 ```text
 To access the dstack server, open one of these URLs in the browser:
-		http://localhost:8080/auth/verify?user=dstack&code=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&next=/
-	or	http://127.0.0.1:8080/auth/verify?user=dstack&code=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&next=/
+        http://localhost:8080/auth/verify?user=dstack&code=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&next=/
+    or    http://127.0.0.1:8080/auth/verify?user=dstack&code=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&next=/
 
 If you're using Python, use the following command line command to configure your dstack profile:
-	pip install dstack
-	dstack config add --token xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --user dstack --server http://localhost:8080/api
+    pip install dstack
+    dstack config add --token xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --user dstack --server http://localhost:8080/api
 
 If you're using R, use the following R command to configure your dstack profile:
-	install.packages("dstack")
-	dstack::configure(user = "dstack", token = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", persist = "global", server = "http://localhost:8080/api")
+    install.packages("dstack")
+    dstack::configure(user = "dstack", token = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", persist = "global", server = "http://localhost:8080/api")
 ```
 
 Note, in your case instead of `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` you'll see your personal code.
@@ -69,7 +69,7 @@ dstack server start --home <other_directory>
 
 In this case, the server will store all the data in `<other_directory>/.dstack/`.
 
-#### Configure a user profile
+## Configure a user profile
 
 In order to send requests to the locally running server, one must run the command suggested in the output:
 

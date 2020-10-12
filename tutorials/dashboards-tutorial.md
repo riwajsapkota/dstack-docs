@@ -43,16 +43,16 @@ Once the setup is over, you'll see the following output:
 
 ```text
 To access the dstack server, open one of these URLs in the browser:
-		http://localhost:8080/auth/verify?user=dstack&code=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&next=/
-	or	http://127.0.0.1:8080/auth/verify?user=dstack&code=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&next=/
+        http://localhost:8080/auth/verify?user=dstack&code=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&next=/
+    or    http://127.0.0.1:8080/auth/verify?user=dstack&code=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&next=/
 
 If you're using Python, use the following command line command to configure your dstack profile:
-	pip install dstack
-	dstack config add --token xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --user dstack --server http://localhost:8080/api
+    pip install dstack
+    dstack config add --token xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --user dstack --server http://localhost:8080/api
 
 If you're using R, use the following R command to configure your dstack profile:
-	install.packages("dstack")
-	dstack::configure(user = "dstack", token = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", persist = "global", server = "http://localhost:8080/api")
+    install.packages("dstack")
+    dstack::configure(user = "dstack", token = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", persist = "global", server = "http://localhost:8080/api")
 ```
 
 The server normally runs on 8080. If you'd like it to run on a different port, use the command line option `--port`:
@@ -78,7 +78,7 @@ Note, if you'd like to host your data on the in-cloud version, you'll have to us
 If you'd like to see the other configuration options, feel free to run `dstack config --help`.
 
 {% hint style="warning" %}
-Note, by default, the server stores all the data under `.dstack`in the user home directory. 
+Note, by default, the server stores all the data under `.dstack`in the user home directory.
 
 In case you'd like to store the `.dstack` folder in a different place, use the following command:
 
@@ -136,7 +136,7 @@ ds.push_frame("simple_plot", fig, """
 How do you like my plot?""")
 ```
 
-If you run this code in Jupyter, you'll see a link in the output. You can use this link to access the visualization on the dstack server. 
+If you run this code in Jupyter, you'll see a link in the output. You can use this link to access the visualization on the dstack server.
 
 Open the link from the output in the browser to see how it works.
 
@@ -187,7 +187,7 @@ In case you're hosting the data with the in-cloud version of dstack.ai, you'll b
 
 ![](../.gitbook/assets/screenshot-2020-07-14-at-11.15.10.png)
 
-Another feature of the in-cloud version of dstack.ai is the `Share` button that is available for both stacks and dashboards. If you click this button, you'll be able to change the access level for any stack or dashboard individually and also share it with specific users of dstack.ai. 
+Another feature of the in-cloud version of dstack.ai is the `Share` button that is available for both stacks and dashboards. If you click this button, you'll be able to change the access level for any stack or dashboard individually and also share it with specific users of dstack.ai.
 
 ![](../.gitbook/assets/screenshot-2020-07-14-at-11.09.50.png)
 

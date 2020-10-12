@@ -1,6 +1,6 @@
 # FAQ
 
-### How does dstack.ai helps business?
+## How does dstack.ai helps business?
 
 dstack.ai enables businesses to make quick data-driven decisions by making the work of data scientists easily accessible to the rest of the organization.
 
@@ -8,41 +8,34 @@ dstack.ai enables businesses to make quick data-driven decisions by making the w
 * Reduces the typical recurring cost associate with frontend and backend web and application development needed to otherwise publish data reports such as dashboard for rest of the organization
 * Allows non-technical audience in the organization to interact with data
 
-### What are the use-cases for dstack.ai?
+## What are the use-cases for dstack.ai?
 
 1. Collaborate on results of an exploratory analysis such as data visualizations, dashboards, and datasets with team members or client:
+2. Data scientists publish their results to the dstack.ai frontend using dstack libraries in their Python or R scripts
+3. Published results can then be shared with team members or clients via URLs of the published results or simple email invitation.
+4. In case of datasets, team members or clients can download the dataset either as CSV or as pandas dataframe. 
+5. Discuss on the published results using the comment section available for each published analysis
+6. Track revisions of data analysis results:
+7. Data scientists update the dataset and reload the dataset to dstack.ai frontend
+8. Permitted users of dstack.ai frontend can view the new version along with older versions of the same dataset.
+9. Build dashboard on top of exploratory visualizations:
+10. Login to dstack.ai frontend
+11. Build dashboard using the published data visualizations or tables
+12. Automate publication of data reports \[Experimental\]
+13. Data scientists define jobs on dstack.ai to be executed at regular schedules
+14. Data reports such as datasets or visualizations are published at dstack.ai front end without manually running scripts.
 
-* Data scientists publish their results to the dstack.ai frontend using dstack libraries in their Python or R scripts
-* Published results can then be shared with team members or clients via URLs of the published results or simple email invitation.
-* In case of datasets, team members or clients can download the dataset either as CSV or as pandas dataframe. 
-* Discuss on the published results using the comment section available for each published analysis
+## Can I push data to dstack.ai from Jupyter notebooks or RMarkdown?
 
-2. Track revisions of data analysis results:
+Yes. The APIs offered by dstack.ai can be used from anywhere - Jupyter notebooks or RMarkdown.
 
-* Data scientists update the dataset and reload the dataset to dstack.ai frontend
-* Permitted users of dstack.ai frontend can view the new version along with older versions of the same dataset.
+## Can I push data to dstack.ai from my Python or R scripts, jobs or applications?
 
-3. Build dashboard on top of exploratory visualizations:
+Yes. The APIs offered by dstack.ai can be used from anywhere - Jupyter notebooks, RMarkdown, Python or R scripts, jobs or other applications - to publish or create data visualizations, datasets or dashboards.
 
-* Login to dstack.ai frontend 
-* Build dashboard using the published data visualizations or tables 
+## How does dstack.ai compare to Dash or Shiny?
 
-4. Automate publication of data reports \[Experimental\]
-
-* Data scientists define jobs on dstack.ai to be executed at regular schedules 
-* Data reports such as datasets or visualizations are published at dstack.ai front end without manually running scripts.
-
-### Can I push data to dstack.ai from Jupyter notebooks or RMarkdown?
-
-Yes. The APIs offered by dstack.ai can be used from anywhere - Jupyter notebooks or RMarkdown. 
-
-### Can I push data to dstack.ai from my Python or R scripts, jobs or applications?
-
-Yes. The APIs offered by dstack.ai can be used from anywhere - Jupyter notebooks, RMarkdown, Python or R scripts, jobs or other applications - to publish or create data visualizations, datasets or dashboards. 
-
-### How does dstack.ai compare to Dash or Shiny?
-
-### How is dstack.ai different from Jupyter notebooks?
+## How is dstack.ai different from Jupyter notebooks?
 
 dstack.ai is a complementary product to Jupyter notebooks. Once a data scientist has prototyped a “data science code”, dstack.ai allows for centralized management of data reports:
 
@@ -50,33 +43,33 @@ dstack.ai is a complementary product to Jupyter notebooks. Once a data scientist
 * Share prototypes also with non-technical audience in form of data reports such as data visualizations, dataset tables or dashboards
 * Keep track or get back to previous data reports
 
-### How does dstack.ai compare to Tableau or other dashboard solutions?
+## How does dstack.ai compare to Tableau or other dashboard solutions?
 
-### How secure is the data when it’s stored on the cloud dstack.ai version?
+## How secure is the data when it’s stored on the cloud dstack.ai version?
 
-The in-cloud version of dstack.ai hosts your data securely at AWS. 
+The in-cloud version of dstack.ai hosts your data securely at AWS.
 
-The on-premise version of dstack.ai allows you to install the software locally, in your own servers or at a cloud service of your choice. 
+The on-premise version of dstack.ai allows you to install the software locally, in your own servers or at a cloud service of your choice.
 
 When you publish data, you can choose whether to make the data privately available to only those with whom you want to share the data.
 
 dstack.ai uses API tokens to configure dstack profiles separately from your code. It allows you to make the code safe as it does not include plain secret tokens.
 
-### Do you have a support line? What level of support is included in my plan?
+## Do you have a support line? What level of support is included in my plan?
 
 The free plan offers support over a chat. The paid plans include support over email.
 
-### I’m interested in a demo or consultation. How can it be arranged?
+## I’m interested in a demo or consultation. How can it be arranged?
 
 Yes. Drop us an email at [team@dstack.ai](mailto:team@dstack.ai) and we will get right back to you.
 
-### In our company we need custom functionality, can we get it?
+## In our company we need custom functionality, can we get it?
 
 Please look into our [public roadmap](https://trello.com/b/CJOnEjrr/dstackai-public-roadmap) to see if we have planned the feature. Please vote for the feature in case you want to expedite the development of the feature. If not, just drop us an email at [team@dstack.ai](mailto:team@dstack.ai) with the description and use case of the functionality and we will get back to you.
 
-### Can I host dstack.ai on my own servers or in my own AWS/Azure/GCS account?
+## Can I host dstack.ai on my own servers or in my own AWS/Azure/GCS account?
 
-Yes. We offer an on-premises docker deployment which allows you to host dstack.ai either at your own premise or at a cloud service of your choice and control. 
+Yes. We offer an on-premises docker deployment which allows you to host dstack.ai either at your own premise or at a cloud service of your choice and control.
 
 {% hint style="info" %}
 Didn't find an answer to your question? Please shoot us an email to [team@dstack.ai](mailto:team@dstack.ai) and we will answer in less than a few hours.
