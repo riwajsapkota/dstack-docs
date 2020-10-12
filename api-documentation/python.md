@@ -1,7 +1,3 @@
----
-description: The Github Repository for the dstack Python is here -
----
-
 # Python
 
 {% hint style="info" %}
