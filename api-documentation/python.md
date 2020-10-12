@@ -1,16 +1,20 @@
 ---
-description: >-
-  The Github Repository for the dstack Python is here -
-  https://github.com/dstackai/dstack-py
+description: The Github Repository for the dstack Python is here -
 ---
 
 # Python
 
+{% hint style="info" %}
+You can find the complete open source python implementation here -[https://github.com/dstackai/dstack-py](https://github.com/dstackai/dstack-py)
+{% endhint %}
+
 {% tabs %}
-{% tab title="Pushing Frame" %}
+{% tab title="Pushing Frames" %}
 ## Pushing Frames
 
 The `push_frame()` function create a frame in the stack, commits and pushes the data in a single operation.
+
+You can push **datasets, models and plots** and specify other optional parameters.
 
 ```python
 push_frame(stack: str, obj, 
@@ -46,7 +50,7 @@ push_frame(stack: str, obj,
 **ConfigurationException**: If something goes wrong with configuration process, config file does not exist an so on.
 {% endtab %}
 
-{% tab title="Pulling Frame" %}
+{% tab title="Pulling Frames" %}
 ## Pushing Frames
 
 The `pull()` function create a frame in the stack, commits and pushes the data in a single operation.
