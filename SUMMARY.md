@@ -28,12 +28,13 @@
 ## API Reference <a id="api-documentation"></a>
 
 * [Python](api-documentation/python.md)
+* [R](api-documentation/r.md)
 
 ## dstack.ai Cloud <a id="in-cloud"></a>
 
 * [Registration](in-cloud/cloud-registration.md)
 * [Configuration](in-cloud/installation.md)
-* [Jobs](in-cloud/jobs.md)
+* [Jobs for Automation](in-cloud/jobs.md)
 * [Collaboration](in-cloud/collaboration.md)
 * [FAQ](in-cloud/faq.md)
 * [Troubleshooting](in-cloud/troubleshooting.md)

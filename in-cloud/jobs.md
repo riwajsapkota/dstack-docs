@@ -1,4 +1,4 @@
-# Jobs
+# Jobs for Automation
 
 dstack.ai allows you to execute simple Python and R jobs right on dstack.ai – either on demand or automatically at a regular schedule. These jobs can run use basic scientific packages, such as `pandas`, `numpy`, `plotly`, and `dstack`, `tidyverse`, `ggplot2`, etc.
 
