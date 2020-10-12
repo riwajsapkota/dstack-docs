@@ -2,7 +2,7 @@
 
 * [What is dstack?](README.md)
 * [GitHub](https://github.com/dstackai/dstack)
-* [dstack.ai Home Page](http://dstack.ai)
+* [Home Page](http://dstack.ai)
 * [Discord Chat](https://discord.gg/8xfhEYa)
 
 ## Getting Started <a id="open-source"></a>
