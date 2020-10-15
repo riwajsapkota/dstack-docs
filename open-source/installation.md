@@ -45,7 +45,9 @@ install.packages("dstack")
 Note, if you don't want to run a server yourself, you can use the in-cloud version running on dstack.ai. To configure a profile that uses dstack.ai, you have to sign up for a [dstack.ai](https://dstack.ai) account, go to settings, and copy the username and the client token. The server in that case must not be specified.
 {% endhint %}
 
-In order to run a server locally, one must run this command line:
+After installing the `dstack` Python Client package, you can access the `dstack` command line tool, which you can use to run a local server.
+
+In order to run a server locally, run this command line:
 
 ```bash
 dstack server start
