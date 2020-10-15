@@ -10,19 +10,19 @@ The `push_frame()` function create a frame in the stack, commits and pushes the 
 
 You can push **datasets**, **models** and **plots** and specify other optional parameters.
 
-{% tabs %}
-{% tab title="Parameters" %}
 ```python
-push_frame(stack: str, obj, 
-           description: Union[str, NoneType] = None, 
-           access: Union[str, NoneType] = None, 
-           message: Union[str, NoneType] = None, 
-           params: Union[Dict, NoneType] = None, 
-           encoder: Union[dstack.handler.Encoder[Any], NoneType] = None, 
+push_frame(stack: str, obj,
+           description: Union[str, NoneType] = None,
+           access: Union[str, NoneType] = None,
+           message: Union[str, NoneType] = None,
+           params: Union[Dict, NoneType] = None,
+           encoder: Union[dstack.handler.Encoder[Any], NoneType] = None,
            profile: str = 'default', 
            **kwargs) -> dstack.stack.PushResult
 ```
 
+{% tabs %}
+{% tab title="Parameters" %}
 **stack**: A stack you want to commit and push to.
 
 **obj**: Object to commit and push, e.g. plot.
@@ -49,8 +49,6 @@ push_frame(stack: str, obj,
 
 The `pull()` function create a frame in the stack, commits and pushes the data in a single operation.
 
-{% tabs %}
-{% tab title="Parameters" %}
 ```python
 pull(stack: str,
      profile: str = 'default',
@@ -59,6 +57,8 @@ pull(stack: str,
      **kwargs) -> ~T
 ```
 
+{% tabs %}
+{% tab title="Parameters" %}
 **stack**: A stack you want to commit and push to.
 
 **profile**: Profile you want to use, i.e. username and token. Default profile is 'default'.
