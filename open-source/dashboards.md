@@ -1,4 +1,12 @@
+---
+description: >-
+  A Dashboard displays multiple visualizations at once based on selected
+  parameters. It can be thought of as a collection of multiple stacks.
+---
+
 # Dashboards
+
+### What is a Dashboard?
 
 Once you've pushed your data to dstack.ai using the`dstack` packages for Python and R, you can combine your datasets and visualizations into interactive dashboards – with just a few clicks.
 
@@ -10,7 +18,7 @@ Here's an example of a simple dashboard: [https://dstack.ai/cheptsov/d/505d2087-
 
 If a _Stack_ displays each moment a single visualization that corresponds to the selected parameters, a _Dashboard_ displays multiple visualizations at once – also based on selected parameters.
 
-Here's how to create a _Dashboard_:
+### Here's how to create a Dashboard:
 
 1. Create _Stacks_ by [pushing](pushing-visualizations.md) your visualizations via the Python or R API. Those can be either _Static stacks_ or _Interactive stacks_. 
 2. Click _Dashboards_ in the sidebar of [dstack.ai](https://dstack.ai) and then click _New dashboard_.
@@ -21,5 +29,5 @@ Here's how to create a _Dashboard_:
 
 The user, with whom you've shared the dashboard, will be able to open the dashboard and see it updating based on the parameters selected. Note, the parameters are shown only in case the added stacks have parameters.
 
-_That is it. Go ahead, and build your interactive dashboards right away! 🚀_
+**That is it. Go ahead, and build your interactive dashboards right away! 🚀**
 

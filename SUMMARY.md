@@ -10,17 +10,17 @@
 * [Installation](open-source/installation.md)
 * [Stacks](open-source/pushing-visualizations.md)
 * [Dashboards](open-source/dashboards.md)
-* [Datasets](open-source/datasets.md)
 
 ## Tutorials
 
 * [Building interactive dashboards](tutorials/dashboards-tutorial.md)
-* [Plotting Libraries](tutorials/plotting-libraries/README.md)
+* [Using Datasets](tutorials/datasets.md)
+* [Using Plotting Libraries](tutorials/plotting-libraries/README.md)
+  * [Matplotlib](tutorials/plotting-libraries/matplotlib.md)
   * [Seaborn](tutorials/plotting-libraries/seaborn.md)
   * [Plotly](tutorials/plotting-libraries/plotly.md)
-  * [Matplotlib](tutorials/plotting-libraries/matplotlib.md)
   * [Bokeh](tutorials/plotting-libraries/bokeh.md)
-* [Machine Learning Models](tutorials/machine-learning-models/README.md)
+* [Using Machine Learning Models](tutorials/machine-learning-models/README.md)
   * [scikit-learn](tutorials/machine-learning-models/scikit-learn.md)
   * [PyTorch](tutorials/machine-learning-models/pytorch.md)
   * [Tensorflow](tutorials/machine-learning-models/tensorflow.md)

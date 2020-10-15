@@ -1,6 +1,6 @@
 ---
-description: 'Using Tensorflow, PyTorch, and Scikit-Learn'
+description: 'dstack.ai ❤️ Tensorflow, PyTorch, and Scikit-Learn'
 ---
 
-# Machine Learning Models
+# Using Machine Learning Models
 

@@ -1,6 +1,10 @@
 # Stacks
 
-The`dstack` tool lets you upload datasets and visualizations, and arrange them into reports and interactive dashboards.
+### What is a Stack?
+
+Stacks form the fundamental building block of dstack.ai. You can create stacks of visualisations, datasets and models in dstack and easily share and re-use them.
+
+The `dstack` tool lets you upload datasets and visualizations, and arrange them into reports and interactive dashboards.
 
 {% hint style="info" %}
 Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python R scripts, and applications. Learn how to [install and configure](installation.md) `dstack`.

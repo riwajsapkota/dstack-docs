@@ -4,14 +4,14 @@
 You can find the complete open source python implementation here -[https://github.com/dstackai/dstack-py](https://github.com/dstackai/dstack-py)
 {% endhint %}
 
+## Pushing Frames 
+
+The `push_frame()` function create a frame in the stack, commits and pushes the data in a single operation. 
+
+You can push **datasets**, **models** and **plots** and specify other optional parameters.
+
 {% tabs %}
-{% tab title="Pushing Frames" %}
-## Pushing Frames
-
-The `push_frame()` function create a frame in the stack, commits and pushes the data in a single operation.
-
-You can push **datasets, models and plots** and specify other optional parameters.
-
+{% tab title="Parameters" %}
 ```python
 push_frame(stack: str, obj, 
            description: Union[str, NoneType] = None, 
@@ -22,8 +22,6 @@ push_frame(stack: str, obj,
            profile: str = 'default', 
            **kwargs) -> dstack.stack.PushResult
 ```
-
-### Parameters
 
 **stack**: A stack you want to commit and push to.
 
@@ -37,20 +35,22 @@ push_frame(stack: str, obj,
 
 **encoder**: Specify a handler to handle the object, by default \`AutoHandler\` will be used.
 
-**profile**: Profile you want to use, i.e. username and token. Default profile is 'default'.
+**profile**: Profile you want to use, i.e. username and token. Default profile is 'default'
+{% endtab %}
 
-### Raises:
-
+{% tab title="Raises" %}
 **ServerException**: If server returns something except HTTP 200, e.g. in the case of authorization failure.
 
 **ConfigurationException**: If something goes wrong with configuration process, config file does not exist an so on.
 {% endtab %}
+{% endtabs %}
 
-{% tab title="Pulling Frames" %}
-## Pushing Frames
+## Pulling Frames
 
 The `pull()` function create a frame in the stack, commits and pushes the data in a single operation.
 
+{% tabs %}
+{% tab title="Parameters" %}
 ```python
 pull(stack: str,
      profile: str = 'default',
@@ -58,6 +58,18 @@ pull(stack: str,
      decoder: Union[dstack.handler.Decoder[~T], NoneType] = None, 
      **kwargs) -> ~T
 ```
+
+**stack**: A stack you want to commit and push to.
+
+**profile**: Profile you want to use, i.e. username and token. Default profile is 'default'.
+
+**decoder**: Specify a handler to for decoder.
+{% endtab %}
+
+{% tab title="Exception Raises" %}
+**ServerException**: If server returns something except HTTP 200, e.g. in the case of authorization failure.
+
+**ConfigurationException**: If something goes wrong with configuration process, config file does not exist an so on.
 {% endtab %}
 {% endtabs %}
 

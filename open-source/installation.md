@@ -1,9 +1,17 @@
+---
+description: 'Before you can use dstack, you’ll need to get it installed.'
+---
+
 # Installation
 
-The main components of dstack include:
+**There are 2 main components of dstack:**
 
-* Client packages for Python \([dstack-py](https://github.com/dstackai/dstack-py)\) an R \([dstack-r](https://github.com/dstackai/dstack-r)\). These packages can be used from either notebooks or scripts to push data to dstack.
-* A server application \([dstack](https://github.com/dstackai/dstack-server)\). It handles the requests from the Client packages, and serve data applications. The application can run locally or in Docker. 
+* **Client packages** for Python \([dstack-py](https://github.com/dstackai/dstack-py)\) an R \([dstack-r](https://github.com/dstackai/dstack-r)\). These packages can be used from either notebooks or scripts to push data to dstack.
+* **A server application** \([dstack](https://github.com/dstackai/dstack-server)\). It handles the requests from the Client packages, and serves data applications. The application can run locally or in Docker, or you can use the in-cloud version running on [dstack.ai](https://dstack.ai) if you don't want to run the server yourself.
+
+## Installing Client Packages
+
+#### Python
 
 The easiest way to install `dstack` is by using `pip` or `conda`:
 
@@ -23,6 +31,8 @@ conda install dstack -c dstack.ai
 
 The package comes with a command-line tool called `dstack`. This command-line tool can be used to configure local profiles, credentials, and to run a local server.
 
+#### R
+
 If you're using R and don't need the command-line tool, you can install the client package for R via the following command:
 
 ```r
@@ -30,6 +40,10 @@ install.packages("dstack")
 ```
 
 ## Run a server
+
+{% hint style="info" %}
+Note, if you don't want to run a server yourself, you can use the in-cloud version running on dstack.ai. To configure a profile that uses dstack.ai, you have to sign up for a [dstack.ai](https://dstack.ai) account, go to settings, and copy the username and the client token. The server in that case must not be specified.
+{% endhint %}
 
 In order to run a server locally, one must run this command line:
 
@@ -76,17 +90,4 @@ In order to send requests to the locally running server, one must run the comman
 ```bash
 dstack config add --token xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --user dstack --server http://localhost:8080/api
 ```
-
-{% hint style="info" %}
-Note, if you don't want to run a server yourself, you can use the in-cloud version running on dstack.ai. To configure a profile that uses dstack.ai, you have to sign up for a [dstack.ai](https://dstack.ai) account, go to settings, and copy the username and the client token. The server in that case must not be specified.
-{% endhint %}
-
-{% hint style="danger" %}
-Note, the R CRAN package is still under review. In order to install it, please use the following commands:
-
-```r
-install.packages(c('uuid', 'bit64', 'rjson', 'rlist'), repos = 'http://cran.us.r-project.org')
-install.packages('https://drive.google.com/uc?export=download&id=1RREfEk_rZFvZN-vS-7H0oPIIWJtWBMar', repos = NULL, type = 'source')
-```
-{% endhint %}
 
