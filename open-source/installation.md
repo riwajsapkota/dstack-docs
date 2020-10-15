@@ -4,7 +4,7 @@ description: 'Before you can use dstack, you’ll need to get it installed.'
 
 # Installation
 
-**There are 2 main components of dstack:**
+There are 2 main components of dstack:
 
 * **Client packages** for Python \([dstack-py](https://github.com/dstackai/dstack-py)\) an R \([dstack-r](https://github.com/dstackai/dstack-r)\). These packages can be used from either notebooks or scripts to push data to dstack.
 * **A server application** \([dstack](https://github.com/dstackai/dstack-server)\). It handles the requests from the Client packages, and serves data applications. The application can run locally or in Docker, or you can use the in-cloud version running on [dstack.ai](https://dstack.ai) if you don't want to run the server yourself.
