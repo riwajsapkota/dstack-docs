@@ -39,7 +39,7 @@ push_frame(stack: str, obj,
 
 **profile**: Profile you want to use, i.e. username and token. Default profile is 'default'.
 
-###  Raises:
+### Raises:
 
 **ServerException**: If server returns something except HTTP 200, e.g. in the case of authorization failure.
 
