@@ -1,6 +1,8 @@
 ---
-description: 'dstack.ai ❤️ Tensorflow, PyTorch, and Scikit-Learn'
+description: >-
+  You can use dstack to push and pull Machine Learning Models made with
+  Tensorflow, PyTorch, or Scikit-Learn.
 ---
 
-# Using Machine Learning Models
+# Machine Learning Models
 

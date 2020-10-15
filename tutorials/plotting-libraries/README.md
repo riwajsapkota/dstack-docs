@@ -1,6 +1,8 @@
 ---
-description: 'dstack.ai ❤️ Matplotlib, Seaborn, Plotly, Bokeh'
+description: >-
+  You can use dstack to easily push and pull visualisations made with
+  Matplotlib, Seaborn, Plotly, Bokeh.
 ---
 
-# Using Plotting Libraries
+# Plotting Libraries
 

@@ -1,4 +1,4 @@
 # Plotly
 
-dstack `plotly.graph_objs._figure.Figure`
+dstack allows you to push `plotly.graph_objs._figure.Figure`
 

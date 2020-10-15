@@ -13,7 +13,7 @@ description: 'Before you can use dstack, you’ll need to get it installed.'
 
 #### Python
 
-The easiest way to install `dstack` is by using `pip` or `conda`:
+The easiest way to install `dstack` in Python is by using `pip` or `conda`:
 
 {% tabs %}
 {% tab title="pip" %}
