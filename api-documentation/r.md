@@ -60,7 +60,11 @@ create_frame(
 )
 ```
 
-**`profile`** - A profile refers to credentials, i.e. username and token. Default profile is named 'default'. The system is looking for specified profile as follows: it looks into working directory to find a configuration file \(local configuration\), if the file doesn't exist it looks into user directory to find it \(global configuration\). The best way to manage profiles is to have dstack CLI tools installed. These tools are written in Python 3, so you have to install dstack support. In the case of PyPI you should type
+**`stack`** - A name of stack to use.
+
+**`profile`** - A profile refers to credentials, i.e. username and token. Default profile is named 'default'. The system is looking for specified profile as follows: it looks into working directory to find a configuration file \(local configuration\), if the file doesn't exist it looks into user directory to find it \(global configuration\). The best way to manage profiles is to have dstack [CLI tools installed.](../open-source/installation.md)
+
+ 
 {% endtab %}
 
 {% tab title="Example" %}
@@ -91,7 +95,7 @@ push(frame)
 
 ## Commit
 
-To Commit Data to Stack Frame. 
+Commits Data to Stack Frame. 
 
 This function adds a new view to the stack frame. Multiple views can be added to one frame, but in this case every plot must be supplied with certain parameters to distiguish one view from another. In the case of single plot parameters are not necessary. For multiple views parameters will be automaticaly converted to UI controls like sliders and drop down lists.
 

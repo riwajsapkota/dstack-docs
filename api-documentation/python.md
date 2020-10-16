@@ -11,7 +11,8 @@ The `push_frame()` function create a frame in the stack, commits and pushes the 
 You can push **datasets**, **models** and **plots** and specify other optional parameters.
 
 ```python
-push_frame(stack: str, obj,
+push_frame(stack: str, 
+           obj,
            description: Union[str, NoneType] = None,
            access: Union[str, NoneType] = None,
            message: Union[str, NoneType] = None,
@@ -23,19 +24,19 @@ push_frame(stack: str, obj,
 
 {% tabs %}
 {% tab title="Parameters" %}
-**stack**: A stack you want to commit and push to.
+**`stack`**: A stack you want to commit and push to.
 
-**obj**: Object to commit and push, e.g. plot.
+**`obj`**: Object to commit and push, e.g. plot, DataFrame, etc.
 
-**description**: Optional description of the object.ept HTTP 200, e.g. in the case of authorization         access: Access level for the stack. It may be public, private or None. It is None by default, so it will be default access level in user's settings.
+**`description`**: Optional description of the object.ept HTTP 200, e.g. in the case of authorization         access: Access level for the stack. It may be public, private or None. It is None by default, so it will be default access level in user's settings.
 
-**message**: Push message to describe what's new in this revision.
+**`message`**: Push message to describe what's new in this revision.
 
-**params**: Optional parameters.
+**`params`**: Optional parameters.
 
-**encoder**: Specify a handler to handle the object, by default \`AutoHandler\` will be used.
+**`encoder`**: Specify a handler to handle the object, by default \`AutoHandler\` will be used.
 
-**profile**: Profile you want to use, i.e. username and token. Default profile is 'default'
+**`profile`**: Profile you want to use, i.e. username and token. Default profile is 'default'
 {% endtab %}
 
 {% tab title="Raises" %}
@@ -59,11 +60,11 @@ pull(stack: str,
 
 {% tabs %}
 {% tab title="Parameters" %}
-**stack**: A stack you want to commit and push to.
+**`stack`**: A stack you want to commit and push to.
 
-**profile**: Profile you want to use, i.e. username and token. Default profile is 'default'.
+**`profile`**: Profile you want to use, i.e. username and token. Default profile is 'default'.
 
-**decoder**: Specify a handler to for decoder.
+**`decoder`**: Specify a handler to for decoder.
 {% endtab %}
 
 {% tab title="Exception Raises" %}
