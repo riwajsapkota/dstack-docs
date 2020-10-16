@@ -1,3 +1,9 @@
+---
+description: >-
+  This is the API Reference for using dstack in R. Please make sure you have
+  followed the Installation procedure before you start using dstack in R.
+---
+
 # R
 
 {% hint style="info" %}
