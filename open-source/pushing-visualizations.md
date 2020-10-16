@@ -2,7 +2,7 @@
 
 ### What are Stacks?
 
-Stacks form the fundamental building block of dstack.ai. You can create stacks of visualisations, datasets and models in dstack and easily share and re-use them.
+Stacks form the fundamental building block of dstack.ai. You can create stacks of visualisations, datasets and models in dstack to easily share and re-use them and also create dashboards with them.
 
 The `dstack` tool lets you upload **datasets**, **models** and **visualizations**, and arrange them into reports and interactive dashboards. You can read more detaled tutorials and examples about how to do this in the [Tutorials](../tutorials/dashboards-tutorial.md) Section.
 
@@ -43,6 +43,8 @@ push_frame("simple", image, "My first plot")
 {% hint style="info" %}
 The `dstack` package can be used with [pandas](https://pandas.pydata.org/), [tidyverse](https://www.tidyverse.org/), [matplotlib](https://matplotlib.org/), [ggplot2](https://ggplot2.tidyverse.org/), [bokeh](https://docs.bokeh.org/en/latest/index.html) and [plotly](https://plot.ly/). The `commit` and `push_frame` methods accept `pandas.core.frame.DataFrame`, `data.frame`, `data.table`, `tibble`, `plotly.graph_objs._figure.Figure`, `bokeh.plotting.figure.Figure`, etc.
 {% endhint %}
+
+You can read more detailed and library-specific tutorials on pushing [datasets](../tutorials/datasets.md) and [visualizations](../tutorials/plotting-libraries/) under the Tutorials tab.
 
 ## Pushing interactive visualizations and datasets
 
@@ -122,7 +124,7 @@ dstack.ai tracks every submitted frame and lets you rollback between revisions v
 All visualizations and datasets pushed to dstack.ai follow the privacy settings specified for the registered profile. You can make all data submitted to dstack.ai either public or private. You also can change the privacy settings for individual datasets and visualizations to make them either public or private, or share them only with selected users. [Learn more on sharing and collaboration](../in-cloud/collaboration.md)
 {% endhint %}
 
-_That is it. Once the data is pushed to dstack.ai, you can share it with the team or arrange into_ [_comprehensive dashboards_](dashboards.md) _📈._
+**That is it. Once the data is pushed to dstack.ai, you can share it with the team or arrange into** [**comprehensive dashboards**](dashboards.md) **📈.**
 
 {% page-ref page="dashboards.md" %}
 
