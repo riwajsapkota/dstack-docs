@@ -156,8 +156,6 @@ push(self,
      meta: Optional[FrameMeta] = None) -> PushResult
 ```
 
-
-
 {% tabs %}
 {% tab title="Parameters" %}
 **`meta`**: Push message to associate some parameters with this revision, e.g. text message.
