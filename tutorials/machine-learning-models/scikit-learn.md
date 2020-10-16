@@ -140,3 +140,15 @@ from dstack import pull
 my_model = pull("my_torch_model", decoder=TorchModelWeightsDecoder(LinearRegression(1, 1)))
 ```
 
+## Common Problems and Debugging
+
+### AttributeError
+
+This error means you probably haven't called `.fit()` method on the Linear Regression model.
+
+```text
+AttributeError: 'LinearRegression' object has no attribute 'coef_'
+```
+
+
+
