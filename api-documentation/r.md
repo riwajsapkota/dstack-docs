@@ -67,7 +67,7 @@ push_frame("simple", image, "My first plot")
 
 ## Create Frame
 
-Suppose you want to publish a line plot that depends on the value of the parameter `Coefficient`\(slope\).
+Create a New Frame in Stack.
 
 {% tabs %}
 {% tab title="Parameters" %}
