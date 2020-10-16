@@ -6,7 +6,7 @@ description: >-
 
 # Dashboards
 
-### What is a Dashboard?
+### What are Dashboards?
 
 Once you've pushed your data to dstack.ai using the`dstack` packages for Python and R, you can combine your datasets and visualizations into interactive dashboards – with just a few clicks.
 

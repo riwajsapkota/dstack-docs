@@ -123,7 +123,3 @@ head(df)
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
-The `dstack` package is currently compatible with`pandas.core.frame.DataFrame`, `data.frame`, `data.table`, and`tibble.`
-{% endhint %}
-
