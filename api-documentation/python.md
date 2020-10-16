@@ -64,7 +64,7 @@ pull(stack: str,
 
 **`profile`**: Profile you want to use, i.e. username and token. Default profile is 'default'.
 
-**`decoder`**: Specify a handler to for decoder.
+**`decoder`**: Specify a handler for decoder.
 {% endtab %}
 
 {% tab title="Exception Raises" %}
