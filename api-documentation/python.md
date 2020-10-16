@@ -1,3 +1,9 @@
+---
+description: >-
+  This is the API Reference for using dstack in Python. Please make sure you
+  have followed the Installation procedure before referring to this.
+---
+
 # Python
 
 {% hint style="info" %}
