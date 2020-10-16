@@ -26,6 +26,8 @@ push_frame(
 ```
 
 **`stack`** - A name of stack to use.
+
+**`params`** - Parameters associated with this data, e.g. plot settings.
 {% endtab %}
 
 {% tab title="Example" %}
