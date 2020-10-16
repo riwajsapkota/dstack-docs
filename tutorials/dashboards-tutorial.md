@@ -5,7 +5,7 @@ description: >-
   Jupyter notebook.
 ---
 
-# Building interactive dashboards
+# Building Interactive Dashboards
 
 ## A quick start guide on building dashboards with dstack and Python
 

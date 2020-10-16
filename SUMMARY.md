@@ -11,9 +11,9 @@
 * [Stacks](open-source/pushing-visualizations.md)
 * [Dashboards](open-source/dashboards.md)
 
-## Tutorials
+## Tutorials and Guides <a id="tutorials"></a>
 
-* [Building interactive dashboards](tutorials/dashboards-tutorial.md)
+* [Building Interactive Dashboards](tutorials/dashboards-tutorial.md)
 * [Using Datasets](tutorials/datasets.md)
 * [Plotting Libraries](tutorials/plotting-libraries/README.md)
   * [Matplotlib](tutorials/plotting-libraries/matplotlib.md)
