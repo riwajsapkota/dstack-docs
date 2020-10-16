@@ -8,7 +8,7 @@ description: >-
 
 We will use the **sklearn.datasets** package to use the diabetes dataset to make and deploy a **simple Linear Regression Model in just 2 minutes!**
 
-#### 1. Importing 
+#### 1. Importing Libraries and dstack
 
 We will first import _scikit-learn_, _numpy_ and _matplotlib_ for plotting and of course the `push_frame` and `pull` methods from _dstack_
 
