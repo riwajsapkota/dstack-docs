@@ -73,7 +73,9 @@ Now that you have it pushed on a Stack, you can share it with anyone so they can
 my_model = pull("simpleLinearReg")
 ```
 
-**That's it! You have pulled your model. It's that easy.** 
+That's it! You have pulled your model. It's that easy. 
+
+**6. Making Predictions and Plotting**
 
 Now we can use the model to make predictions and use Matplotlib for plotting.
 
