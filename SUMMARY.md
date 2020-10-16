@@ -20,6 +20,7 @@
   * [Seaborn](tutorials/plotting-libraries/seaborn.md)
   * [Plotly](tutorials/plotting-libraries/plotly.md)
   * [Bokeh](tutorials/plotting-libraries/bokeh.md)
+  * [ggplot2 in R](tutorials/plotting-libraries/ggplot2-in-r.md)
 * [Machine Learning Models](tutorials/machine-learning-models/README.md)
   * [Scikit-learn](tutorials/machine-learning-models/scikit-learn.md)
   * [PyTorch](tutorials/machine-learning-models/pytorch.md)
