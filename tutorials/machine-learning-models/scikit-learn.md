@@ -4,7 +4,7 @@ description: >-
   to pull and push the model.
 ---
 
-# scikit-learn
+# Scikit-learn
 
 We will use the **sklearn.datasets** package to use the diabetes dataset to make and deploy a **simple Linear Regression Model in just 2 minutes!**
 
@@ -63,4 +63,37 @@ Now that our model is fit and ready, we push it to dstack as a stack using the `
 # Push the frame
 push_frame("simpleLinearReg", regr, "My first linear model")
 ```
+
+#### 5. Pulling from dstack 
+
+Now that you have it pushed on a Stack, you can share it with anyone so they can pull the model and use it, or you can pull it and re-use it anytime you like as well! Let's see how we can pull the model from the Stack and use it to display a plot.
+
+```python
+# Pull from the Stack
+my_model = pull("simpleLinearReg")
+```
+
+**That's it! You have pulled your model. It's that easy.** 
+
+Now we can use the model to make predictions and use Matplotlib for plotting.
+
+```python
+# Make predictions using the testing set
+diabetes_y_pred = my_model.predict(diabetes_X_test)
+
+# Plot outputs
+plt.scatter(diabetes_X_test, diabetes_y_test,  color='black')
+plt.plot(diabetes_X_test, diabetes_y_pred, color='blue', linewidth=3)
+
+plt.xticks(())
+plt.yticks(())
+
+plt.show()
+```
+
+You should see the following output.
+
+![Linear Regression Plot Output](../../.gitbook/assets/unknownd.png)
+
+You can also push this plot onto dstack and create a dashboard with the model, plot as well as the dataset! Read the tutorial on the [plotting libraries](../plotting-libraries/matplotlib.md) to try this out,
 

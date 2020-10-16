@@ -21,7 +21,7 @@
   * [Plotly](tutorials/plotting-libraries/plotly.md)
   * [Bokeh](tutorials/plotting-libraries/bokeh.md)
 * [Machine Learning Models](tutorials/machine-learning-models/README.md)
-  * [scikit-learn](tutorials/machine-learning-models/scikit-learn.md)
+  * [Scikit-learn](tutorials/machine-learning-models/scikit-learn.md)
   * [PyTorch](tutorials/machine-learning-models/pytorch.md)
   * [Tensorflow](tutorials/machine-learning-models/tensorflow.md)
 
