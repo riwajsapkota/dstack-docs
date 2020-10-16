@@ -4,7 +4,7 @@
 You can find the complete open source R implementation of dstack here -[https://github.com/dstackai/dstack-r](https://github.com/dstackai/dstack-r)
 {% endhint %}
 
-## Pushing Frames
+## Push Frame
 
 Creates a Frame, Commits and Pushes the Data in a Single Operation.
 
@@ -27,7 +27,21 @@ push_frame(
 
 **`stack`** - A name of stack to use.
 
+**`obj`**: Object/data to be commited and pushed, e.g. plot, DataFrame, etc.
+
+**`description`** - Description of the data.
+
 **`params`** - Parameters associated with this data, e.g. plot settings.
+
+**`message`**- Push message.
+
+**`profile`** - A profile refers to credentials, i.e. username and token. Default profile is named 'default'.
+
+**`handler`** - Specify handler to handle the object, if it's `None` then `auto_handler` will be used.
+
+**`protocol`** - Protocol to use, usually it is `NULL` it means that `json_protocol` will be used.
+
+**`encryption`** - Encryption method. By default `no_encryption` will be used.
 {% endtab %}
 
 {% tab title="Example" %}
@@ -64,10 +78,14 @@ create_frame(
 
 **`profile`** - A profile refers to credentials, i.e. username and token. Default profile is named 'default'. The system is looking for specified profile as follows: it looks into working directory to find a configuration file \(local configuration\), if the file doesn't exist it looks into user directory to find it \(global configuration\). The best way to manage profiles is to have dstack [CLI tools installed.](../open-source/installation.md)
 
- 
+ **`encryption`**
+
+**\`\`**
 {% endtab %}
 
 {% tab title="Example" %}
+This example publishes an interactive line plot that depends on the value of the parameter `Coefficient`\(slope\).
+
 ```r
 library(ggplot2)
 library(dstack)
@@ -122,7 +140,7 @@ commit(
 
 **`handler`** - A handler which can be specified in the case of custom content, but by default it is
 
-**`...`** - Optional parameters is an alternative to `params`. If both are present this one will be merged into params
+**`...`** - Optional parameters is an alternative to `params`. If both are present this one will be merged into params.
 {% endtab %}
 
 {% tab title="Example" %}

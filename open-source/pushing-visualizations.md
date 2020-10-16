@@ -2,9 +2,9 @@
 
 ### What are Stacks?
 
-Stacks form the fundamental building block of dstack.ai. You can create stacks of visualisations, datasets and models in dstack to easily share and re-use them and also create dashboards with them.
+Stacks form the fundamental building block of dstack.ai. You can create stacks of **datasets, visualizations**, and **models** in dstack to easily share and re-use them and also create [Dashboards](dashboards.md) with them.
 
-The `dstack` tool lets you upload **datasets**, **models** and **visualizations**, and arrange them into reports and interactive dashboards. You can read more detaled tutorials and examples about how to do this in the [Tutorials](../tutorials/dashboards-tutorial.md) Section.
+The `dstack` tool lets you upload datasets, models and visualizations, and arrange them into reports and interactive dashboards. You can read more detaled tutorials and examples about how to do this in the [Tutorials](../tutorials/dashboards-tutorial.md) Section.
 
 {% hint style="info" %}
 Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python R scripts, and applications. Learn how to [install and configure](installation.md) `dstack`.
