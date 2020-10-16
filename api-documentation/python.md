@@ -10,14 +10,18 @@ description: >-
 You can find the complete open source python implementation here -[https://github.com/dstackai/dstack-py](https://github.com/dstackai/dstack-py)
 {% endhint %}
 
-## Pushing Frames 
+## Push Frame
 
-The `push_frame()` function create a frame in the stack, commits and pushes the data in a single operation. 
+The `push()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to use interactive plots, you can use the `create_frame()`, `commit()`, and then `push()`
+
+{% hint style="info" %}
+`push_frame()` method is now deprecated and is replaced by `push()` 
+{% endhint %}
 
 You can push **datasets**, **models** and **plots** and specify other optional parameters.
 
 ```python
-push_frame(stack: str, 
+push(stack: str, 
            obj,
            description: Union[str, NoneType] = None,
            access: Union[str, NoneType] = None,
@@ -77,6 +81,86 @@ pull(stack: str,
 **ServerException**: If server returns something except HTTP 200, e.g. in the case of authorization failure.
 
 **ConfigurationException**: If something goes wrong with configuration process, config file does not exist an so on.
+{% endtab %}
+{% endtabs %}
+
+## Frame \(previously Create Frame\)
+
+This can be used for interactive plots. Creates a new stack frame. The method also checks access to specified stack. It returns a new stack frame. It returns a `StackFrame` object which contains the `commit()` and `push()` methods as discussed later which can be used to add to the created frame and push the frame finally to the stack.
+
+{% hint style="info" %}
+ `create_frame()`method has now been deprecated and been replaced by the `frame()` method.
+{% endhint %}
+
+```python
+create_frame(stack: str,
+      profile: str = "default",
+      access: Optional[str] = None,
+      auto_push: bool = False,
+      check_access: bool = True) -> StackFrame
+```
+
+{% tabs %}
+{% tab title="Parameters" %}
+**`stack`**: A stack you want to commit and push to.
+
+**`profile`**: Profile you want to use, i.e. username and token. Default profile is 'default'.
+
+**`access`**: Specify access level for this stack. It can be **private** - This means the stack will be visible only for the author. **public** - The stack will be accessible for everyone. **None** - Default access level will be used, one can find it in own settings on dstack server. If it is not specified default access level will be used.
+
+**`auto_push`**: Tells the system to push frame just after the commit. It may be useful if you want to see result immediately. Default is False.
+
+**`check_access`**: Check access to be sure about credentials before trying to actually push something. Default is `True`.
+{% endtab %}
+
+{% tab title="Exception Raises" %}
+**ServerException**: If server returns something except HTTP 200, e.g. in the case of authorization failure.
+
+**ConfigurationException**: If something goes wrong with configuration process, config file does not exist an so on.
+{% endtab %}
+{% endtabs %}
+
+## Add \(previously Commit\)
+
+The `add()` method is part of the `StackFrame` object which is returned by the `frame()`method, and as the name suggests, it adds the object to the `StackFrame`.
+
+{% hint style="info" %}
+ `commit()` has now been deprecated to be replaced by `add()`
+{% endhint %}
+
+```python
+add(self,
+    obj: Any,
+    description: Optional[str] = None,
+    params: Optional[Dict] = None,
+    encoder: Optional[Encoder[Any]] = None,
+    **kwargs)
+```
+
+{% tabs %}
+{% tab title="Parameters" %}
+**`obj`**: A data to commit. Data will be preprocessed by the handler but dependently on `auto_push` mode will be sent to server or not. If `auto_push` is False then the data won't be sent. Explicit push call need anyway to process committed data. auto\_push is useful only in the case of multiple data objects in the stack frame, _e.g. set of plots with settings._
+
+**`profile`**: Profile you want to use, i.e. username and token. Default profile is 'default'.
+
+**`params`**: Parameters associated with this data, e.g. plot settings.
+{% endtab %}
+{% endtabs %}
+
+## Push
+
+Push all data to server. In the case of `auto_push` mode it sends only a total number of elements in the frame. So call this method is obligatory to close frame anyway.
+
+```python
+push(self, 
+     meta: Optional[FrameMeta] = None) -> PushResult
+```
+
+
+
+{% tabs %}
+{% tab title="Parameters" %}
+**`meta`**: Push message to associate some parameters with this revision, e.g. text message.
 {% endtab %}
 {% endtabs %}
 
