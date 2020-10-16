@@ -6,7 +6,7 @@ description: >-
 
 # R
 
-{% hint style="info" %}
+{% hint style="success" %}
 You can find the complete open source R implementation of dstack here -[https://github.com/dstackai/dstack-r](https://github.com/dstackai/dstack-r)
 {% endhint %}
 

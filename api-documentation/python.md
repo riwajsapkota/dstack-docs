@@ -6,7 +6,7 @@ description: >-
 
 # Python
 
-{% hint style="info" %}
+{% hint style="success" %}
 You can find the complete open source python implementation here -[https://github.com/dstackai/dstack-py](https://github.com/dstackai/dstack-py)
 {% endhint %}
 
