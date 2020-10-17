@@ -93,7 +93,7 @@ This can be used for interactive plots. Creates a new stack frame. The method al
 {% endhint %}
 
 ```python
-create_frame(stack: str,
+frame(stack: str,
       profile: str = "default",
       access: Optional[str] = None,
       auto_push: bool = False,
