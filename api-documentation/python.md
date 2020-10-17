@@ -122,7 +122,7 @@ frame(stack: str,
 
 ## Add \(previously Commit\)
 
-The `add()` method is part of the `StackFrame` object which is returned by the `frame()`method, and as the name suggests, it adds the object to the `StackFrame`.
+The `add()` method is part of the `StackFrame` object which is returned by the `frame()`method and as the name suggests, it adds the object \(some data\) to the `StackFrame`.
 
 {% hint style="warning" %}
  `commit()` has now been deprecated to be replaced by `add()`
