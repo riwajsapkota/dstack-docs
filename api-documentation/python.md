@@ -14,7 +14,7 @@ You can find the complete open source python implementation here -[https://githu
 
 The `push()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to use interactive plots, you can use the `create_frame()`, `commit()`, and then `push()`
 
-{% hint style="info" %}
+{% hint style="warning" %}
 `push_frame()` method is now deprecated and is replaced by `push()` 
 {% endhint %}
 
@@ -88,7 +88,7 @@ pull(stack: str,
 
 This can be used for interactive plots. Creates a new stack frame. The method also checks access to specified stack. It returns a new stack frame. It returns a `StackFrame` object which contains the `commit()` and `push()` methods as discussed later which can be used to add to the created frame and push the frame finally to the stack.
 
-{% hint style="info" %}
+{% hint style="warning" %}
  `create_frame()`method has now been deprecated and been replaced by the `frame()` method.
 {% endhint %}
 
@@ -124,7 +124,7 @@ create_frame(stack: str,
 
 The `add()` method is part of the `StackFrame` object which is returned by the `frame()`method, and as the name suggests, it adds the object to the `StackFrame`.
 
-{% hint style="info" %}
+{% hint style="warning" %}
  `commit()` has now been deprecated to be replaced by `add()`
 {% endhint %}
 
