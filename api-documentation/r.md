@@ -6,6 +6,8 @@ description: >-
 
 # R
 
+Please make sure you have followed the [Installation procedure](../open-source/installation.md) before referring to the API.
+
 {% hint style="success" %}
 You can find the complete open source R implementation of dstack here -[https://github.com/dstackai/dstack-r](https://github.com/dstackai/dstack-r)
 {% endhint %}

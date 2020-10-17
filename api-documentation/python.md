@@ -10,7 +10,7 @@ Please make sure you have followed the [Installation procedure](../open-source/i
 You can find the complete open source python implementation here -[https://github.com/dstackai/dstack-py](https://github.com/dstackai/dstack-py)
 {% endhint %}
 
-## Push Frame
+## Push
 
 The `push()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to use interactive plots, you can use the `create_frame()`, `commit()`, and then `push()`
 
@@ -56,7 +56,7 @@ push(stack: str,
 {% endtab %}
 {% endtabs %}
 
-## Pulling Frames
+## Pull
 
 The `pull()` function create a frame in the stack, commits and pushes the data in a single operation.
 
@@ -123,6 +123,8 @@ frame(stack: str,
 ## Add \(previously Commit\)
 
 The `add()` method is part of the `StackFrame` object which is returned by the `frame()`method and as the name suggests, it adds the object \(some data\) to the `StackFrame`.
+
+The parameters associated with the data also allow you to create interactive plots when you use the `add()` method.
 
 {% hint style="warning" %}
  `commit()` has now been deprecated to be replaced by `add()`
