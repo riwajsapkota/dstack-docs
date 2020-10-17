@@ -1,10 +1,10 @@
 ---
-description: >-
-  This is the API Reference for using dstack in Python. Please make sure you
-  have followed the Installation procedure before referring to this.
+description: This is the API Reference for using dstack in Python.
 ---
 
 # Python
+
+Please make sure you have followed the [Installation procedure](../open-source/installation.md) before referring to the API.
 
 {% hint style="success" %}
 You can find the complete open source python implementation here -[https://github.com/dstackai/dstack-py](https://github.com/dstackai/dstack-py)
