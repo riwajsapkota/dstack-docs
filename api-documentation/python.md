@@ -95,7 +95,7 @@ This can be used for interactive plots. Creates a new stack frame. The method al
 {% endhint %}
 
 ```python
-frame(stack: str,
+create_frame(stack: str,
       profile: str = "default",
       access: Optional[str] = None,
       auto_push: bool = False,
@@ -124,16 +124,16 @@ frame(stack: str,
 
 ## Add \(previously Commit\)
 
-The `add()` method is part of the `StackFrame` object which is returned by the `frame()`method and as the name suggests, it adds the object \(some data\) to the `StackFrame`.
+The `commit()` method is part of the `StackFrame` object which is returned by the `frame()`method and as the name suggests, it adds the object \(some data\) to the `StackFrame`.
 
-The parameters associated with the data also allow you to create interactive plots when you use the `add()` method.
+The parameters associated with the data also allow you to create interactive plots when you use the `commit()` method.
 
 {% hint style="warning" %}
- `commit()` has now been deprecated to be replaced by `add()`
+ `commit()` has now been deprecated. Use `add()`instead, which is functionally equivalent.
 {% endhint %}
 
 ```python
-add(self,
+commit(self,
     obj: Any,
     description: Optional[str] = None,
     params: Optional[Dict] = None,
