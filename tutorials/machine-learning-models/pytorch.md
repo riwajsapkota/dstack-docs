@@ -2,7 +2,7 @@
 
 Let's consider an example in Pytorch where we define our own new Model with a class.
 
-### 1. Creating the Model
+### 1. Defining and Training the Model
 
 ```python
 import torch
