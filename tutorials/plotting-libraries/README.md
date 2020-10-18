@@ -4,5 +4,5 @@ description: >-
   Matplotlib, Seaborn, Plotly, Bokeh.
 ---
 
-# Plotting Libraries
+# Using Visualisations
 
