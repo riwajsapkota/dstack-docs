@@ -30,6 +30,7 @@
 
 * [Python](api-documentation/python.md)
 * [R](api-documentation/r.md)
+* [CLI](api-documentation/cli.md)
 
 ## dstack.ai Cloud <a id="in-cloud"></a>
 

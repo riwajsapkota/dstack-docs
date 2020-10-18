@@ -74,6 +74,8 @@ pull(stack: str,
 
 **`profile`**: Profile you want to use, i.e. username and token. Default profile is 'default'.
 
+**`params`**: Optional parameters.
+
 **`decoder`**: Specify a handler for decoder.
 {% endtab %}
 
