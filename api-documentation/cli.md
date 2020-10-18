@@ -4,6 +4,12 @@ description: This is the API Reference for using the dstack Command Line Tool.
 
 # CLI
 
+Please make sure you have followed the [Installation procedure](../open-source/installation.md) before referring to the API.
+
+{% hint style="success" %}
+You can find the complete open source implementation of the dstack CLI here -[https://github.com/dstackai/dstack-py/tree/master/dstack/cli](https://github.com/dstackai/dstack-py/tree/master/dstack/cli)
+{% endhint %}
+
 The dstack CLI has 2 optional arguments - 
 
 `dstack --help`- Show help message and exit
