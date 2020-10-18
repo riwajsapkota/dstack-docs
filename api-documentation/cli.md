@@ -20,13 +20,55 @@ The positional arguments of the CLI are **Server** and **Config** as elaborated 
 
 ## Server
 
+You can use `-h, --help` to show the help message and exit for all pameters.
+
 To manage your dstack server.
 
-`dstack server start`  - Start server 
+### start
 
-`dstack server version` - Prints server version
+```bash
+dstack server start # Start a server
+```
 
-`dstack server update` - Update server
+{% tabs %}
+{% tab title="Optional Parameters" %}
+`--port [PORT]` -  use specific port
+
+```bash
+dstack server start --port
+```
+
+`--home [HOME]` - store server data in the specified directory
+
+```text
+dstack server start --home [HOME]
+```
+
+`--skip` - skip checking for updates
+
+```text
+dstack server start --skip
+```
+
+`--no-verify`  - do not verify SSL certificates
+
+```text
+dstack server start --no-verify
+```
+{% endtab %}
+{% endtabs %}
+
+### version
+
+```bash
+dstack server version # Prints server version
+```
+
+### update
+
+```bash
+dstack server update # Update server version
+```
 
 ## Config
 

@@ -45,7 +45,7 @@ diabetes_y_test = diabetes_y[-20:]
 
 #### 3. Fitting the Model
 
-Finally we fit the model with the `LinearRegression()` object in scikit-learn and push the frame using dstack's `push_frame()`
+Finally we fit the model with the `LinearRegression()` object in scikit-learn 
 
 ```python
 # Create linear regression object
@@ -57,7 +57,7 @@ regr.fit(diabetes_X_train, diabetes_y_train)
 
 #### 4. Pushing to dstack 
 
-Now that our model is fit and ready, we push it to dstack as a stack using the `push_frame`
+Now that our model is fit and ready, we push it to dstack as a stack using the `push_frame()`method
 
 ```python
 # Push the frame
@@ -98,47 +98,6 @@ You should see the following output.
 ![Linear Regression Plot Output](../../.gitbook/assets/unknownd.png)
 
 You can also push this plot onto dstack and create a dashboard with the model, plot as well as the dataset! Read the tutorial on the [plotting libraries](../plotting-libraries/matplotlib.md) to try this out.
-
-## Defining Your Own Model and Specifying a Decoder
-
-Let's consider another common example where we define our own new Model with a class.
-
-```python
-import torch
-from dstack import push_frame
-from dstack.torch.handlers import TorchModelEncoder
-
-# define a new model
-class LinearRegression(torch.nn.Module):
-    def __init__(self, input_size, output_size):
-        super(LinearRegression, self).__init__()
-        self.linear = torch.nn.Linear(input_size, output_size)
-
-    def forward(self, x):
-        out = self.linear(x)
-        return out
-
-model = LinearRegression(1, 1)
-
-# here you are training the model
-for epoch in range(100):
-    ...
-
-# to avoid compatibility issues we will store only model weights   
-TorchModelEncoder.STORE_WHOLE_MODEL = False
-
-# and finally push the model
-push_frame("my_torch_model", model, "My first PyTorch model")        
-```
-
-We stored only model weights, so to pull it we should provide model class to decoder, because `pull` method is not smart enough to guess which particular class to use. The following example shows a common pattern how to use pull in this case:
-
-```python
-from dstack.torch.handlers import TorchModelWeightsDecoder
-from dstack import pull
-
-my_model = pull("my_torch_model", decoder=TorchModelWeightsDecoder(LinearRegression(1, 1)))
-```
 
 ## Common Problems and Debugging
 
