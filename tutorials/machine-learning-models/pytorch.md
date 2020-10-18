@@ -1,3 +1,9 @@
+---
+description: >-
+  Defining a Linear Regression model and pulling with a dstack Decoder
+  parameter.
+---
+
 # PyTorch
 
 Let's consider an example in Pytorch where we define our own new Model with a class.
