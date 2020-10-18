@@ -43,9 +43,8 @@
 
 ## dstack.ai on-premises
 
-* [Running in Docker](dstack.ai-on-premises/docker.md)
-
 ---
 
+* [Running in Docker](docker.md)
 * [DockerHub](https://hub.docker.com/r/dstackai/dstack)
 

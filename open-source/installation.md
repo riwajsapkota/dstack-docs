@@ -39,6 +39,14 @@ If you're using R and don't need the command-line tool, you can install the clie
 install.packages("dstack")
 ```
 
+#### Quick Start
+
+Once you are done installing the Client Packages, the easiest way to start using dstack would be to Register for dstack.ai cloud and follow the configuration instructions here -
+
+{% page-ref page="../in-cloud/installation.md" %}
+
+Otherwise you can run a server locally as specified below.
+
 ## Run a server
 
 {% hint style="info" %}
