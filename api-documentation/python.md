@@ -76,7 +76,7 @@ pull(stack: str,
 
 **`params`**: Optional parameters.
 
-**`decoder`**: Specify a handler for decoder.
+**`decoder`**: Specify a handler for decoder. See the [PyTorch Tutorial](../tutorials/machine-learning-models/pytorch.md#3-pulling-the-model-with-a-decoder-parameter) for an example.
 {% endtab %}
 
 {% tab title="Exception Raises" %}
