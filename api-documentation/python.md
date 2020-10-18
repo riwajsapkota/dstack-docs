@@ -50,9 +50,9 @@ push(stack: str,
 {% endtab %}
 
 {% tab title="Raises" %}
-**ServerException**: If server returns something except HTTP 200, e.g. in the case of authorization failure.
+`ServerException`: If server returns something except HTTP 200, e.g. in the case of authorization failure.
 
-**ConfigurationException**: If something goes wrong with configuration process, config file does not exist an so on.
+`ConfigurationException`: If something goes wrong with configuration process, config file does not exist an so on.
 {% endtab %}
 {% endtabs %}
 
@@ -79,10 +79,10 @@ pull(stack: str,
 **`decoder`**: Specify a handler for decoder. See the [PyTorch Tutorial](../tutorials/machine-learning-models/pytorch.md#3-pulling-the-model-with-a-decoder-parameter) for an example.
 {% endtab %}
 
-{% tab title="Exception Raises" %}
-**ServerException**: If server returns something except HTTP 200, e.g. in the case of authorization failure.
+{% tab title="Exceptions Raised" %}
+`ServerException`: If server returns something except HTTP 200, e.g. in the case of authorization failure.
 
-**ConfigurationException**: If something goes wrong with configuration process, config file does not exist an so on.
+`ConfigurationException`: If something goes wrong with configuration process, config file does not exist an so on.
 {% endtab %}
 {% endtabs %}
 
@@ -115,10 +115,10 @@ frame(stack: str,
 **`check_access`**: Check access to be sure about credentials before trying to actually push something. Default is `True`.
 {% endtab %}
 
-{% tab title="Exception Raises" %}
-**ServerException**: If server returns something except HTTP 200, e.g. in the case of authorization failure.
+{% tab title="Exceptions Raised" %}
+`ServerException`: If server returns something except HTTP 200, e.g. in the case of authorization failure.
 
-**ConfigurationException**: If something goes wrong with configuration process, config file does not exist an so on.
+`ConfigurationException`: If something goes wrong with configuration process, config file does not exist an so on.
 {% endtab %}
 {% endtabs %}
 
