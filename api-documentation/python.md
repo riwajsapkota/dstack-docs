@@ -12,7 +12,7 @@ You can find the complete open source python implementation here -[https://githu
 
 ## Push
 
-The `push()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to use interactive plots, you can use the `create_frame()`, `commit()`, and then `push()`
+The `push_frame()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to use interactive plots, you can use the `create_frame()`, `commit()`, and then `push()`
 
 {% hint style="warning" %}
 `push_frame()` method is now deprecated and is replaced by `push()` 
@@ -21,7 +21,7 @@ The `push()` method **creates** **a frame** in the stack, **commits** and **push
 You can push **datasets**, **models** and **plots** and specify other optional parameters.
 
 ```python
-push(stack: str, 
+push_frame(stack: str, 
            obj,
            description: Union[str, NoneType] = None,
            access: Union[str, NoneType] = None,
@@ -34,7 +34,7 @@ push(stack: str,
 
 {% tabs %}
 {% tab title="Parameters" %}
-**`stack`**: A stack you want to commit and push to.
+**`stack`**: A stack you want to commit and push to. Stack name can contain only latin letters, digits, slash and underscore
 
 **`obj`**: Object to commit and push, e.g. plot, DataFrame, etc.
 
@@ -106,7 +106,7 @@ create_frame(stack: str,
 
 {% tabs %}
 {% tab title="Parameters" %}
-**`stack`**: A stack you want to commit and push to.
+**`stack`**: A stack you want to commit and push to. Stack name can contain only latin letters, digits, slash and underscore
 
 **`profile`**: Profile you want to use, i.e. username and token. Default profile is 'default'.
 
@@ -118,15 +118,19 @@ create_frame(stack: str,
 {% endtab %}
 
 {% tab title="Exceptions Raised" %}
-`ServerException`: If server returns something except HTTP 200, e.g. in the case of authorization failure.
+**`ValueError`**: Stack name can contain only latin letters, digits, slash and underscore
 
-`ConfigurationException`: If something goes wrong with configuration process, config file does not exist an so on.
+**`ServerException`**: If server returns something except HTTP 200, e.g. in the case of authorization failure.
+
+**`ConfigurationException`**: If something goes wrong with configuration process, config file does not exist an so on.
 {% endtab %}
 {% endtabs %}
 
+
+
 ## Commit \(now Add\)
 
-The `commit()` method is part of the `StackFrame` object which is returned by the `frame()`method and as the name suggests, it adds the object \(some data\) to the `StackFrame`.
+The `commit()` method is part of the `StackFrame`object which is returned by the `create_frame()`method and as the name suggests, it adds the object \(some data\) to the `StackFrame`.
 
 The parameters associated with the data also allow you to create interactive plots when you use the `commit()` method.
 
