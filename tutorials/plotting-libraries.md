@@ -4,11 +4,13 @@ description: >-
   Matplotlib, Seaborn, Plotly, Bokeh.
 ---
 
-# Using Visualisations with dstack.ai
+# Using Visualisations
 
 ## Matplotlib
 
 Once the **dstack profile** is configured, you can publish plots from your Python program or Jupyter notebook. Let's consider the simpliest example, line plot using [matplotlib](https://matplotlib.org/) library, but you can use [bokeh](https://docs.bokeh.org/en/latest/index.html) and [plotly](https://plot.ly/) plots instead of matplotlib in the same way:
+
+#### Simple Plot
 
 ```python
 import matplotlib.pyplot as plt
@@ -20,28 +22,59 @@ plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
 push_frame("simple", fig, "My first plot")
 ```
 
-## Plotly
-
-dstack allows you to push `plotly.graph_objs._figure.Figure`
-
-## Seaborn
+#### Interactive Plot
 
 ```python
-import seaborn as sns
-sns.set_theme(style="darkgrid")
+import matplotlib.pyplot as plt
+from dstack import create_frame
 
-# Load an example dataset with long-form data
-fmri = sns.load_dataset("fmri")
+def line_plot(a):
+    xs = range(0, 21)
+    ys = [a * x for x in xs]
+    fig = plt.figure()
+    plt.axis([0, 20, 0, 20])
+    plt.plot(xs, ys)
+    return fig
 
-# Plot the responses for different events and regions
-sns.lineplot(x="timepoint", y="signal",
-             hue="region", style="event",
-             data=fmri)
+
+frame = create_frame("line_plot")
+coeff = [0.5, 1.0, 1.5, 2.0]
+
+for c in coeff:
+    frame.commit(line_plot(c), f"Line plot with the coefficient of {c}", Coefficient=c)
+
+frame.push("Adding message to my push for interactive plot")
+```
+
+## Plotly
+
+The object type `plotly.graph_objs._figure.Figure` for Plotly plots is support by dstack.
+
+```python
+import plotly.express as px
+from dstack import push_frame
+
+
+df = px.data.gapminder().query("country=='Canada'")
+fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
+
+push_frame("plotly_plot", fig, "My plotly plot")
 ```
 
 ## Bokeh
 
 dstack allows you to push `bokeh.plotting.figure.Figure`
+
+```python
+import plotly.express as px
+from dstack import push_frame
+
+
+df = px.data.gapminder().query("country=='Canada'")
+fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
+
+push_frame("plotly_plot", fig, "My plotly plot")
+```
 
 ## ggplot2 in R
 

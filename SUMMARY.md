@@ -14,9 +14,9 @@
 ## Tutorials and Guides <a id="tutorials"></a>
 
 * [Building Interactive Dashboards](tutorials/dashboards-tutorial.md)
-* [Using Datasets with dstack.ai](tutorials/datasets.md)
-* [Using Visualisations with dstack.ai](tutorials/plotting-libraries.md)
-* [Using Machine Learning Models with dstack.ai](tutorials/machine-learning-models/README.md)
+* [Using Datasets](tutorials/datasets.md)
+* [Using Visualisations](tutorials/plotting-libraries.md)
+* [Using Machine Learning Models](tutorials/machine-learning-models/README.md)
   * [Scikit-learn](tutorials/machine-learning-models/scikit-learn.md)
   * [PyTorch](tutorials/machine-learning-models/pytorch.md)
   * [Tensorflow](tutorials/machine-learning-models/tensorflow.md)

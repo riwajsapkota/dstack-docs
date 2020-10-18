@@ -38,13 +38,15 @@ push(stack: str,
 
 **`obj`**: Object to commit and push, e.g. plot, DataFrame, etc.
 
-**`description`**: Optional description of the object.ept HTTP 200, e.g. in the case of authorization         access: Access level for the stack. It may be public, private or None. It is None by default, so it will be default access level in user's settings.
+**`description`**: Optional description of the object.ept HTTP 200, e.g. in the case of authorization         
+
+**`access`**: Access level for the stack. It may be public, private or None. It is None by default, so it will be default access level in user's settings.
 
 **`message`**: Push message to describe what's new in this revision.
 
 **`params`**: Optional parameters.
 
-**`encoder`**: Specify a handler to handle the object, by default \`AutoHandler\` will be used.
+**`encoder`**: Specify a handler to handle the object, by default `AutoHandler` will be used.
 
 **`profile`**: Profile you want to use, i.e. username and token. Default profile is 'default'
 {% endtab %}
@@ -86,7 +88,7 @@ pull(stack: str,
 {% endtab %}
 {% endtabs %}
 
-## Frame \(previously Create Frame\)
+## Create Frame \(now Frame\)
 
 This can be used for interactive plots. Creates a new stack frame. The method also checks access to specified stack. It returns a new stack frame. It returns a `StackFrame` object which contains the `commit()` and `push()` methods as discussed later which can be used to add to the created frame and push the frame finally to the stack.
 
@@ -122,7 +124,7 @@ create_frame(stack: str,
 {% endtab %}
 {% endtabs %}
 
-## Add \(previously Commit\)
+## Commit \(now Add\)
 
 The `commit()` method is part of the `StackFrame` object which is returned by the `frame()`method and as the name suggests, it adds the object \(some data\) to the `StackFrame`.
 
@@ -145,9 +147,13 @@ commit(self,
 {% tab title="Parameters" %}
 **`obj`**: A data to commit. Data will be preprocessed by the handler but dependently on `auto_push` mode will be sent to server or not. If `auto_push` is False then the data won't be sent. Explicit push call need anyway to process committed data. auto\_push is useful only in the case of multiple data objects in the stack frame, _e.g. set of plots with settings._
 
+**`description`**: Optional description of the object.ept HTTP 200, e.g. in the case of authorization       
+
 **`profile`**: Profile you want to use, i.e. username and token. Default profile is 'default'.
 
 **`params`**: Parameters associated with this data, e.g. plot settings.
+
+**`encoder`**: Specify a handler to handle the object, by default \`AutoHandler\` will be used.
 {% endtab %}
 {% endtabs %}
 

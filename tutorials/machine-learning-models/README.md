@@ -4,5 +4,5 @@ description: >-
   Tensorflow, PyTorch, or Scikit-Learn.
 ---
 
-# Using Machine Learning Models with dstack.ai
+# Using Machine Learning Models
 

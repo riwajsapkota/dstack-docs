@@ -1,4 +1,4 @@
-# Using Datasets with dstack.ai
+# Using Datasets
 
 Effective collaboration on datasets is the key ingredient of any data science project. dstack.ai offers APIs and services to upload datasets, track their revisions and to share these datasets securely within teams \(or publicly if needed\).
 
