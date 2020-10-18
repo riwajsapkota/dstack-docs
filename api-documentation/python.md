@@ -151,18 +151,3 @@ add(self,
 {% endtab %}
 {% endtabs %}
 
-## Push
-
-Push all data to server. In the case of `auto_push` mode it sends only a total number of elements in the frame. So call this method is obligatory to close frame anyway.
-
-```python
-push(self, 
-     meta: Optional[FrameMeta] = None) -> PushResult
-```
-
-{% tabs %}
-{% tab title="Parameters" %}
-**`meta`**: Push message to associate some parameters with this revision, e.g. text message.
-{% endtab %}
-{% endtabs %}
-
