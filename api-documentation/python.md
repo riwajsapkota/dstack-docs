@@ -10,7 +10,7 @@ Please make sure you have followed the [Installation procedure](../open-source/i
 You can find the complete open source python implementation here -[https://github.com/dstackai/dstack-py](https://github.com/dstackai/dstack-py)
 {% endhint %}
 
-## Push
+## Push Frame
 
 The `push_frame()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to use interactive plots, you can use the `create_frame()`, `commit()`, and then `push()`
 
