@@ -41,7 +41,7 @@ install.packages("dstack")
 
 #### Quick Start
 
-Once you are done installing the Client Packages, the easiest way to start using dstack would be to Register for [dstack.ai cloud](https://dstack.ai/auth/signup) and follow the configuration instructions here -
+Once you are done installing the Client Packages, the easiest way to start using dstack would be to Register for [dstack.ai cloud](https://dstack.ai/auth/signup) and [follow the configuration instructions here](../in-cloud/installation.md#configuring-dstack-ai-profile) -
 
 {% page-ref page="../in-cloud/installation.md" %}
 
