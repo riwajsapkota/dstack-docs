@@ -26,59 +26,140 @@ To manage your dstack server.
 
 ### start
 
+Start a server
+
 ```bash
-dstack server start # Start a server
+dstack server start [-h] [--port [PORT]] [--home [HOME]] [--skip]
+                           [--no-verify]
 ```
 
 {% tabs %}
 {% tab title="Optional Parameters" %}
 `--port [PORT]` -  use specific port
 
-```bash
-dstack server start --port
-```
-
 `--home [HOME]` - store server data in the specified directory
-
-```text
-dstack server start --home [HOME]
-```
 
 `--skip` - skip checking for updates
 
-```text
-dstack server start --skip
-```
-
 `--no-verify`  - do not verify SSL certificates
-
-```text
-dstack server start --no-verify
-```
 {% endtab %}
 {% endtabs %}
 
 ### version
 
+Prints server version
+
 ```bash
-dstack server version # Prints server version
+dstack server version 
 ```
 
 ### update
 
+Update server version
+
 ```bash
-dstack server update # Update server version
+dstack server update 
 ```
 
 ## Config
 
+You can use `-h, --help` to show the help message and exit for all pameters.
+
 To manage your configuration.
 
-`dstack config add`- Create a new user profile
+### add
 
-`dstack config modify`- Modify an existing user profile
+To add a user profile
 
-`dstack config remove`- Remove existing user profile
+```bash
+dstack config add [-h] [--token [TOKEN]] [--server [SERVER]]
+                         [--user [USER]] [--no-verify] [--force] [--file FILE]
+                         [PROFILE]
+```
 
-`dstack config list`- List all configured user profiles
+{% tabs %}
+{% tab title="Optional Parameters" %}
+`-h, --help`  - show this help message and exit
+
+`--token [TOKEN]`- set token for selected profile
+
+`--server [SERVER]` - set server to handle api requests
+
+`--user [USER]`- set user name
+
+`--no-verify`- do not verify SSL certificates
+
+`--force` - don't ask for confirmation
+
+`--file FILE` - use specific config file
+{% endtab %}
+
+{% tab title="Positional Parameters" %}
+`[PROFILE]`- Profile name, 'default' if missing
+{% endtab %}
+{% endtabs %}
+
+### Modify
+
+```bash
+dstack config add [-h] [--token [TOKEN]] [--server [SERVER]]
+                         [--user [USER]] [--no-verify] [--force] [--file FILE]
+                         [PROFILE]
+```
+
+{% tabs %}
+{% tab title="Optional Parameters" %}
+`-h, --help`  - show this help message and exit
+
+`--token [TOKEN]`- set token for selected profile
+
+`--server [SERVER]` - set server to handle api requests
+
+`--user [USER]`- set user name
+
+`--no-verify`- do not verify SSL certificates
+
+`--force` - don't ask for confirmation
+
+`--file FILE` - use specific config file
+{% endtab %}
+
+{% tab title="Positional Parameters" %}
+`[PROFILE]`- Profile name, 'default' if missing
+{% endtab %}
+{% endtabs %}
+
+### Remove
+
+Remove existing user profile
+
+```bash
+dstack config remove [-h] [--force] [--file FILE] [PROFILE]
+```
+
+{% tabs %}
+{% tab title="Optional Parameters" %}
+`-h, --help`  - show this help message and exit
+
+`--force` - don't ask for confirmation
+
+`--file FILE` - use specific config file
+{% endtab %}
+{% endtabs %}
+
+### List
+
+List all configured user profiles
+
+```bash
+dstack config remove [-h] [--force] [--file FILE] [PROFILE]
+```
+
+{% tabs %}
+{% tab title="Optional Parameters" %}
+`-h, --help`  - show this help message and exit
+
+`--file FILE` - use specific config file
+{% endtab %}
+{% endtabs %}
 
