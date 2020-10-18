@@ -6,7 +6,7 @@ description: >-
 
 # Scikit-learn
 
-We will use the **sklearn.datasets** package to use the diabetes dataset to make and deploy a **simple Linear Regression Model in just 2 minutes!**
+We will use the `sklearn.datasets` package to use the diabetes dataset to make and deploy a simple Linear Regression Model using dstack, then pull it to make a linear regression plot using `matplotlib`
 
 #### 1. Importing Libraries and dstack
 
@@ -75,7 +75,7 @@ my_model = pull("simpleLinearReg")
 
 That's it! You have pulled your model. It's that easy. 
 
-**6. Making Predictions and Plotting**
+**6. Using the Model to Make Predictions or Plots**
 
 Now we can use the model to make predictions and use Matplotlib for plotting.
 
@@ -101,9 +101,9 @@ You can also push this plot onto dstack and create a dashboard with the model, p
 
 ## Common Problems and Debugging
 
-### AttributeError
+**`AttributeError`**
 
-This error means you probably haven't called `.fit()` method on the Linear Regression model.
+This error probably means you haven't called `.fit()` method on the Linear Regression model.
 
 ```text
 AttributeError: 'LinearRegression' object has no attribute 'coef_'
