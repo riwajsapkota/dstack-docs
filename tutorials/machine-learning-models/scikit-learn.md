@@ -97,7 +97,7 @@ You should see the following output.
 
 ![Linear Regression Plot Output](../../.gitbook/assets/unknownd.png)
 
-You can also push this plot onto dstack and create a dashboard with the model, plot as well as the dataset! Read the tutorial on the [plotting libraries](../plotting-libraries/matplotlib.md) to try this out.
+You can also push this plot onto dstack and create a dashboard with the model, plot as well as the dataset! Read the tutorial on the [plotting libraries]() to try this out.
 
 ## Common Problems and Debugging
 

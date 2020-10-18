@@ -14,14 +14,9 @@
 ## Tutorials and Guides <a id="tutorials"></a>
 
 * [Building Interactive Dashboards](tutorials/dashboards-tutorial.md)
-* [Using Datasets](tutorials/datasets.md)
-* [Using Visualisations](tutorials/plotting-libraries/README.md)
-  * [Matplotlib](tutorials/plotting-libraries/matplotlib.md)
-  * [Seaborn](tutorials/plotting-libraries/seaborn.md)
-  * [Plotly](tutorials/plotting-libraries/plotly.md)
-  * [Bokeh](tutorials/plotting-libraries/bokeh.md)
-  * [ggplot2 in R](tutorials/plotting-libraries/ggplot2-in-r.md)
-* [Using Machine Learning Models](tutorials/machine-learning-models/README.md)
+* [Using Datasets with dstack.ai](tutorials/datasets.md)
+* [Using Visualisations with dstack.ai](tutorials/plotting-libraries.md)
+* [Using Machine Learning Models with dstack.ai](tutorials/machine-learning-models/README.md)
   * [Scikit-learn](tutorials/machine-learning-models/scikit-learn.md)
   * [PyTorch](tutorials/machine-learning-models/pytorch.md)
   * [Tensorflow](tutorials/machine-learning-models/tensorflow.md)
