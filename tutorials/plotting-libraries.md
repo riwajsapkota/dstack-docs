@@ -66,14 +66,21 @@ push_frame("plotly_plot", fig, "My plotly plot")
 dstack allows you to push `bokeh.plotting.figure.Figure`
 
 ```python
-import plotly.express as px
+from bokeh.plotting import figure, output_file, show
 from dstack import push_frame
 
+# prepare some data
+x = [1, 2, 3, 4, 5]
+y = [6, 7, 2, 4, 5]
 
-df = px.data.gapminder().query("country=='Canada'")
-fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
+# create a new plot with a title and axis labels
+p = figure(title="simple line example", x_axis_label='x', y_axis_label='y')
 
-push_frame("plotly_plot", fig, "My plotly plot")
+# add a line renderer with legend and line thickness
+p.line(x, y, legend_label="Temp.", line_width=2)
+
+# show the results
+push_frame("bokeh_plot", p, "My bokeh plot")
 ```
 
 ## ggplot2 in R
