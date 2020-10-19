@@ -10,10 +10,6 @@ Here is a simple example where we build a model to classify Fashion MNIST images
 
 Note: Only version 2 of Tensorflow in supported by dstack.
 
-{% hint style="info" %}
-You can find the open source implementation of Tenorflow for dstack on [Github here](https://github.com/dstackai/dstack-py/blob/aec55ca60e72cfefc78b4e05eebbcca2bb31219c/dstack/tensorflow/handlers.py). 
-{% endhint %}
-
 ### 1. Import, building and training the model
 
 ```python
