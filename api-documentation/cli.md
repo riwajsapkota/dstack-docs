@@ -95,7 +95,7 @@ dstack config add [-h] [--token [TOKEN]] [--server [SERVER]]
 {% endtab %}
 
 {% tab title="Positional Parameters" %}
-`[PROFILE]`- Profile name, 'default' if missing
+`[PROFILE]`- Profile name, `'default'` if missing
 {% endtab %}
 {% endtabs %}
 
@@ -125,7 +125,7 @@ dstack config add [-h] [--token [TOKEN]] [--server [SERVER]]
 {% endtab %}
 
 {% tab title="Positional Parameters" %}
-`[PROFILE]`- Profile name, 'default' if missing
+`[PROFILE]`- Profile name, `'default'` if missing
 {% endtab %}
 {% endtabs %}
 
