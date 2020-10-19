@@ -45,7 +45,7 @@ Once you are done installing the Client Packages, the easiest way to start using
 
 {% page-ref page="../in-cloud/installation.md" %}
 
-Otherwise you can run a server locally as specified below.
+Otherwise you can also run a server locally as specified below.
 
 ## Run a server
 
