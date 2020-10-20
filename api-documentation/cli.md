@@ -152,7 +152,7 @@ dstack config remove [-h] [--force] [--file FILE] [PROFILE]
 List all configured user profiles
 
 ```bash
-dstack config remove [-h] [--force] [--file FILE] [PROFILE]
+dstack config list [-h] [--file FILE] 
 ```
 
 {% tabs %}
