@@ -12,7 +12,7 @@ You can find the complete open source python implementation here -[https://githu
 
 ## Push Frame
 
-The `push_frame()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to use interactive plots, you can use the `create_frame()`, `commit()`, and then `push()`
+The `push()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to use interactive plots, you can use the `frame()`, `commit()`, and then `push()`
 
 {% hint style="warning" %}
 `push_frame()` method will be deprecated in future versions replaced by `push()` 
@@ -21,7 +21,7 @@ The `push_frame()` method **creates** **a frame** in the stack, **commits** and 
 You can push **datasets**, **models** and **plots** and specify other optional parameters.
 
 ```python
-push_frame(stack: str, 
+push(stack: str, 
            obj,
            description: Union[str, NoneType] = None,
            access: Union[str, NoneType] = None,
