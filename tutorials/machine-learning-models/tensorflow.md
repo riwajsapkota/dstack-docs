@@ -86,7 +86,7 @@ push("my_fmnist_model", model, "My Fashion MNIST TF model description")
 
 ### 3. Pulling the Model
 
-To pull model you need simply call `pull`, because the model is standard, no additional information \(i.e. decoder informatiion\) required.
+To pull model you need simply call `pull`, because the model is standard, no additional information \(i.e. decoder information\) required.
 
 You can read the [API Documentation](../../api-documentation/python.md#pulling-frames) to see what parameters you can specify when pulling the model.
 
