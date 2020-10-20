@@ -13,7 +13,7 @@ description: >-
 In order to follow this tutorial, you'll only need Conda or pip, a terminal, and a browser. Going through this tutorial will take not more than 10 minutes.
 {% endhint %}
 
-### 1. Installation
+#### 1. Installation
 
 Open your Terminal and install the `dstack` package using `conda`:
 
@@ -29,7 +29,7 @@ pip install dstack
 
 Along with `dstack`'s modules for Python the package will install the command line utility named dstack.
 
-### 2. Starting server
+#### 2. Starting server
 
 If you'd like to host your dashboard the in-cloud, you'll need to [register](../in-cloud/cloud-registration.md) an account on [dstack.ai](https://dstack.ai) and use its username and token. However, if you'd like to host your dashboard locally, you'll need to launch the dstack server locally using the following command:
 

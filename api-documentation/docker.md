@@ -4,6 +4,12 @@
 You can find dstack for Docker on DockerHub here - [https://hub.docker.com/r/dstackai/dstack](https://hub.docker.com/r/dstackai/dstack)
 {% endhint %}
 
+#### Docker Pull Command
+
+```bash
+docker pull dstackai/dstack
+```
+
 The [Docker image](https://hub.docker.com/repository/docker/dstackai/dstack) can be used to host the enterprise version of dstack.ai on own servers or in own AWS/Azure/Google Cloud account.
 
 You can run dstack.ai in Docker using the following command:
