@@ -27,6 +27,7 @@
 * [Python](api-documentation/python.md)
 * [R](api-documentation/r.md)
 * [CLI](api-documentation/cli.md)
+* [Docker](api-documentation/docker.md)
 
 ## dstack.ai Cloud <a id="in-cloud"></a>
 
@@ -35,11 +36,4 @@
 * [Collaboration](in-cloud/collaboration.md)
 * [FAQ](in-cloud/faq.md)
 * [Troubleshooting](in-cloud/troubleshooting.md)
-
-## dstack.ai on-premises
-
----
-
-* [Running in Docker](docker.md)
-* [DockerHub](https://hub.docker.com/r/dstackai/dstack)
 

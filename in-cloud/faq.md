@@ -33,8 +33,6 @@ Yes. The APIs offered by dstack.ai can be used from anywhere - Jupyter notebooks
 
 Yes. The APIs offered by dstack.ai can be used from anywhere - Jupyter notebooks, RMarkdown, Python or R scripts, jobs or other applications - to publish or create data visualizations, datasets or dashboards.
 
-## How does dstack.ai compare to Dash or Shiny?
-
 ## How is dstack.ai different from Jupyter notebooks?
 
 dstack.ai is a complementary product to Jupyter notebooks. Once a data scientist has prototyped a “data science code”, dstack.ai allows for centralized management of data reports:
@@ -42,8 +40,6 @@ dstack.ai is a complementary product to Jupyter notebooks. Once a data scientist
 * Publish reports to be used by a wider audience
 * Share prototypes also with non-technical audience in form of data reports such as data visualizations, dataset tables or dashboards
 * Keep track or get back to previous data reports
-
-## How does dstack.ai compare to Tableau or other dashboard solutions?
 
 ## How secure is the data when it’s stored on the cloud dstack.ai version?
 
