@@ -10,6 +10,7 @@
 * [Installation](open-source/installation.md)
 * [Stacks](open-source/pushing-visualizations.md)
 * [Dashboards](open-source/dashboards.md)
+* [Jobs for Automation](open-source/jobs.md)
 
 ## Tutorials and Guides <a id="tutorials"></a>
 
@@ -31,7 +32,6 @@
 
 * [Registration](in-cloud/cloud-registration.md)
 * [Configuration](in-cloud/installation.md)
-* [Jobs for Automation](in-cloud/jobs.md)
 * [Collaboration](in-cloud/collaboration.md)
 * [FAQ](in-cloud/faq.md)
 * [Troubleshooting](in-cloud/troubleshooting.md)

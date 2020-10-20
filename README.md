@@ -38,7 +38,7 @@ Check out this [quick tutorial](tutorials/dashboards-tutorial.md) on how to buil
 
 The dstack in-cloud and on-premises versions allow you to execute Python and R jobs right – either on demand or automatically at a regular schedule.
 
-{% page-ref page="in-cloud/jobs.md" %}
+{% page-ref page="open-source/jobs.md" %}
 
 The jobs are ideal for processing data regularly and publishing the results, e.g. in the form of data visualizations, datasets, or other artifacts.
 
