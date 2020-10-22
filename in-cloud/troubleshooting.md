@@ -21,3 +21,5 @@ logger.enable()
 If you see something doesn't work as you expect, or you have a question, please make sure to immediately write about it to [team@dstack.ai](mailto:team@dstack.ai). Our team will be happy to help right away! 🙌
 {% endhint %}
 
+You can also join our [Discord Chat](https://discord.com/invite/8xfhEYa) to discuss any issues and we will be happy to help!
+

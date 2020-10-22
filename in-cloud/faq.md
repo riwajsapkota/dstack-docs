@@ -15,15 +15,14 @@ dstack.ai enables businesses to make quick data-driven decisions by making the w
 3. Published results can then be shared with team members or clients via URLs of the published results or simple email invitation.
 4. In case of datasets, team members or clients can download the dataset either as CSV or as pandas dataframe. 
 5. Discuss on the published results using the comment section available for each published analysis
-6. Track revisions of data analysis results:
-7. Data scientists update the dataset and reload the dataset to dstack.ai frontend
+6. Track revisions of data analysis results
+7. Data scientists can update the dataset and reload the dataset to dstack.ai frontend
 8. Permitted users of dstack.ai frontend can view the new version along with older versions of the same dataset.
-9. Build dashboard on top of exploratory visualizations:
-10. Login to dstack.ai frontend
-11. Build dashboard using the published data visualizations or tables
-12. Automate publication of data reports \[Experimental\]
-13. Data scientists define jobs on dstack.ai to be executed at regular schedules
-14. Data reports such as datasets or visualizations are published at dstack.ai front end without manually running scripts.
+9. Build dashboard on top of exploratory visualizations
+10. Build dashboard using the published data visualizations or tables
+11. Automate publication of data reports \[Experimental\]
+12. Data scientists define jobs on dstack.ai to be executed at regular schedules
+13. Data reports such as datasets or visualizations are published at dstack.ai front end without manually running scripts.
 
 ## Can I push data to dstack.ai from Jupyter notebooks or RMarkdown?
 
