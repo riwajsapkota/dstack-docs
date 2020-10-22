@@ -43,7 +43,15 @@ install.packages("dstack")
 
 Once you are done installing the Client Packages, the easiest way to start using dstack would be to Register for [dstack.ai cloud](https://dstack.ai/auth/signup) and [follow the configuration instructions here](../in-cloud/installation.md#configuring-dstack-ai-profile) -
 
+```
+dstack config add --token [YOUR TOKEN] --user [YOUR USERNAME]
+```
+
+You can read more details about Configuration and dstack.ai cloud here-
+
 {% page-ref page="../in-cloud/installation.md" %}
+
+You can find your token number and username information inside settings -  [https://dstack.ai/settings](https://dstack.ai/settings)
 
 Otherwise you can also run a server locally as specified below.
 

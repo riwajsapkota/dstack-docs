@@ -23,7 +23,7 @@ import dstack as ds
 fig = plt.figure()
 plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
 
-ds.push_frame("simple", fig, "My first plot")
+ds.push("simple", fig, "My first plot")
 ```
 {% endtab %}
 

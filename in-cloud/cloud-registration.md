@@ -9,3 +9,9 @@ To create a dstack.ai, take the following steps:
 
 Now, your profile is ready! 🚀Now you can push data to dstack.ai using the API, create dashboards, and share them with your team.
 
+
+
+## Pricing
+
+![The basic version of dstack.ai is free!](../.gitbook/assets/untitled.png)
+

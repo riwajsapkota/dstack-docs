@@ -10,7 +10,7 @@
 * [Installation](open-source/installation.md)
 * [Stacks](open-source/pushing-visualizations.md)
 * [Dashboards](open-source/dashboards.md)
-* [Jobs for Automation](open-source/jobs.md)
+* [Jobs](open-source/jobs.md)
 
 ## Tutorials and Guides <a id="tutorials"></a>
 

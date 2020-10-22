@@ -34,15 +34,6 @@ install.packages("dstack")
 Sometimes pip can't resolve `PyYAML` dependency, so it should be installed manually:`pip install pyyaml`
 {% endhint %}
 
-{% hint style="danger" %}
-Note, the R CRAN package is still under review. In order to install it, please use the following commands:
-
-```r
-install.packages(c('uuid', 'bit64', 'rjson', 'rlist'), repos = 'http://cran.us.r-project.org')
-install.packages('https://drive.google.com/uc?export=download&id=1RREfEk_rZFvZN-
-```
-{% endhint %}
-
 ## Configuring dstack.ai profile
 
 {% hint style="info" %}
