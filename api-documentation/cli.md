@@ -16,17 +16,17 @@ The dstack CLI has **2 optional arguments** -
 
 `dstack --version`- Show program's version number and exit
 
-and it has **2 position arguments -** 
+and it has **2 positional arguments -** 
 
 `dstack config`- To manage the user profile configuration.
 
 `dstack server` - To manage your local dstack server.
 
-These positional arguments **\(Config** and **Server\)** as elaborated below.
+These positional arguments **\(Config** and **Server\)** are elaborated below.
 
 ## Config
 
-To manage your configuration.
+To manage your user profile configuration.
 
 {% hint style="info" %}
 You can use `-h, --help` to show the help message for all pameters.

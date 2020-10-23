@@ -86,13 +86,13 @@ create_frame(
 
 **`profile`** - A profile refers to credentials, i.e. username and token. Default profile is named 'default'. The system is looking for specified profile as follows: it looks into working directory to find a configuration file \(local configuration\), if the file doesn't exist it looks into user directory to find it \(global configuration\). The best way to manage profiles is to have dstack [CLI tools installed.](../open-source/installation.md)
 
-**`auto_push`** - Tells the system to push frame just after commit. It may be useful if you want to see result immediately. Default is \code{FALSE}.
+**`auto_push`** - Tells the system to push frame just after commit. It may be useful if you want to see result immediately. Default is `FALSE`.
 
 **`protocol`** - Protocol to use, usually it is `NULL` it means that `json_protocol` will be used.
 
 **`encryption`** - Encryption method. By default `no_encryption` will be used.
 
-**`check_access`** - Check access to specified stack, default is \code{TRUE}
+**`check_access`** - Check access to specified stack, default is `TRUE`
 {% endtab %}
 
 {% tab title="Example" %}
