@@ -44,7 +44,7 @@ push_frame("simple", image, "My first plot")
 The `dstack` package can be used with [pandas](https://pandas.pydata.org/), [tidyverse](https://www.tidyverse.org/), [matplotlib](https://matplotlib.org/), [ggplot2](https://ggplot2.tidyverse.org/), [bokeh](https://docs.bokeh.org/en/latest/index.html) and [plotly](https://plot.ly/). The `commit` and `push_frame` methods accept `pandas.core.frame.DataFrame`, `data.frame`, `data.table`, `tibble`, `plotly.graph_objs._figure.Figure`, `bokeh.plotting.figure.Figure`, etc.
 {% endhint %}
 
-You can read more detailed and library-specific tutorials on pushing [datasets](../tutorials/datasets.md) and [visualizations](../tutorials/plotting-libraries.md) under the Tutorials tab.
+You can read more detailed and library-specific tutorials on pushing [datasets](../tutorials/datasets.md) and [visualizations](../tutorials/plotting-libraries.md) under the Tutorials and Guides tab.
 
 ## Pushing interactive visualizations and datasets
 
