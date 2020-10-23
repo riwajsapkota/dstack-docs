@@ -1,12 +1,16 @@
 # Stacks
 
-The`dstack` tool lets you upload datasets and visualizations, and arrange them into reports and interactive dashboards.
+### What are Stacks?
+
+Stacks form the fundamental building block of dstack.ai. You can create stacks of **datasets, visualizations**, and **models** in dstack to easily share and re-use them and also create [Dashboards](dashboards.md) with them.
+
+The `dstack` tool lets you upload datasets, models and visualizations, and arrange them into reports and interactive dashboards. You can read more detailed tutorials and examples about how to do this in the [Tutorials](../tutorials/dashboards-tutorial.md) Section.
 
 {% hint style="info" %}
 Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python R scripts, and applications. Learn how to [install and configure](installation.md) `dstack`.
 {% endhint %}
 
-#### Pushing static visualizations or datasets
+## Pushing static visualizations or datasets
 
 Here's an example of the code that pushes a data visualization to dstack.ai:
 
@@ -19,7 +23,7 @@ import dstack as ds
 fig = plt.figure()
 plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
 
-ds.push_frame("simple", fig, "My first plot")
+ds.push("simple", fig, "My first plot")
 ```
 {% endtab %}
 
@@ -37,12 +41,14 @@ push_frame("simple", image, "My first plot")
 {% endtabs %}
 
 {% hint style="info" %}
-The `dstack` package can be used with [pandas](https://pandas.pydata.org/), [tidyverse](https://www.tidyverse.org/), [matplotlib](https://matplotlib.org/), [ggplot2](https://ggplot2.tidyverse.org/), [bokeh](https://docs.bokeh.org/en/latest/index.html) and [plotly](https://plot.ly/).  The `commit` and `push_frame` methods accept  `pandas.core.frame.DataFrame`, `data.frame`, `data.table`, `tibble`, `plotly.graph_objs._figure.Figure`,  `bokeh.plotting.figure.Figure`,  etc.
+The `dstack` package can be used with [pandas](https://pandas.pydata.org/), [tidyverse](https://www.tidyverse.org/), [matplotlib](https://matplotlib.org/), [ggplot2](https://ggplot2.tidyverse.org/), [bokeh](https://docs.bokeh.org/en/latest/index.html) and [plotly](https://plot.ly/). The `commit` and `push_frame` methods accept `pandas.core.frame.DataFrame`, `data.frame`, `data.table`, `tibble`, `plotly.graph_objs._figure.Figure`, `bokeh.plotting.figure.Figure`, etc.
 {% endhint %}
 
-#### Pushing interactive visualizations and datasets
+You can read more detailed and library-specific tutorials on pushing [datasets](../tutorials/datasets.md) and [visualizations](../tutorials/plotting-libraries.md) under the Tutorials and Guides tab.
 
-In some cases, you want to have plots that are interactive and that can change when the user change its parameters. Suppose you want to publish a line plot that depends on the value of the  parameter`Coefficient`:
+## Pushing interactive visualizations and datasets
+
+In some cases, you want to have plots that are interactive and that can change when the user change its parameters. Suppose you want to publish a line plot that depends on the value of the parameter`Coefficient`:
 
 {% tabs %}
 {% tab title="Python" %}
@@ -75,23 +81,35 @@ frame.push()
 library(ggplot2)
 library(dstack)
 
-line_plot <- function(a) {  
-    x <- c(0:20)  
-    y <- sapply(x, function(x) { return(a * x) })  
-    df <- data.frame(x = x, y = y)  
+
+
+line_plot <- function(a) {
+
+    x <- c(0:20)
+
+    y <- sapply(x, function(x) { return(a * x) })
+
+    df <- data.frame(x = x, y = y)
+
     plot <- ggplot(data = df, aes(x = x, y = y)) + 
         geom_line() + xlim(0, 20) + ylim(0, 20)
     return(plot)
-}
 
-coeff <- c(0.5, 1.0, 1.5, 2.0)
-frame <- create_frame(stack = "line_plot")
-for(c in coeff) {  
+}
+
+
+
+coeff <- c(0.5, 1.0, 1.5, 2.0)
+frame <- create_frame(stack = "line_plot")
+
+for(c in coeff) {
+
     frame <- commit(frame, line_plot(c), 
         paste0("Line plot with the coefficient of ", c), 
         Coefficient = c)
 }
-push(frame)
+
+push(frame)
 ```
 {% endtab %}
 {% endtabs %}
@@ -106,13 +124,11 @@ dstack.ai tracks every submitted frame and lets you rollback between revisions v
 All visualizations and datasets pushed to dstack.ai follow the privacy settings specified for the registered profile. You can make all data submitted to dstack.ai either public or private. You also can change the privacy settings for individual datasets and visualizations to make them either public or private, or share them only with selected users. [Learn more on sharing and collaboration](../in-cloud/collaboration.md)
 {% endhint %}
 
-_That is it. Once the data is pushed to dstack.ai, you can share it with the team or arrange into_ [_comprehensive dashboards_](dashboards.md) _📈._
+**That is it. Once the data is pushed to dstack.ai, you can share it with the team or arrange into** [**comprehensive dashboards**](dashboards.md) **📈.**
 
 {% page-ref page="dashboards.md" %}
 
-
-
-#### Using Markdown and LaTeX
+## Using Markdown and LaTeX
 
 Sometimes you need to have more than just text in frame description. Fortunately, _dstack_ supports Markdown with embedded LaTeX formulas. There is an example how to use them all together:
 
@@ -149,6 +165,6 @@ ds.push_frame("exponent", fig, description=text)
 {% endtabs %}
 
 {% hint style="info" %}
-Be sure that you escape all special symbols, e.g. `\f` in `\frac`. Certainly, it is possible to escape all \ to be safe.
+Be sure that you escape all special symbols, e.g. `\f` in `\frac`. Certainly, it is possible to escape all  to be safe.
 {% endhint %}
 

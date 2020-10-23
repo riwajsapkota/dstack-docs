@@ -1,9 +1,11 @@
-# Datasets
+# Using Datasets
 
 Effective collaboration on datasets is the key ingredient of any data science project. dstack.ai offers APIs and services to upload datasets, track their revisions and to share these datasets securely within teams \(or publicly if needed\).
 
+The dstack package for datasets is currently compatible with `pandas.core.frame.DataFrame`, `data.frame`, `data.table`, and `tibble`.
+
 {% hint style="info" %}
-Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python and R scripts and applications. [Learn how to install dstack package](../in-cloud/installation.md)
+Make sure you have the `dstack` package installed \(available both in Python and R\) before you try to upload datasets and visualisations. These packages can be used from Jupyter notebooks, RMarkdown, Python and R scripts and applications. [Learn how to install dstack package](../in-cloud/installation.md)
 {% endhint %}
 
 ## Pushing single datasets
@@ -121,7 +123,29 @@ head(df)
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
-The `dstack` package is compatible with`pandas.core.frame.DataFrame`, `data.frame`, `data.table`, and`tibble.`
-{% endhint %}
+## GeoPandas support
+
+You can also push and pull GeoDataFrame from [GeoPandas](https://geopandas.org/):
+
+```python
+import geopandas
+import pandas as pd
+
+from dstack import push_frame, pull
+
+df = pd.DataFrame({'City': ['Buenos Aires', 'Brasilia', 'Santiago', 'Bogota', 'Caracas'],
+                   'Country': ['Argentina', 'Brazil', 'Chile', 'Colombia', 'Venezuela'],
+                   'Latitude': [-34.58, -15.78, -33.45, 4.60, 10.48],
+                   'Longitude': [-58.66, -47.91, -70.66, -74.08, -66.86]})
+
+gdf = geopandas.GeoDataFrame(
+    df, geometry=geopandas.points_from_xy(df.Longitude, df.Latitude))
+
+push_frame("my_first_geo", gdf)
+```
+
+To pull the GeoDataFrame object just call `my_gdf = pull("my_first_geo")`.
+
+  
+
 
