@@ -10,64 +10,29 @@ Please make sure you have followed the [Installation procedure](../open-source/i
 You can find the complete open source implementation of the dstack CLI here -[https://github.com/dstackai/dstack-py/tree/master/dstack/cli](https://github.com/dstackai/dstack-py/tree/master/dstack/cli)
 {% endhint %}
 
-The dstack CLI has 2 optional arguments - 
+The dstack CLI has **2 optional arguments** - 
 
 `dstack --help`- Show help message and exit
 
 `dstack --version`- Show program's version number and exit
 
-The positional arguments of the CLI are **Server** and **Config** as elaborated below.
+and it has **2 position arguments -** 
 
-## Server
+`dstack config`- To manage the user profile configuration.
 
-You can use `-h, --help` to show the help message and exit for all pameters.
+`dstack server` - To manage your local dstack server.
 
-To manage your dstack server.
-
-### start
-
-Start a server
-
-```bash
-dstack server start [-h] [--port [PORT]] [--home [HOME]] [--skip]
-                           [--no-verify]
-```
-
-{% tabs %}
-{% tab title="Optional Parameters" %}
-`--port [PORT]` -  use specific port
-
-`--home [HOME]` - store server data in the specified directory
-
-`--skip` - skip checking for updates
-
-`--no-verify`  - do not verify SSL certificates
-{% endtab %}
-{% endtabs %}
-
-### version
-
-Prints server version
-
-```bash
-dstack server version 
-```
-
-### update
-
-Update server version
-
-```bash
-dstack server update 
-```
+These positional arguments **\(Config** and **Server\)** as elaborated below.
 
 ## Config
 
-You can use `-h, --help` to show the help message and exit for all pameters.
-
 To manage your configuration.
 
-### add
+{% hint style="info" %}
+You can use `-h, --help` to show the help message for all pameters.
+{% endhint %}
+
+#### 1. add
 
 To add a user profile
 
@@ -99,10 +64,10 @@ dstack config add [-h] [--token [TOKEN]] [--server [SERVER]]
 {% endtab %}
 {% endtabs %}
 
-### Modify
+#### 2. Modify
 
 ```bash
-dstack config add [-h] [--token [TOKEN]] [--server [SERVER]]
+dstack config modify [-h] [--token [TOKEN]] [--server [SERVER]]
                          [--user [USER]] [--no-verify] [--force] [--file FILE]
                          [PROFILE]
 ```
@@ -129,7 +94,7 @@ dstack config add [-h] [--token [TOKEN]] [--server [SERVER]]
 {% endtab %}
 {% endtabs %}
 
-### Remove
+#### 3. Remove
 
 Remove existing user profile
 
@@ -147,7 +112,7 @@ dstack config remove [-h] [--force] [--file FILE] [PROFILE]
 {% endtab %}
 {% endtabs %}
 
-### List
+#### 4. List
 
 List all configured user profiles
 
@@ -162,4 +127,49 @@ dstack config list [-h] [--file FILE]
 `--file FILE` - use specific config file
 {% endtab %}
 {% endtabs %}
+
+## Server
+
+To manage your dstack server.
+
+{% hint style="info" %}
+You can use `-h, --help` to show the help message for all pameters.
+{% endhint %}
+
+#### 1. start
+
+Start a server
+
+```bash
+dstack server start [-h] [--port [PORT]] [--home [HOME]] [--skip]
+                           [--no-verify]
+```
+
+{% tabs %}
+{% tab title="Optional Parameters" %}
+`--port [PORT]` -  use specific port
+
+`--home [HOME]` - store server data in the specified directory
+
+`--skip` - skip checking for updates
+
+`--no-verify`  - do not verify SSL certificates
+{% endtab %}
+{% endtabs %}
+
+#### 2. version
+
+Prints server version
+
+```bash
+dstack server version 
+```
+
+#### 3.update
+
+Update server version
+
+```bash
+dstack server update 
+```
 

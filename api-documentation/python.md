@@ -10,12 +10,12 @@ Please make sure you have followed the [Installation procedure](../open-source/i
 You can find the complete open source python implementation here -[https://github.com/dstackai/dstack-py](https://github.com/dstackai/dstack-py)
 {% endhint %}
 
-## Push Frame
+## Push Method
 
 The `push()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to use interactive plots, you can use the `frame()`, `commit()`, and then `push()`
 
 {% hint style="warning" %}
-`push_frame()` method will be deprecated in future versions replaced by `push()` 
+`push_frame()` method has been deprecated and replaced by the `push()` method
 {% endhint %}
 
 You can push **datasets**, **models** and **plots** and specify other optional parameters.
@@ -58,9 +58,9 @@ push(stack: str,
 {% endtab %}
 {% endtabs %}
 
-## Pull
+## Pull Method
 
-The `pull()` function create a frame in the stack, commits and pushes the data in a single operation.
+The `pull()` method create a frame in the stack, commits and pushes the data in a single operation.
 
 ```python
 pull(stack: str,
@@ -88,16 +88,16 @@ pull(stack: str,
 {% endtab %}
 {% endtabs %}
 
-## Create Frame
+## Frame Method
 
-This can be used for interactive plots. Creates a new stack frame. The method also checks access to specified stack. It returns a new stack frame. It returns a `StackFrame` object which contains the `commit()` and `push()` methods as discussed later which can be used to add to the created frame and push the frame finally to the stack.
+To create an interactive stack, you can use the `frame()` method. It returns a `StackFrame` object which contains the `add()` and `push()` methods as discussed later which can be used to add interactive plots, models or datasets with parameters to the created frame, and you can finally push the frame to the stack using the `push()` method.
 
 {% hint style="warning" %}
- `create_frame()`method will be deprecated in future versions and be replaced by the `frame()` method.
+ `create_frame()`method has been deprecated replaced by the `frame()` method.
 {% endhint %}
 
 ```python
-create_frame(stack: str,
+frame(stack: str,
       profile: str = "default",
       access: Optional[str] = None,
       auto_push: bool = False,
@@ -126,20 +126,18 @@ create_frame(stack: str,
 {% endtab %}
 {% endtabs %}
 
+## Add Method
 
+The `add()` method is part of the `StackFrame`object which is returned by the `create_frame()`method and as the name suggests, it adds the object \(some data\) to the `StackFrame`.
 
-## Commit 
-
-The `commit()` method is part of the `StackFrame`object which is returned by the `create_frame()`method and as the name suggests, it adds the object \(some data\) to the `StackFrame`.
-
-The parameters associated with the data also allow you to create interactive plots when you use the `commit()` method.
+The parameters associated with the data also allow you to create interactive plots when you use the `add()` method.
 
 {% hint style="warning" %}
- `commit()` will be deprecated in future versions and be replaced by the `add()`method.
+ `commit()` method has been deprecated replaced by the `add()`method.
 {% endhint %}
 
 ```python
-commit(self,
+add(self,
     obj: Any,
     description: Optional[str] = None,
     params: Optional[Dict] = None,
