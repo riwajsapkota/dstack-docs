@@ -20,7 +20,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.linear_model import LinearRegression
 import sklearn
 
-from dstack import push, pull
+import dstack as ds
 ```
 
 #### 2. Loading and Splitting Dataset
@@ -61,7 +61,7 @@ Now that our model is fit and ready, we push it to dstack as a stack using the `
 
 ```python
 # Push the frame
-push("simpleLinearReg", regr, "My first linear model")
+ds.push("simpleLinearReg", regr, "My first linear model")
 ```
 
 #### 5. Pulling from dstack 
@@ -70,7 +70,7 @@ Now that you have it pushed on a Stack, you can share it with anyone so they can
 
 ```python
 # Pull from the Stack
-my_model = pull("simpleLinearReg")
+my_model = ds.pull("simpleLinearReg")
 ```
 
 That's it! You have pulled your model. It's that easy. 
@@ -97,7 +97,7 @@ You should see the following output.
 
 ![Linear Regression Plot Output](../../.gitbook/assets/unknownd.png)
 
-You can also push this plot onto dstack and create a dashboard with the model, plot as well as the dataset! Read the tutorial on the [plotting libraries]() to try this out.
+You can also push this plot onto dstack and create a dashboard with the model, plot as well as the dataset! Read the tutorial on the [plotting libraries](../plotting-libraries.md) to try this out.
 
 ## Common Problems and Debugging
 
