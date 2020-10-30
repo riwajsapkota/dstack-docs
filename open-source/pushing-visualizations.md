@@ -65,11 +65,11 @@ def line_plot(a):
     return fig
 
 
-frame = ds.create_frame("line_plot")
+frame = ds.frame("line_plot")
 coeff = [0.5, 1.0, 1.5, 2.0]
 
 for c in coeff:
-    frame.commit(line_plot(c), 
+    frame.add(line_plot(c), 
     f"Line plot with the coefficient of {c}", {"Coefficient": c})
 
 frame.push()
@@ -159,7 +159,7 @@ $$e^x=\sum_{i=0}^\infty \\frac{1}{i!}x^i$$
 It's sometimes very useful.
 """
 
-ds.push_frame("exponent", fig, description=text)
+ds.push("exponent", fig, description=text)
 ```
 {% endtab %}
 {% endtabs %}
