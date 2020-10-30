@@ -22,7 +22,7 @@ import dstack as ds
 dates = pd.date_range('20130101', periods=6)
 df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list('ABCD'))
 
-ds.push_frame("static_dataset_example", df, "static dataset")
+ds.push("static_dataset_example", df, "static dataset")
 ```
 {% endtab %}
 
@@ -52,14 +52,14 @@ import pandas as pd
 import dstack as ds
 
 df = pd.read_csv("player_data.csv").dropna()
-frame = ds.create_frame("player_data")
+frame = ds.frame("player_data")
 
 pdf = df['college'].value_counts().rename_axis('college').reset_index(name='players').head(10)
-frame.commit(pdf, f"Top 10 colleges by number of players", { "College": "Top 10 colleges" })
+frame.add(pdf, f"Top 10 colleges by number of players", { "College": "Top 10 colleges" })
 
 for college in df["college"].unique():
     players = df.loc[df["college"] == college]
-    frame.commit(players, f"Players from {college}", { "College": college })
+    frame.add(players, f"Players from {college}", { "College": college })
 
 frame.push()
 ```
@@ -130,8 +130,7 @@ You can also push and pull GeoDataFrame from [GeoPandas](https://geopandas.org/)
 ```python
 import geopandas
 import pandas as pd
-
-from dstack import push_frame, pull
+import dstack as ds
 
 df = pd.DataFrame({'City': ['Buenos Aires', 'Brasilia', 'Santiago', 'Bogota', 'Caracas'],
                    'Country': ['Argentina', 'Brazil', 'Chile', 'Colombia', 'Venezuela'],
@@ -141,7 +140,7 @@ df = pd.DataFrame({'City': ['Buenos Aires', 'Brasilia', 'Santiago', 'Bogota', 'C
 gdf = geopandas.GeoDataFrame(
     df, geometry=geopandas.points_from_xy(df.Longitude, df.Latitude))
 
-push_frame("my_first_geo", gdf)
+ds.push("my_first_geo", gdf)
 ```
 
 To pull the GeoDataFrame object just call `my_gdf = pull("my_first_geo")`.

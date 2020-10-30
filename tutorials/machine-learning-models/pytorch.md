@@ -12,7 +12,7 @@ Let's consider an example in Pytorch where we define our own new Model with a cl
 
 ```python
 import torch
-from dstack import push_frame
+from dstack import push
 from dstack.torch.handlers import TorchModelEncoder
 
 # define a new model
@@ -39,7 +39,7 @@ TorchModelEncoder.STORE_WHOLE_MODEL = False
 
 ```python
 # finally push the model
-push_frame("my_torch_model", model, "My first PyTorch model")        
+push("my_torch_model", model, "My first PyTorch model")        
 ```
 
 We stored only model weights, so to pull it we should provide model class to decoder, because `pull` method is not smart enough to guess which particular class to use. The following example shows a common pattern how to use pull in this case:

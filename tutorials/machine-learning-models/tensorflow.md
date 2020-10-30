@@ -6,7 +6,7 @@ description: >-
 
 # Tensorflow
 
-Here is a simple example where we build a model to classify Fashion MNIST images and push it to dstack. Both `tf.keras.Sequential` and `tf.keras.Model` are supported for Te
+Here is a simple example where we build a model to classify Fashion MNIST images and push it to dstack. Both `tf.keras.Sequential` and `tf.keras.Model` are supported for Tensorflow.
 
 Note: Only version 2 of Tensorflow in supported by dstack.
 

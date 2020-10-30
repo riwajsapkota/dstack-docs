@@ -130,7 +130,7 @@ Now, let's push this visualization to the dstack server:
 ```python
 import dstack as ds
 
-ds.push_frame("simple_plot", fig, """
+ds.push("simple_plot", fig, """
 # My simple plot
 
 How do you like my plot?""")
@@ -145,7 +145,7 @@ Now let's do something more complex. Invoke the function in the loop with differ
 ```python
 import dstack as ds
 
-frame = ds.create_frame("complex_plot")
+frame = ds.frame("complex_plot")
 coeff = [0.5, 1.0, 1.5, 2.0]
 
 for c in coeff:

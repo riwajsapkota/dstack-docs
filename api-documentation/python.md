@@ -12,10 +12,10 @@ You can find the complete open source python implementation here -[https://githu
 
 ## Push Method
 
-The `push()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to use interactive plots, you can use the `frame()`, `commit()`, and then `push()`
+The `push()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to use interactive plots, you can use the `frame()`, `add()`, and then `push()`
 
 {% hint style="warning" %}
-`push_frame()` method has been deprecated and replaced by the `push()` method
+`push_frame()` method has now been deprecated and been replaced by the `push()` method
 {% endhint %}
 
 You can push **datasets**, **models** and **plots** and specify other optional parameters.
@@ -93,7 +93,7 @@ pull(stack: str,
 To create an interactive stack, you can use the `frame()` method. It returns a `StackFrame` object which contains the `add()` and `push()` methods as discussed later which can be used to add interactive plots, models or datasets with parameters to the created frame, and you can finally push the frame to the stack using the `push()` method.
 
 {% hint style="warning" %}
- `create_frame()`method has been deprecated replaced by the `frame()` method.
+ `create_frame()`method has now been deprecated and been replaced by the `frame()` method.
 {% endhint %}
 
 ```python
@@ -128,12 +128,12 @@ frame(stack: str,
 
 ## Add Method
 
-The `add()` method is part of the `StackFrame`object which is returned by the `create_frame()`method and as the name suggests, it adds the object \(some data\) to the `StackFrame`.
+The `add()` method is part of the `StackFrame`object which is returned by the `frame()`method and as the name suggests, it adds the object \(some data\) to the `StackFrame`.
 
 The parameters associated with the data also allow you to create interactive plots when you use the `add()` method.
 
 {% hint style="warning" %}
- `commit()` method has been deprecated replaced by the `add()`method.
+ `commit()` method has now been deprecated and been replaced by the `add()`method.
 {% endhint %}
 
 ```python
