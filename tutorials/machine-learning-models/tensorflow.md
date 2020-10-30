@@ -13,8 +13,8 @@ Note: Only version 2 of Tensorflow in supported by dstack.
 ### 1. Import, building and training the model
 
 ```python
-from dstack import push
 import tensorflow as tf
+import dstack as ds
 
 d = 30
 
@@ -36,7 +36,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
               
 # Training the model for 10 epochs
-pulled_model.fit(train_images, train_labels, epochs=10)
+model.fit(train_images, train_labels, epochs=10)
 ```
 
 This will result in the following looking output if you don't have the dataset downloaded already.
@@ -81,7 +81,7 @@ Note: The model  we are pushing is of type `tensorflow.python.keras.engine.seque
 
 ```python
 # push the model
-push("my_fmnist_model", model, "My Fashion MNIST TF model description")
+ds.push("my_fmnist_model", model, "My Fashion MNIST TF model description")
 ```
 
 ### 3. Pulling the Model
@@ -91,8 +91,7 @@ To pull model you need simply call `pull`, because the model is standard, no add
 You can read the [API Documentation](../../api-documentation/python.md#pulling-frames) to see what parameters you can specify when pulling the model.
 
 ```python
-from dstack import pull
-pulled_model = pull("my_fmnist_model")
+pulled_model = ds.pull("my_fmnist_model")
 ```
 
 ### 4. Using the Model
