@@ -29,7 +29,7 @@ conda install dstack -c dstack.ai
 {% endtab %}
 {% endtabs %}
 
-The package comes with a command-line tool called `dstack`. This command-line tool can be used to configure local profiles, credentials, and to run a local server.
+The python package **comes** **with** **a command-line tool** called `dstack`. This command-line tool can be used to configure local profiles, credentials, and to run a local server.
 
 ### R
 
