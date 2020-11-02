@@ -2,9 +2,9 @@
 
 ## What are Stacks?
 
-Stacks form the fundamental building block of dstack.ai. You can create stacks of **datasets, visualizations**, and **models** in dstack to easily share and re-use them and also create [Dashboards](dashboards.md) with them.
+Stacks are the heart and soul of dstack.ai. A stack in the English language is a pile of things - typically one that is neatly arranged. With dstack.ai, you can create stacks of **datasets, visualizations**, and **models** to create and save different versions of them, easily share them to collaborate with your team, re-use them as you see fit, and also create [Dashboards](dashboards.md) with them that help you tell a story with multiple stacks.
 
-The `dstack` tool lets you upload datasets, models and visualizations, and arrange them into reports and interactive dashboards. You can read more detailed tutorials and examples about how to do this in the [Tutorials](../tutorials/dashboards-tutorial.md) Section.
+The `dstack` tool for Python and R lets you push datasets, models and visualizations, and arrange them into reports and interactive dashboards. You can read more detailed tutorials and examples about how to do this in the [Tutorials](../tutorials/dashboards-tutorial.md) Section.
 
 {% hint style="info" %}
 Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python R scripts, and applications. Learn how to [install and configure](installation.md) `dstack`.
@@ -12,7 +12,7 @@ Uploading datasets and visualization to dstack.ai is done via the `dstack` packa
 
 ## Pushing static visualizations or datasets
 
-Here's an example of the code that pushes a data visualization to dstack.ai:
+Here's a simple example of the code that pushes a data visualization to dstack.ai:
 
 {% tabs %}
 {% tab title="Python" %}
@@ -115,7 +115,7 @@ push(frame)
 {% endtabs %}
 
 {% hint style="info" %}
-You can have as many parameters as you want. Within one frame, you can combine different types of data: dataframes and figures.
+You can have as many parameters as you want. Within one frame, you can combine different types of data: dataframes and figures. 
 {% endhint %}
 
 dstack.ai tracks every submitted frame and lets you rollback between revisions via the web application if needed.
