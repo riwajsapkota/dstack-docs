@@ -1,6 +1,6 @@
 # Stacks
 
-### What are Stacks?
+## What are Stacks?
 
 Stacks form the fundamental building block of dstack.ai. You can create stacks of **datasets, visualizations**, and **models** in dstack to easily share and re-use them and also create [Dashboards](dashboards.md) with them.
 

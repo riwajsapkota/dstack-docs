@@ -6,7 +6,7 @@ description: >-
 
 # Dashboards
 
-### What are Dashboards?
+## What are Dashboards?
 
 Dashboards are a great way to build great-looking interactive reports. Once you've pushed your data to dstack.ai using the`dstack` packages for Python and R, you can combine your datasets and visualizations into interactive dashboards – with just a few clicks. 
 
@@ -18,7 +18,7 @@ Here's an example of a simple dashboard: [https://dstack.ai/cheptsov/d/505d2087-
 
 If a **Stack** displays each moment a single visualization that corresponds to the selected parameters, a **Dashboard** displays multiple visualizations at once – also based on selected parameters.
 
-### Creating a Dashboard
+## Creating a Dashboard
 
 1. First create **Stacks** by [pushing](pushing-visualizations.md) your visualizations via the Python or R API. Those can be either Static or Interactive stacks. 
 2. Click **Dashboards** in the sidebar of [dstack.ai](https://dstack.ai) and then click **New dashboard**.
