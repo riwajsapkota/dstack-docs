@@ -14,7 +14,7 @@ In order to follow this tutorial, you'll only need Conda or pip, a terminal, and
 {% endhint %}
 
 {% hint style="success" %}
-If you have already completed the installation and configuration steps, you can jump straight to [part 4 ](dashboards-tutorial.md#4-pushing-visualizations)of this tutorial \(Pushing Visualizations\) 
+If you have already completed the installation and configuration process, you can **jump straight to** [**part 4** ](dashboards-tutorial.md#4-pushing-visualizations)**of this tutorial** \(Pushing Visualizations\) 
 {% endhint %}
 
 ### 1. Installation

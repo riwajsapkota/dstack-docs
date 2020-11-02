@@ -22,14 +22,11 @@ If a **Stack** displays each moment a single visualization that corresponds to t
 
 1. First create **Stacks** by [pushing](pushing-visualizations.md) your visualizations via the Python or R API. Those can be either Static or Interactive stacks. 
 2. Click **Dashboards** in the sidebar of [dstack.ai](https://dstack.ai) and then click **New dashboard**.
+3. You'll see a new empty Dashboard. Now, go ahead, click **Add Stack**, and select the Stacks that you'd like to put to your Dashboard. You can add as many Stacks as you'd like
+4. Once you've selected the **Stacks**, click **Add selected stacks**. You'll see the selected **Stacks** added to the current **Dashboard.**
+5. Now you can change the title of the Dashboard or any of the Stacks by mouse-clicking their titles.
 
-![](../.gitbook/assets/untitled-2.png)
-
-4. You'll see a new empty Dashboard. Now, go ahead, click **Add Stack**, and select the Stacks that you'd like to put to your Dashboard. You can add as many Stacks as you'd like
-
-5. Once you've selected the **Stacks**, click **Add selected stacks**. You'll see the selected **Stacks** added to the current **Dashboard**.
-
-6. Now you can change the title of the Dashboard or any of the Stacks by mouse-clicking their titles.
+![](../.gitbook/assets/untitled%20%281%29.png)
 
 ## Sharing Dashboards
 
