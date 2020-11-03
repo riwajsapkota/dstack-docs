@@ -24,7 +24,7 @@ Here's an example of a simple report: [https://dstack.ai/cheptsov/d/505d2087-9ad
 4. Once you've selected the **Stacks**, click **Add selected stacks**. You'll see the selected **Stacks** added to the current **Report.**
 5. Now you can change the title of the Dashboard or any of the Stacks by mouse-clicking their titles.
 
-![](../.gitbook/assets/frame-12.png)
+![](../.gitbook/assets/frame-13.png)
 
 ## Sharing Reports
 
@@ -34,9 +34,7 @@ You can switch the **access level** for this Dashboard between **Public** \(Ever
 
 The user with whom you've shared the dashboard will be able to open the dashboard and see it updating based on the parameters selected. Note, the parameters are shown only in case the added stacks have parameters.
 
-![](../.gitbook/assets/share.png)
-
-\*\*\*\*
+![](../.gitbook/assets/frame-12.png)
 
 **That's it! Go ahead, and build your interactive reports right away! 🚀**
 
