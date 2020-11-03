@@ -29,10 +29,10 @@ These positional arguments **\(Config** and **Server\)** are elaborated below.
 To manage your user profile configuration.
 
 {% hint style="info" %}
-You can use `-h, --help` to show the help message for all pameters.
+You can always use `-h or --help` to show the help message for all parameters.
 {% endhint %}
 
-#### 1. add
+### 1. add
 
 To add a user profile
 
@@ -64,7 +64,7 @@ dstack config add [-h] [--token [TOKEN]] [--server [SERVER]]
 {% endtab %}
 {% endtabs %}
 
-#### 2. Modify
+### 2. modify
 
 ```bash
 dstack config modify [-h] [--token [TOKEN]] [--server [SERVER]]
@@ -94,7 +94,7 @@ dstack config modify [-h] [--token [TOKEN]] [--server [SERVER]]
 {% endtab %}
 {% endtabs %}
 
-#### 3. Remove
+### 3. remove
 
 Remove existing user profile
 
@@ -112,7 +112,7 @@ dstack config remove [-h] [--force] [--file FILE] [PROFILE]
 {% endtab %}
 {% endtabs %}
 
-#### 4. List
+### 4. list
 
 List all configured user profiles
 
@@ -136,7 +136,7 @@ To manage your dstack server.
 You can use `-h, --help` to show the help message for all pameters.
 {% endhint %}
 
-#### 1. start
+### 1. start
 
 Start a server
 
@@ -157,7 +157,7 @@ dstack server start [-h] [--port [PORT]] [--home [HOME]] [--skip]
 {% endtab %}
 {% endtabs %}
 
-#### 2. version
+### 2. version
 
 Prints server version
 
@@ -165,7 +165,7 @@ Prints server version
 dstack server version 
 ```
 
-#### 3.update
+### 3. update
 
 Update server version
 

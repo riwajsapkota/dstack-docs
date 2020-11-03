@@ -11,7 +11,7 @@ There are 2 main components of dstack:
 
 ## Installing Client Packages
 
-#### Python
+### Python
 
 The easiest way to install `dstack` in Python is by using `pip` or `conda`:
 
@@ -29,9 +29,9 @@ conda install dstack -c dstack.ai
 {% endtab %}
 {% endtabs %}
 
-The package comes with a command-line tool called `dstack`. This command-line tool can be used to configure local profiles, credentials, and to run a local server.
+The python package **comes** **with** **a command-line tool** called `dstack`. This command-line tool can be used to configure local profiles, credentials, and to run a local server.
 
-#### R
+### R
 
 If you're using R and don't need the command-line tool, you can install the client package for R via the following command:
 
@@ -39,7 +39,7 @@ If you're using R and don't need the command-line tool, you can install the clie
 install.packages("dstack")
 ```
 
-#### Quick Start
+### Quick Start
 
 Once you are done installing the Client Packages, the easiest way to start using dstack would be to Register for [dstack.ai cloud](https://dstack.ai/auth/signup) and [follow the configuration instructions here](../in-cloud/installation.md#configuring-dstack-ai-profile) -
 
@@ -47,11 +47,13 @@ Once you are done installing the Client Packages, the easiest way to start using
 dstack config add --token [YOUR TOKEN] --user [YOUR USERNAME]
 ```
 
+{% hint style="info" %}
+You can find your token number and username information inside settings -  [https://dstack.ai/settings](https://dstack.ai/settings)
+{% endhint %}
+
 You can read more details about Configuration and dstack.ai cloud here-
 
 {% page-ref page="../in-cloud/installation.md" %}
-
-You can find your token number and username information inside settings -  [https://dstack.ai/settings](https://dstack.ai/settings)
 
 Otherwise you can also run a server locally as specified below.
 

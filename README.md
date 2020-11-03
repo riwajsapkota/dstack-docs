@@ -9,7 +9,7 @@ How is dstack different from other frameworks \(Shiny, Dash, Streamlit, and othe
   * a\) a declarative approach to defining application components; 
   * b\) agnostic to data science frameworks and tools.
 
-**How dstack works**
+### **How dstack works**
 
 The framework consists of the following parts:
 
@@ -18,23 +18,23 @@ The framework consists of the following parts:
 
 A data science application is a specific kind of application that solves domain-specific problems using data and data science methods. These data science methods may include data-wrangling, data visualizations, statistical modeling, machine learning, etc.
 
-**Building data science applications**
+### **Building data science applications**
 
 There are several general use-cases for such data science applications:
 
-1. _Interactive reports_ – a set data visualizations and interactive widgets, combined using a certain layout
-2. _Live dashboards_ – applications that fetch data from various data sources, turn it into visualizations and combine using a certain layout \(not supported yet\)
-3. _Machine learning applications_ – applications that let users interact with ML models \(not supported yet\)
+1. **Interactive reports** – Creating a set data visualizations and interactive widgets, combined using a certain layout to convey ideas and stories based in data.
+2. **Live dashboards** – applications that fetch data from various data sources, turn it into visualizations and combine using a certain layout \(not supported yet\).
+3. **Machine learning applications** – applications that let users interact with ML models \(not supported yet\).
 
 {% page-ref page="open-source/dashboards.md" %}
 
-Currently, dstack supports only _Interactive reports_. The support for _Live dashboards_ and _Machine learning applications_ is coming soon.
+Currently, dstack supports only _Interactive reports_. The support for _Live dashboards_ and _Machine learning applications_ is coming very soon.
 
 {% hint style="info" %}
 Check out this [quick tutorial](tutorials/dashboards-tutorial.md) on how to build interactive reports with dstack in minutes.
 {% endhint %}
 
-**Automating scientific routines**
+### **Automating scientific routines**
 
 The dstack in-cloud and on-premises versions allow you to execute Python and R jobs right – either on demand or automatically at a regular schedule.
 
