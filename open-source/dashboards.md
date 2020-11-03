@@ -30,9 +30,13 @@ If a **Stack** displays each moment a single visualization that corresponds to t
 
 ## Sharing Dashboards
 
-Finally, you can switch the access level for this Dashboard between Public and Private, and share it with specific users by entering their usernames or emails. In order to do that, click **Share**_._
+In order to share the dashboard with others you can click **Share** on the top right of your dashboard.
 
-The user, with whom you've shared the dashboard, will be able to open the dashboard and see it updating based on the parameters selected. Note, the parameters are shown only in case the added stacks have parameters.
+You can switch the **access level** for this Dashboard between **Public** \(Everyone with the link can view it\) and **Private** \(share it with specific users by entering their usernames or emails\). 
+
+The user with whom you've shared the dashboard will be able to open the dashboard and see it updating based on the parameters selected. Note, the parameters are shown only in case the added stacks have parameters.
+
+![](../.gitbook/assets/untitled%20%282%29.png)
 
 **That's it! Go ahead, and build your interactive dashboards right away! 🚀**
 
