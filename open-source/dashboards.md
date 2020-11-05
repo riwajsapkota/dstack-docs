@@ -20,7 +20,7 @@ Here's an example of a simple report: [https://dstack.ai/cheptsov/d/505d2087-9ad
 
 1. First create **Stacks** by [pushing](pushing-visualizations.md) your visualizations via the Python or R API. Those can be either Static or Interactive stacks. 
 2. Click **Reports** in the sidebar of [dstack.ai](https://dstack.ai) and then click **New Report**.
-3. You'll see a new empty Dashboard. Now, go ahead, click **Add Stack**, and select the Stacks that you'd like to put to your Dashboard. You can add as many Stacks as you'd like
+3. You'll see a new empty Report. Now, go ahead, click **Add Stack**, and select the Stacks that you'd like to put to your Report. You can add as many Stacks as you'd like
 4. Once you've selected the **Stacks**, click **Add selected stacks**. You'll see the selected **Stacks** added to the current **Report.**
 5. Now you can change the title of the Dashboard or any of the Stacks by mouse-clicking their titles.
 
@@ -28,11 +28,11 @@ Here's an example of a simple report: [https://dstack.ai/cheptsov/d/505d2087-9ad
 
 ## Sharing Reports
 
-In order to share the dashboard with others you can click **Share** on the top right of your dashboard.
+In order to share the report with others you can click **Share** on the top right of your report.
 
-You can switch the **access level** for this Dashboard between **Public** \(Everyone with the link can view it\) and **Private** \(share it with specific users by entering their usernames or emails\). 
+You can switch the **access level** for this Report between **Public** \(Everyone with the link can view it\) and **Private** \(share it with specific users by entering their usernames or emails\). 
 
-The user with whom you've shared the dashboard will be able to open the dashboard and see it updating based on the parameters selected. Note, the parameters are shown only in case the added stacks have parameters.
+The user with whom you've shared the report will be able to open the report and see it updating based on the parameters selected. Note, the parameters are shown only in case the added stacks have parameters.
 
 ![](../.gitbook/assets/frame-12.png)
 

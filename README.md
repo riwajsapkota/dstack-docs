@@ -23,7 +23,7 @@ A data science application is a specific kind of application that solves domain-
 There are several general use-cases for such data science applications:
 
 1. **Interactive reports** – Creating a set data visualizations and interactive widgets, combined using a certain layout to convey ideas and stories based in data.
-2. **Live dashboards** – applications that fetch data from various data sources, turn it into visualizations and combine using a certain layout \(not supported yet\).
+2. **Live reports** – applications that fetch data from various data sources, turn it into visualizations and combine using a certain layout \(not supported yet\).
 3. **Machine learning applications** – applications that let users interact with ML models \(not supported yet\).
 
 {% page-ref page="open-source/dashboards.md" %}

@@ -7,7 +7,7 @@ description: >-
 
 # Building Interactive Reports
 
-## A quick start guide on building dashboards with dstack and Python.
+## A quick start guide on building reports with dstack and Python.
 
 {% hint style="warning" %}
 This tutorial does not cover the installation process of `dstack`client packages which is required for this tutorial to be followed. You can easily do the Installation by going to the [Installation](../open-source/installation.md) page in Getting Started. 
