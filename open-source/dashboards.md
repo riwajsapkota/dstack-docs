@@ -17,7 +17,7 @@ Here's an example of a simple report: [https://dstack.ai/cheptsov/d/505d2087-9ad
 {% endhint %}
 
 {% hint style="info" %}
-Note: Reports used to be referred to as Dashboards in prior versions of dstack.
+Note: Reports used to be referred to as Dashboards in older versions of dstack. If you had previously created or saved Dashboards, they will now appear under the new label of Reports.
 {% endhint %}
 
 ## Creating a Report
