@@ -16,13 +16,17 @@ A Report can be thought of as a **collection of multiple stacks**. If a **Stack*
 Here's an example of a simple report: [https://dstack.ai/cheptsov/d/505d2087-9adc-49e3-88de-6b46079c394f](https://dstack.ai/cheptsov/d/505d2087-9adc-49e3-88de-6b46079c394f)
 {% endhint %}
 
+{% hint style="info" %}
+Note: Reports used to be referred to as Dashboards in prior versions of dstack.
+{% endhint %}
+
 ## Creating a Report
 
 1. First create **Stacks** by [pushing](pushing-visualizations.md) your visualizations via the Python or R API. Those can be either Static or Interactive stacks. 
 2. Click **Reports** in the sidebar of [dstack.ai](https://dstack.ai) and then click **New Report**.
 3. You'll see a new empty Report. Now, go ahead, click **Add Stack**, and select the Stacks that you'd like to put to your Report. You can add as many Stacks as you'd like
 4. Once you've selected the **Stacks**, click **Add selected stacks**. You'll see the selected **Stacks** added to the current **Report.**
-5. Now you can change the title of the Dashboard or any of the Stacks by mouse-clicking their titles.
+5. Now you can change the title of the Report or any of the Stacks by mouse-clicking their titles.
 
 ![](../.gitbook/assets/frame-13.png)
 
