@@ -1,6 +1,6 @@
 # Registration
 
-Registered users can push their data to dstack.ai, create dashboards, and invite other users as collaborators.
+Registered users can push their data to dstack.ai, create reports, and invite other users as collaborators.
 
 To create a dstack.ai account, take the following steps:
 

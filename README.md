@@ -28,7 +28,7 @@ There are several general use-cases for such data science applications:
 
 {% page-ref page="open-source/dashboards.md" %}
 
-Currently, dstack supports only _Interactive reports_. The support for _Live dashboards_ and _Machine learning applications_ is coming very soon.
+Currently, dstack supports only _Interactive reports_. The support for _Live Reports_ and _Machine learning applications_ is coming very soon.
 
 {% hint style="info" %}
 Check out this [quick tutorial](tutorials/dashboards-tutorial.md) on how to build interactive reports with dstack in minutes.

@@ -3,7 +3,7 @@
 Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python and R scripts and applications.
 
 {% hint style="success" %}
-Once you've pushed your data to dstack.ai using the `dstack` packages for Python and R, you can combine your datasets and visualizations into a great-looking interactive dashboards with just a few clicks. [Learn more on how to push your data to dstack.ai](../open-source/pushing-visualizations.md)
+Once you've pushed your data to dstack.ai using the `dstack` packages for Python and R, you can combine your datasets and visualizations into a great-looking interactive reports with just a few clicks. [Learn more on how to push your data to dstack.ai](../open-source/pushing-visualizations.md)
 {% endhint %}
 
 ## Installing dstack package
