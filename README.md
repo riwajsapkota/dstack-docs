@@ -4,7 +4,9 @@
 
 How is dstack different from other frameworks \(Plotly, Streamlit, Shiny, etc\):
 
-* It simplifies the process of creating applications by a\) decoupling ML development and application development \(by introducing an ML Registry\) b\) leveraging a declarative approach to defining application components \(ML models, datasets, reports, jobs, etc\)
+* It simplifies the process of creating applications by 
+  * a\) decoupling ML development and application development \(by introducing an ML Registry\) 
+  * b\) leveraging a declarative approach to defining application components \(ML models, datasets, reports, jobs, etc\)
 * It is designed for data scientists and doesn't require development skills to build applications.
 
 ![](.gitbook/assets/dstack_example.gif)
