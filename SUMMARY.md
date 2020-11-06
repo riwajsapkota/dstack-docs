@@ -25,9 +25,9 @@
 
 ## 💡 API Reference <a id="api-documentation"></a>
 
-* [Python](api-documentation/python.md)
-* [R](api-documentation/r.md)
-* [CLI](api-documentation/cli.md)
+* [Python](api-documentation/python-reference.md)
+* [R](api-documentation/r-reference.md)
+* [CLI](api-documentation/cli-reference.md)
 * [Docker](api-documentation/docker.md)
 
 ## 🌥 dstack.ai Cloud <a id="in-cloud"></a>

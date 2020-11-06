@@ -88,7 +88,7 @@ ds.push("my_fmnist_model", model, "My Fashion MNIST TF model description")
 
 To pull model you need simply call `pull`, because the model is standard, no additional information \(i.e. decoder information\) required.
 
-You can read the [API Documentation](../../api-documentation/python.md#pulling-frames) to see what parameters you can specify when pulling the model.
+You can read the [API Documentation](../../api-documentation/python-reference.md#pulling-frames) to see what parameters you can specify when pulling the model.
 
 ```python
 pulled_model = ds.pull("my_fmnist_model")
