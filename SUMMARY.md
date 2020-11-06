@@ -13,7 +13,7 @@
 * [Reports](open-source/dashboards.md)
 * [Jobs](open-source/jobs.md)
 
-## 📕 Tutorials and Guides <a id="tutorials"></a>
+## 📚 Tutorials and Guides <a id="tutorials"></a>
 
 * [Building Interactive Reports](tutorials/dashboards-tutorial.md)
 * [Using Datasets](tutorials/datasets.md)
