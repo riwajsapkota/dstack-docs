@@ -92,6 +92,8 @@ pull(stack: str,
 
 To create an interactive stack, you can use the `frame()` method. It returns a `StackFrame` object which contains the `add()` and `push()` methods as discussed later which can be used to add interactive plots, models or datasets with parameters to the created frame, and you can finally push the frame to the stack using the `push()` method.
 
+Every frame can contain many `FrameData` objects \(and must have at least one object attached\), and any such object represent a piece of data user is going to publish, e.g. a chart with specified parameters. 
+
 {% hint style="warning" %}
  `create_frame()`method from older dstack versions has now been deprecated and been replaced by the `frame()` method.
 {% endhint %}

@@ -10,12 +10,12 @@
 
 * [Installation](open-source/installation.md)
 * [Stacks](open-source/pushing-visualizations.md)
-* [Dashboards](open-source/dashboards.md)
+* [Reports](open-source/dashboards.md)
 * [Jobs](open-source/jobs.md)
 
-## 📕 Tutorials and Guides <a id="tutorials"></a>
+## 📚 Tutorials and Guides <a id="tutorials"></a>
 
-* [Building Interactive Dashboards](tutorials/dashboards-tutorial.md)
+* [Building Interactive Reports](tutorials/dashboards-tutorial.md)
 * [Using Datasets](tutorials/datasets.md)
 * [Using Visualisations](tutorials/plotting-libraries.md)
 * [Using Machine Learning Models](tutorials/machine-learning-models/README.md)
@@ -25,9 +25,9 @@
 
 ## 💡 API Reference <a id="api-documentation"></a>
 
-* [Python](api-documentation/python.md)
-* [R](api-documentation/r.md)
-* [CLI](api-documentation/cli.md)
+* [Python](api-documentation/python-reference.md)
+* [R](api-documentation/r-reference.md)
+* [CLI](api-documentation/cli-reference.md)
 * [Docker](api-documentation/docker.md)
 
 ## 🌥 dstack.ai Cloud <a id="in-cloud"></a>

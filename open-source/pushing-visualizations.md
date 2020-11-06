@@ -2,9 +2,9 @@
 
 ## What are Stacks?
 
-Stacks are the heart and soul of dstack.ai. A stack in the English language is a pile of things - typically one that is neatly arranged. With dstack.ai, you can create stacks of **datasets, visualizations**, and **models** to create and save different versions of them, easily share them to collaborate with your team, re-use them as you see fit, and also create [Dashboards](dashboards.md) with them that help you tell a story with multiple stacks.
+Stacks are the heart and soul of dstack.ai. A stack in the English language is a pile of things - typically one that is neatly arranged. With dstack.ai, you can create stacks of **datasets, visualizations**, and **models** to create and save different versions of them, easily share them to collaborate with your team, re-use them as you see fit, and also create [Reports](dashboards.md) with them that help you tell a story with multiple stacks.
 
-The `dstack` tool for Python and R lets you push datasets, models and visualizations, and arrange them into reports and interactive dashboards. You can read more detailed tutorials and examples about how to do this in the [Tutorials](../tutorials/dashboards-tutorial.md) Section.
+The `dstack` tool for Python and R lets you push datasets, models and visualizations, and arrange them into reports and interactive reports. You can read more detailed tutorials and examples about how to do this in the [Tutorials](../tutorials/dashboards-tutorial.md) Section.
 
 {% hint style="info" %}
 Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python R scripts, and applications. Learn how to [install and configure](installation.md) `dstack`.
@@ -124,7 +124,7 @@ dstack.ai tracks every submitted frame and lets you rollback between revisions v
 All visualizations and datasets pushed to dstack.ai follow the privacy settings specified for the registered profile. You can make all data submitted to dstack.ai either public or private. You also can change the privacy settings for individual datasets and visualizations to make them either public or private, or share them only with selected users. [Learn more on sharing and collaboration](../in-cloud/collaboration.md)
 {% endhint %}
 
-**That is it. Once the data is pushed to dstack.ai, you can share it with the team or arrange into** [**comprehensive dashboards**](dashboards.md) **📈.**
+**That is it. Once the data is pushed to dstack.ai, you can share it with the team or arrange into** [**comprehensive reports**](dashboards.md) **📈.**
 
 {% page-ref page="dashboards.md" %}
 

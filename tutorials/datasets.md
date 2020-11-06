@@ -145,6 +145,3 @@ ds.push("my_first_geo", gdf)
 
 To pull the GeoDataFrame object just call `my_gdf = pull("my_first_geo")`.
 
-  
-
-
