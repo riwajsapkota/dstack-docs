@@ -58,7 +58,7 @@ dstack::configure(user = "<USER>", token = "<TOKEN>", persist = "global")
 Configuring dstack profiles separately from your code, allows you to make the code safe and not include plain secret tokens.
 {% endhint %}
 
-Note, by default, the server stores all the data under `.dstack` in the user home directory. In case you'd like to store the `.dstack` folder in a different place, use the following command:
+Note, by default, the server stores all the data under `.dstack` in the user home directory \(`$HOME/.dstack/config.yaml`\). In case you'd like to store the `.dstack` folder in a different place, use the following command:
 
 ```text
 dstack server start --home <other_directory>
