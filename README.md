@@ -2,19 +2,19 @@
 
 [dstack.ai](https://dstack.ai) is an open-source tool and an enterprise platform for building data and ML applications using Python and R.
 
-How is dstack different from other frameworks \(Shiny, Dash, Streamlit, and others\):
+How is dstack different from other frameworks \(Plotly, Streamlit, Shiny, etc\):
 
+* It simplifies the process of creating applications by a\) decoupling ML development and application development \(by introducing an ML Registry\) b\) leveraging a declarative approach to defining application components \(ML models, datasets, reports, jobs, etc\)
 * It is designed for data scientists and doesn't require development skills to build applications.
-* It simplifies the process of creating applications by leveraging 
-  * a\) a declarative approach to defining application components; 
-  * b\) agnostic to data science frameworks and tools.
+
+![](.gitbook/assets/dstack_example.gif)
 
 ### **How dstack works**
 
 The framework consists of the following parts:
 
-* Client packages for Python \([dstack-py](https://github.com/dstackai/dstack-py)\) an R \([dstack-r](https://github.com/dstackai/dstack-r)\). These packages can be used from either notebooks or scripts to push data to dstack.
-* A server application \([dstack-server](https://github.com/dstackai/dstack-server)\). It handles the requests from the Client packages, and serve data applications. The application can run locally or in Docker.
+* **Client packages** for Python \([dstack-py](https://github.com/dstackai/dstack-py)\) an R \([dstack-r](https://github.com/dstackai/dstack-r)\). These packages can be used from either notebooks or scripts to push data to dstack.
+* **A server application** \([dstack-server](https://github.com/dstackai/dstack-server)\). It handles the requests from the Client packages, and serve data applications. The application can run locally or in Docker.
 
 A data science application is a specific kind of application that solves domain-specific problems using data and data science methods. These data science methods may include data-wrangling, data visualizations, statistical modeling, machine learning, etc.
 
