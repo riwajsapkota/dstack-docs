@@ -22,9 +22,12 @@ A data science application is a specific kind of application that solves domain-
 
 There are several general use-cases for such data science applications:
 
-1. **Interactive reports** – Creating a set data visualizations and interactive widgets, combined using a certain layout to convey ideas and stories based in data.
-2. **Live reports** – applications that fetch data from various data sources, turn it into visualizations and combine using a certain layout \(not supported yet\).
-3. **Machine learning applications** – applications that let users interact with ML models \(not supported yet\).
+1. **Reports** – interactive visualizations with different layouts
+2. **Model registry** - Once, you've trained an ML model, you can push it to dstack.ai using the Python's push function. Later, you can pull this model to use anywhere: in a notebook, script, job, or application.
+3. **Jobs** – Automate the routine of processing datasets or updating dashboards, by running regular Python or R jobs and monitoring their progress.
+4. **Applications** – Interactive applications that run on the server and let users to interact with ML models and data sources \(not supported yet\)
+
+Currently, dstack supports _Reports_, _Model registry_, and _Jobs_. The support for _Applications_ is coming soon.
 
 {% page-ref page="open-source/dashboards.md" %}
 
