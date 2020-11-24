@@ -9,8 +9,6 @@ How is dstack different from other frameworks \(Plotly, Streamlit, Shiny, etc\):
   * b\) leveraging a declarative approach to defining application components \(ML models, datasets, reports, jobs, etc\)
 * It is designed for data scientists and doesn't require development skills to build applications.
 
-![](.gitbook/assets/dstack_example.gif)
-
 ### **How dstack works**
 
 The framework consists of the following parts:
