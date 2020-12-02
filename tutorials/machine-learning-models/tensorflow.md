@@ -10,7 +10,7 @@ Here is a simple example where we build a model to classify Fashion MNIST images
 
 Note: Only version 2 of Tensorflow in supported by dstack.
 
-### 1. Import, building and training the model
+## 1. Import, building and training the model
 
 ```python
 import tensorflow as tf
@@ -34,7 +34,7 @@ model = tf.keras.Sequential([
 model.compile(optimizer='adam',
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
               metrics=['accuracy'])
-              
+
 # Training the model for 10 epochs
 model.fit(train_images, train_labels, epochs=10)
 ```
@@ -73,18 +73,18 @@ Epoch 10/10
 <tensorflow.python.keras.callbacks.History at 0x7fb7ef01ea90>
 ```
 
-### 2. Pushing the Model
+## 2. Pushing the Model
 
-Now finally we can push the model to our stack with the model name and description. 
+Now finally we can push the model to our stack with the model name and description.
 
-Note: The model  we are pushing is of type `tensorflow.python.keras.engine.sequential.Sequential`
+Note: The model we are pushing is of type `tensorflow.python.keras.engine.sequential.Sequential`
 
 ```python
 # push the model
 ds.push("my_fmnist_model", model, "My Fashion MNIST TF model description")
 ```
 
-### 3. Pulling the Model
+## 3. Pulling the Model
 
 To pull model you need simply call `pull`, because the model is standard, no additional information \(i.e. decoder information\) required.
 
@@ -94,7 +94,7 @@ You can read the [API Documentation](../../api-documentation/python-reference.md
 pulled_model = ds.pull("my_fmnist_model")
 ```
 
-### 4. Using the Model
+## 4. Using the Model
 
 Because of dstack saving the model, we can re-use the model that we `pull` and use it for other prediction tasks, making plots, or anything else. We can quite simply just evaluate the accuracy of the downloaded model or just see check out the weights of the model like this -
 
@@ -102,7 +102,7 @@ Because of dstack saving the model, we can re-use the model that we `pull` and u
 pulled_model.get_weights()
 ```
 
-This will result in the following output. 
+This will result in the following output.
 
 ```text
 [array([[ 0.052427  , -0.02945182,  0.0617029 , ...,  0.00246967,

@@ -10,7 +10,7 @@ description: >-
 ## A quick start guide on building reports with dstack and Python.
 
 {% hint style="warning" %}
-This tutorial does not cover the installation process of `dstack`client packages which is required for this tutorial to be followed. You can easily do the Installation by going to the [Installation](../open-source/installation.md) page in Getting Started. 
+This tutorial does not cover the installation process of `dstack`client packages which is required for this tutorial to be followed. You can easily do the Installation by going to the [Installation](../open-source/installation.md) page in Getting Started.
 {% endhint %}
 
 {% page-ref page="../open-source/installation.md" %}

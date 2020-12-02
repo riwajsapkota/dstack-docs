@@ -8,7 +8,7 @@ description: >-
 
 Let's consider an example in Pytorch where we define our own new Model with a class.
 
-#### 1. Defining and Training the Model
+## 1. Defining and Training the Model
 
 ```python
 import torch
@@ -35,18 +35,18 @@ for epoch in range(100):
 TorchModelEncoder.STORE_WHOLE_MODEL = False
 ```
 
-#### 2. Pushing the model
+## 2. Pushing the model
 
 ```python
 # finally push the model
-ds.push("my_torch_model", model, "My first PyTorch model")        
+ds.push("my_torch_model", model, "My first PyTorch model")
 ```
 
 We stored only model weights, so to pull it we should provide model class to decoder, because `pull` method is not smart enough to guess which particular class to use. The following example shows a common pattern how to use pull in this case:
 
-#### 3. Pulling the Model with a Decoder Parameter
+## 3. Pulling the Model with a Decoder Parameter
 
-You can also import the Decoder from `dstack.torch.handlers` like this -  `from dstack.torch.handlers import TorchModelWeightsDecoder`
+You can also import the Decoder from `dstack.torch.handlers` like this - `from dstack.torch.handlers import TorchModelWeightsDecoder`
 
 ```python
 my_model = ds.pull("my_torch_model", decoder=TorchModelWeightsDecoder(LinearRegression(1, 1)))

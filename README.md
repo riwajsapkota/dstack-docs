@@ -9,7 +9,7 @@ How is dstack different from other frameworks \(Plotly, Streamlit, Shiny, etc\):
   * b\) leveraging a declarative approach to defining application components \(ML models, datasets, reports, jobs, etc\)
 * It is designed for data scientists and doesn't require development skills to build applications.
 
-### **How dstack works**
+## **How dstack works**
 
 The framework consists of the following parts:
 
@@ -18,7 +18,7 @@ The framework consists of the following parts:
 
 A data science application is a specific kind of application that solves domain-specific problems using data and data science methods. These data science methods may include data-wrangling, data visualizations, statistical modeling, machine learning, etc.
 
-### **Building data science applications**
+## **Building data science applications**
 
 There are several general use-cases for such data science applications:
 
@@ -37,7 +37,7 @@ Currently, dstack supports only _Interactive reports_. The support for _Live Rep
 Check out this [quick tutorial](tutorials/dashboards-tutorial.md) on how to build interactive reports with dstack in minutes.
 {% endhint %}
 
-### **Automating scientific routines**
+## **Automating scientific routines**
 
 The dstack in-cloud and on-premises versions allow you to execute Python and R jobs right – either on demand or automatically at a regular schedule.
 

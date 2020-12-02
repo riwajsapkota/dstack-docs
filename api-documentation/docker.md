@@ -4,7 +4,7 @@
 You can find dstack for Docker on DockerHub here - [https://hub.docker.com/r/dstackai/dstack](https://hub.docker.com/r/dstackai/dstack)
 {% endhint %}
 
-#### Docker Pull Command
+## Docker Pull Command
 
 ```bash
 docker pull dstackai/dstack

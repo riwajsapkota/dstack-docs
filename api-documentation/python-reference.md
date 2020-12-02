@@ -12,7 +12,7 @@ You can find the complete open source python implementation here -[https://githu
 
 ## Push Method
 
-The `push()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to have interactive plots in your application then you would want to first use the `frame()` method to create the frame then add with `add()`, and then finally push it with the  `push()` method.
+The `push()` method **creates** **a frame** in the stack, **commits** and **pushes** the data in a single operation. If you want to have interactive plots in your application then you would want to first use the `frame()` method to create the frame then add with `add()`, and then finally push it with the `push()` method.
 
 {% hint style="warning" %}
 `push_frame()` method from older dstack versions has now been deprecated and been replaced by the `push()` method
@@ -38,7 +38,7 @@ push(stack: str,
 
 **`obj`**: Object to commit and push, e.g. plot, DataFrame, etc.
 
-**`description`**: Optional description of the object.ept HTTP 200, e.g. in the case of authorization         
+**`description`**: Optional description of the object.ept HTTP 200, e.g. in the case of authorization
 
 **`access`**: Access level for the stack. It may be public, private or None. It is None by default, so it will be default access level in user's settings.
 
@@ -92,10 +92,10 @@ pull(stack: str,
 
 To create an interactive stack, you can use the `frame()` method. It returns a `StackFrame` object which contains the `add()` and `push()` methods as discussed later which can be used to add interactive plots, models or datasets with parameters to the created frame, and you can finally push the frame to the stack using the `push()` method.
 
-Every frame can contain many `FrameData` objects \(and must have at least one object attached\), and any such object represent a piece of data user is going to publish, e.g. a chart with specified parameters. 
+Every frame can contain many `FrameData` objects \(and must have at least one object attached\), and any such object represent a piece of data user is going to publish, e.g. a chart with specified parameters.
 
 {% hint style="warning" %}
- `create_frame()`method from older dstack versions has now been deprecated and been replaced by the `frame()` method.
+`create_frame()`method from older dstack versions has now been deprecated and been replaced by the `frame()` method.
 {% endhint %}
 
 ```python
@@ -135,7 +135,7 @@ The `add()` method is part of the `StackFrame`object which is returned by the `f
 The parameters associated with the data also allow you to create interactive plots when you use the `add()` method.
 
 {% hint style="warning" %}
- `commit()` method from older dstack versions has now been deprecated and been replaced by the `add()`method.
+`commit()` method from older dstack versions has now been deprecated and been replaced by the `add()`method.
 {% endhint %}
 
 ```python
@@ -151,7 +151,7 @@ add(self,
 {% tab title="Parameters" %}
 **`obj`**: A data to commit. Data will be preprocessed by the handler but dependently on `auto_push` mode will be sent to server or not. If `auto_push` is False then the data won't be sent. Explicit push call need anyway to process committed data. auto\_push is useful only in the case of multiple data objects in the stack frame, _e.g. set of plots with settings._
 
-**`description`**: Optional description of the object.ept HTTP 200, e.g. in the case of authorization       
+**`description`**: Optional description of the object.ept HTTP 200, e.g. in the case of authorization
 
 **`profile`**: Profile you want to use, i.e. username and token. Default profile is 'default'.
 

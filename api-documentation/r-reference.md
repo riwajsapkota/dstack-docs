@@ -125,7 +125,7 @@ push(frame)
 
 ## Commit
 
-Commits Data to the Stack Frame. 
+Commits Data to the Stack Frame.
 
 This function adds a new view to the stack frame. Multiple views can be added to one frame, but in this case every plot must be supplied with certain parameters to distiguish one view from another. In the case of single plot parameters are not necessary. For multiple views parameters will be automaticaly converted to UI controls like sliders and drop down lists.
 

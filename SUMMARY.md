@@ -12,6 +12,7 @@
 * [Stacks](open-source/pushing-visualizations.md)
 * [Reports](open-source/dashboards.md)
 * [Jobs](open-source/jobs.md)
+* [Applications \(Beta Version\)](open-source/applications.md)
 
 ## 📚 Tutorials and Guides <a id="tutorials"></a>
 

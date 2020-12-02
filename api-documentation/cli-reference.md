@@ -10,13 +10,13 @@ Please make sure you have followed the [Installation procedure](../open-source/i
 You can find the complete open source implementation of the dstack CLI here -[https://github.com/dstackai/dstack-py/tree/master/dstack/cli](https://github.com/dstackai/dstack-py/tree/master/dstack/cli)
 {% endhint %}
 
-The dstack CLI has **2 optional arguments** - 
+The dstack CLI has **2 optional arguments** -
 
 `dstack --help`- Show help message and exit
 
 `dstack --version`- Show program's version number and exit
 
-and it has **2 positional arguments -** 
+and it has **2 positional arguments -**
 
 `dstack config`- To manage the user profile configuration.
 
@@ -44,7 +44,7 @@ dstack config add [-h] [--token [TOKEN]] [--server [SERVER]]
 
 {% tabs %}
 {% tab title="Optional Parameters" %}
-`-h, --help`  - show this help message and exit
+`-h, --help` - show this help message and exit
 
 `--token [TOKEN]`- set token for selected profile
 
@@ -74,7 +74,7 @@ dstack config modify [-h] [--token [TOKEN]] [--server [SERVER]]
 
 {% tabs %}
 {% tab title="Optional Parameters" %}
-`-h, --help`  - show this help message and exit
+`-h, --help` - show this help message and exit
 
 `--token [TOKEN]`- set token for selected profile
 
@@ -104,7 +104,7 @@ dstack config remove [-h] [--force] [--file FILE] [PROFILE]
 
 {% tabs %}
 {% tab title="Optional Parameters" %}
-`-h, --help`  - show this help message and exit
+`-h, --help` - show this help message and exit
 
 `--force` - don't ask for confirmation
 
@@ -117,12 +117,12 @@ dstack config remove [-h] [--force] [--file FILE] [PROFILE]
 List all configured user profiles
 
 ```bash
-dstack config list [-h] [--file FILE] 
+dstack config list [-h] [--file FILE]
 ```
 
 {% tabs %}
 {% tab title="Optional Parameters" %}
-`-h, --help`  - show this help message and exit
+`-h, --help` - show this help message and exit
 
 `--file FILE` - use specific config file
 {% endtab %}
@@ -147,13 +147,13 @@ dstack server start [-h] [--port [PORT]] [--home [HOME]] [--skip]
 
 {% tabs %}
 {% tab title="Optional Parameters" %}
-`--port [PORT]` -  use specific port
+`--port [PORT]` - use specific port
 
 `--home [HOME]` - store server data in the specified directory
 
 `--skip` - skip checking for updates
 
-`--no-verify`  - do not verify SSL certificates
+`--no-verify` - do not verify SSL certificates
 {% endtab %}
 {% endtabs %}
 
@@ -162,7 +162,7 @@ dstack server start [-h] [--port [PORT]] [--home [HOME]] [--skip]
 Prints server version
 
 ```bash
-dstack server version 
+dstack server version
 ```
 
 ### 3. update
@@ -170,6 +170,6 @@ dstack server version
 Update server version
 
 ```bash
-dstack server update 
+dstack server update
 ```
 

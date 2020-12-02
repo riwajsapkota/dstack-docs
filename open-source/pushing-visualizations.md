@@ -115,7 +115,7 @@ push(frame)
 {% endtabs %}
 
 {% hint style="info" %}
-You can have as many parameters as you want. Within one frame, you can combine different types of data: dataframes and figures. 
+You can have as many parameters as you want. Within one frame, you can combine different types of data: dataframes and figures.
 {% endhint %}
 
 dstack.ai tracks every submitted frame and lets you rollback between revisions via the web application if needed.
@@ -165,6 +165,6 @@ ds.push("exponent", fig, description=text)
 {% endtabs %}
 
 {% hint style="info" %}
-Be sure that you escape all special symbols, e.g. `\f` in `\frac`. Certainly, it is possible to escape all  to be safe.
+Be sure that you escape all special symbols, e.g. `\f` in `\frac`. Certainly, it is possible to escape all to be safe.
 {% endhint %}
 

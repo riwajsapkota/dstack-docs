@@ -8,7 +8,7 @@ description: >-
 
 We will use the `sklearn.datasets` package to use the diabetes dataset to make and deploy a simple Linear Regression Model using dstack, then pull it to make a linear regression plot using `matplotlib`
 
-#### 1. Importing Libraries and dstack
+### 1. Importing Libraries and dstack
 
 We will first import _scikit-learn_, _numpy_ and _matplotlib_ for plotting and of course the `push` and `pull` methods from _dstack_
 
@@ -23,7 +23,7 @@ import sklearn
 import dstack as ds
 ```
 
-#### 2. Loading and Splitting Dataset
+### 2. Loading and Splitting Dataset
 
 Let's load our diabetes dataset now from scikit-learn, and split it.
 
@@ -43,9 +43,9 @@ diabetes_y_train = diabetes_y[:-20]
 diabetes_y_test = diabetes_y[-20:]
 ```
 
-#### 3. Fitting the Model
+### 3. Fitting the Model
 
-Finally we fit the model with the `LinearRegression()` object in scikit-learn 
+Finally we fit the model with the `LinearRegression()` object in scikit-learn
 
 ```python
 # Create linear regression object
@@ -55,7 +55,7 @@ regr = LinearRegression()
 regr.fit(diabetes_X_train, diabetes_y_train)
 ```
 
-#### 4. Pushing to dstack 
+### 4. Pushing to dstack
 
 Now that our model is fit and ready, we push it to dstack as a stack using the `push_frame()`method
 
@@ -64,7 +64,7 @@ Now that our model is fit and ready, we push it to dstack as a stack using the `
 ds.push("simpleLinearReg", regr, "My first linear model")
 ```
 
-#### 5. Pulling from dstack 
+### 5. Pulling from dstack
 
 Now that you have it pushed on a Stack, you can share it with anyone so they can pull the model and use it, or you can pull it and re-use it anytime you like as well! Let's see how we can pull the model from the Stack and use it to display a plot.
 
@@ -73,7 +73,7 @@ Now that you have it pushed on a Stack, you can share it with anyone so they can
 my_model = ds.pull("simpleLinearReg")
 ```
 
-That's it! You have pulled your model. It's that easy. 
+That's it! You have pulled your model. It's that easy.
 
 **6. Using the Model to Make Predictions or Plots**
 
@@ -108,6 +108,4 @@ This error probably means you haven't called `.fit()` method on the Linear Regre
 ```text
 AttributeError: 'LinearRegression' object has no attribute 'coef_'
 ```
-
-
 

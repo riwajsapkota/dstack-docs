@@ -10,7 +10,7 @@ description: >-
 
 Once the **dstack profile** is configured, you can publish plots from your Python program or Jupyter notebook. Let's consider the simpliest example, line plot using [matplotlib](https://matplotlib.org/) library, but you can use [bokeh](https://docs.bokeh.org/en/latest/index.html) and [plotly](https://plot.ly/) plots instead of matplotlib in the same way:
 
-#### Simple Plot
+### Simple Plot
 
 ```python
 import matplotlib.pyplot as plt
@@ -22,7 +22,7 @@ plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
 ds.push("simple", fig, "My first plot")
 ```
 
-#### Interactive Plot
+### Interactive Plot
 
 ```python
 import matplotlib.pyplot as plt
@@ -85,7 +85,7 @@ ds.push("bokeh_plot", p, "My bokeh plot")
 
 ## ggplot2 in R
 
-#### Publishing simple plots in R
+### Publishing simple plots in R
 
 ```r
 library(ggplot2)
@@ -97,7 +97,7 @@ image <- ggplot(data = df, aes(x = x, y = y)) + geom_line()
 push("simple", image, "My first plot")
 ```
 
-#### Publishing interactive plots in R
+### Publishing interactive plots in R
 
 Suppose you want to publish a line plot that depends on the value of the parameter `Coefficient`\(slope\).
 

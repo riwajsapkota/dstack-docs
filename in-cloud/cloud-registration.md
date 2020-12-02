@@ -9,8 +9,6 @@ To create a dstack.ai account, take the following steps:
 
 Now, your profile is ready! 🚀Now you can push data to dstack.ai using the API, create reports, and share them with your team.
 
-
-
 ## Pricing
 
 The basic version of dstack.ai is free for individuals to use, and you can use sign up here - [https://dstack.ai/auth/signup](https://dstack.ai/auth/signup) in order to start using this tier.
