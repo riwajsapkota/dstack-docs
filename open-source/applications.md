@@ -330,6 +330,11 @@ The dstack framework offers an [ML Registry](../tutorials/machine-learning-model
 
 It's very likely that the other existing features of dstack such as Stacks, Reports, Jobs, etc, are going to be discontinued after the public release of interactive applications.
 
+ **6. What are the other limitations of current implementation?**
+
+* [ ] Applications work only with the open-source version. The cloud version of dstack is going to be [discontinued](https://blog.dstack.ai/discontinuing-cloud-and-r-to-fully-focus-on-open-source-data-applications-using-python).
+* [ ] Applications currently do not offer a way to cache data. This is going to be fixed soon. Here's the [issue](https://github.com/dstackai/dstack-py/issues/14).
+
 ### Questions
 
 Do you have any feedback either minor or critical? Something doesn't work? Have a question? Please, write to us on our [Discord Channel](https://discord.gg/8xfhEYa).
