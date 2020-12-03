@@ -114,6 +114,7 @@ import pandas as pd
 import plotly.express as px
 
 
+@ds.cache()
 def get_data():
     return pd.read_csv("https://www.dropbox.com/s/cat8vm6lchlu5tp/data.csv?dl=1", index_col=0)
 
@@ -148,6 +149,7 @@ def get_companies():
 companies = ctrl.ComboBox(data=get_companies, label="Company", require_apply=False)
 
 
+@ds.cache()
 def get_data_by_company(companies: ctrl.ComboBox):
     df = get_data()
     row = df[df["Company"] == companies.value()].filter(["y2015", "y2016", "y2017", "y2018", "y2019"], axis=1)
@@ -180,9 +182,14 @@ Let's start with the first tab.
 First, we define a function `get_data` which fetches data from an external source and returns a pandas dataframe with this data.
 
 ```python
+@ds.cache()
 def get_data():
     return pd.read_csv("https://www.dropbox.com/s/cat8vm6lchlu5tp/data.csv?dl=1", index_col=0)
 ```
+
+{% hint style="info" %}
+Note, in order to improve the performance of our application, we use the annotation `@dstack.cache`. This annotation wraps the function to make sure that the result of the function is cached, so when it's called the next time, the function is not called again. 
+{% endhint %}
 
 **User controls**
 
@@ -254,6 +261,7 @@ companies = ctrl.ComboBox(data=get_companies, label="Company", require_apply=Fal
 Then, we define a function `get_data_by_company` that produces a Plotly chart with numbers of purchased licenses for the selected company grouped by the year.
 
 ```python
+@ds.cache()
 def get_data_by_company(companies: ctrl.ComboBox):
     df = get_data()
     row = df[df["Company"] == companies.value()].filter(["y2015", "y2016", "y2017", "y2018", "y2019"], axis=1)
@@ -265,6 +273,10 @@ def get_data_by_company(companies: ctrl.ComboBox):
     fig.update(layout_showlegend=False)
     return fig
 ```
+
+{% hint style="info" %}
+Here, we also use the annotation `@dstack.cache` to prevent the function to be called when it is not necessary.
+{% endhint %}
 
 **Application**
 
