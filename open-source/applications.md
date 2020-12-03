@@ -17,7 +17,7 @@ The new feature of `dstack` helps data scientists build such applications and sh
 ### Installation
 
 {% hint style="warning" %}
-In order to try the new feature, you have to install the **`0.6dev9`** version of the `dstack` Python package from [test.pypi.org](https://test.pypi.org/):
+In order to try the new feature, you have to install the **`0.6dev11`** version of the `dstack` Python package from [test.pypi.org](https://test.pypi.org/):
 {% endhint %}
 
 ```bash
