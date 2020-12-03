@@ -1,5 +1,11 @@
 # What is dstack?
 
+{% hint style="info" %}
+Applications is a new upcoming feature of `dstack` that allows Python developers to quickly build, run, and share data applications. A limited preview of this feature is already available. **Click** [**here**](open-source/applications.md) **to learn how it works and how to try it.**
+{% endhint %}
+
+{% page-ref page="open-source/applications.md" %}
+
 [dstack.ai](https://dstack.ai) is an open-source tool and an enterprise platform for building data and ML applications using Python and R.
 
 How is dstack different from other frameworks \(Plotly, Streamlit, Shiny, etc\):
