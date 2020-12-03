@@ -350,10 +350,9 @@ It's very likely that the other existing features of dstack such as Stacks, Repo
 
  **6. What are the other limitations of current implementation?**
 
-* [ ] Applications work only with the open-source version. The cloud version of dstack is going to be [discontinued](https://blog.dstack.ai/discontinuing-cloud-and-r-to-fully-focus-on-open-source-data-applications-using-python).
-* [ ] Applications currently do not offer a way to cache data. This is going to be fixed soon. Here's the [issue](https://github.com/dstackai/dstack-py/issues/14).
-* [ ] Reports are not compatible with Applications. It's likely that Reports might be discontinued after the release of Applications.
 * [ ] Application outputs do not support complex layouts yet.
+* [ ] Applications work only with the open-source version. The cloud version of dstack is going to be [discontinued](https://blog.dstack.ai/discontinuing-cloud-and-r-to-fully-focus-on-open-source-data-applications-using-python).
+* [ ] Reports are not compatible with Applications. It's likely that Reports might be discontinued after the release of Applications.
 
 ### Need Help?
 
