@@ -13,18 +13,12 @@ There are 2 main components of dstack:
 
 ### Python
 
-The easiest way to install `dstack` in Python is by using `pip` or `conda`:
+The easiest way to install `dstack` in Python is by using `pip`:
 
 {% tabs %}
 {% tab title="pip" %}
 ```bash
 pip install dstack
-```
-{% endtab %}
-
-{% tab title="conda" %}
-```text
-conda install dstack -c dstack.ai
 ```
 {% endtab %}
 {% endtabs %}

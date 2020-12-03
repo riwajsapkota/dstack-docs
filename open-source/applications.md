@@ -30,6 +30,12 @@ Once the package is installed, you have to run the `dstack` server locally:
 dstack server start
 ```
 
+By default, the server uses the `8080` port. Optionally, you can specify a custom port by using the command line option `--port`:
+
+```bash
+dstack server start --port 8081
+```
+
 After you've started the `dstack` server, you can use the `dstack`'s API from a Python script or a Jupyter notebook.
 
 ### A Minimal Application
