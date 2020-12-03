@@ -21,7 +21,7 @@ In order to try the new feature, you have to install the **`0.6dev9`** version o
 {% endhint %}
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6dev9
+pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6dev11
 ```
 
 Once the package is installed, you have to run the `dstack` server locally:
