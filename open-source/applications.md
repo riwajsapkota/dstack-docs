@@ -354,6 +354,12 @@ It's very likely that the other existing features of dstack such as Stacks, Repo
 * [ ] Applications work only with the open-source version. The cloud version of dstack is going to be [discontinued](https://blog.dstack.ai/discontinuing-cloud-and-r-to-fully-focus-on-open-source-data-applications-using-python).
 * [ ] Reports are not compatible with Applications. It's likely that Reports might be discontinued after the release of Applications.
 
+### Feedback
+
+{% hint style="danger" %}
+**Have you read or tried this tutorial? Please share your feedback with us using** [**this**](https://forms.gle/4U6Z6hmZhbAtEDK29) **form!**
+{% endhint %}
+
 ### Need Help?
 
 Do you have any feedback either minor or critical? Something doesn't work? Have a question? Please, write to us on our [Discord Channel](https://discord.gg/8xfhEYa).
