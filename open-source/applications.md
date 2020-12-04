@@ -17,11 +17,11 @@ The new feature of `dstack` helps data scientists build such applications and sh
 ### Installation
 
 {% hint style="warning" %}
-In order to try the new feature, you have to install the **`0.6dev11`** version of the `dstack` Python package from [test.pypi.org](https://test.pypi.org/):
+In order to try the new feature, you have to install the **`0.6dev12`** version of the `dstack` Python package from [test.pypi.org](https://test.pypi.org/):
 {% endhint %}
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6dev11
+pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6dev12
 ```
 
 Once the package is installed, you have to run the `dstack` server locally:
