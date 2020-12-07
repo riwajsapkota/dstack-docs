@@ -163,7 +163,7 @@ def get_data_by_company(companies: ctrl.ComboBox):
                inplace=True)
     col = row.transpose()
     col.rename(columns={col.columns[0]: "Licenses"}, inplace=True)
-    fig = px.bar(col, labels={"value": "Licenses", "index": "Year"})
+    fig = px.bar(col.reset_index(), x="index", y="Licenses", labels={"index": "Year"})
     fig.update(layout_showlegend=False)
     return fig
 
@@ -275,7 +275,7 @@ def get_data_by_company(companies: ctrl.ComboBox):
                inplace=True)
     col = row.transpose()
     col.rename(columns={col.columns[0]: "Licenses"}, inplace=True)
-    fig = px.bar(col, labels={"value": "Licenses", "index": "Year"})
+    fig = px.bar(col.reset_index(), x="index", y="Licenses", labels={"index": "Year"})
     fig.update(layout_showlegend=False)
     return fig
 ```
