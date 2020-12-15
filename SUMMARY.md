@@ -8,8 +8,14 @@
   * [Tabs](applications/tabs.md)
   * [Caching](applications/caching.md)
   * [Markdown](applications/markdown.md)
-  * [Example Application](applications/example-application.md)
+  * [Dependencies](applications/dependencies.md)
+  * [Examples](applications/examples.md)
 * [ML Models](ml-models.md)
 * [FAQ](faq.md)
-* [Troubleshooting](troubleshooting.md)
+* [Feedback](feedback.md)
+
+## Tutorials
+
+* [Minimal Application](tutorials/minimal-application.md)
+* [Complex Application](tutorials/complex-application.md)
 
