@@ -1,10 +1,2 @@
----
-description: asfaf
----
-
 # Applications
-
-
-
-
 
