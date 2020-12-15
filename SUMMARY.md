@@ -11,11 +11,9 @@
   * [Dependencies](applications/dependencies.md)
   * [Examples](applications/examples.md)
 * [ML Models](ml-models.md)
+* [Tutorials](tutorials-1/README.md)
+  * [Complex Application](tutorials-1/complex-application.md)
+  * [Minimal Application](tutorials-1/minimal-application.md)
 * [FAQ](faq.md)
 * [Feedback](feedback.md)
-
-## Tutorials
-
-* [Minimal Application](tutorials/minimal-application.md)
-* [Complex Application](tutorials/complex-application.md)
 
