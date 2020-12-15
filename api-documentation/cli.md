@@ -4,7 +4,7 @@ description: This is the API Reference for using the dstack Command Line Tool.
 
 # CLI
 
-Please make sure you have followed the [Installation procedure](../open-source/installation.md) before referring to the API.
+Please make sure you have followed the [Installation procedure](../installation.md) before referring to the API.
 
 {% hint style="success" %}
 You can find the complete open source implementation of the dstack CLI here -[https://github.com/dstackai/dstack-py/tree/master/dstack/cli](https://github.com/dstackai/dstack-py/tree/master/dstack/cli)
@@ -16,20 +16,20 @@ The dstack CLI has **2 optional arguments** -
 
 `dstack --version`- Show program's version number and exit
 
-and it has **2 positional arguments -**
+and it has **2 position arguments -**
 
 `dstack config`- To manage the user profile configuration.
 
 `dstack server` - To manage your local dstack server.
 
-These positional arguments **\(Config** and **Server\)** are elaborated below.
+These positional arguments **\(Config** and **Server\)** as elaborated below.
 
 ## Config
 
-To manage your user profile configuration.
+To manage your configuration.
 
 {% hint style="info" %}
-You can always use `-h or --help` to show the help message for all parameters.
+You can use `-h, --help` to show the help message for all pameters.
 {% endhint %}
 
 ### 1. add
@@ -64,7 +64,7 @@ dstack config add [-h] [--token [TOKEN]] [--server [SERVER]]
 {% endtab %}
 {% endtabs %}
 
-### 2. modify
+### 2. Modify
 
 ```bash
 dstack config modify [-h] [--token [TOKEN]] [--server [SERVER]]
@@ -94,7 +94,7 @@ dstack config modify [-h] [--token [TOKEN]] [--server [SERVER]]
 {% endtab %}
 {% endtabs %}
 
-### 3. remove
+### 3. Remove
 
 Remove existing user profile
 
@@ -112,7 +112,7 @@ dstack config remove [-h] [--force] [--file FILE] [PROFILE]
 {% endtab %}
 {% endtabs %}
 
-### 4. list
+### 4. List
 
 List all configured user profiles
 
@@ -165,7 +165,7 @@ Prints server version
 dstack server version
 ```
 
-### 3. update
+### 3.update
 
 Update server version
 

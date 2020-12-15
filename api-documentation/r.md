@@ -4,7 +4,7 @@ description: This is the API Reference for using dstack in R.
 
 # R
 
-Please make sure you have followed the [Installation procedure](../open-source/installation.md) before referring to the API.
+Please make sure you have followed the [Installation procedure](../installation.md) before referring to the API.
 
 {% hint style="success" %}
 You can find the complete open source R implementation of dstack here -[https://github.com/dstackai/dstack-r](https://github.com/dstackai/dstack-r)
@@ -41,7 +41,7 @@ push_frame(
 
 **`message`**- Push message.
 
-**`profile`** - A profile refers to credentials, i.e. username and token. Default profile is named 'default'. The best way to manage profiles is to have dstack [CLI tools installed.](../open-source/installation.md)
+**`profile`** - A profile refers to credentials, i.e. username and token. Default profile is named 'default'. The best way to manage profiles is to have dstack [CLI tools installed.](../installation.md)
 
 **`handler`** - Specify handler to handle the object, if it's `None` then `auto_handler` will be used.
 
@@ -67,7 +67,7 @@ push_frame("simple", image, "My first plot")
 
 ## Create Frame
 
-Create a new Frame for the Stack.
+Create a New Frame in Stack.
 
 {% tabs %}
 {% tab title="Parameters" %}
@@ -84,15 +84,15 @@ create_frame(
 
 **`stack`** - A name of stack to use.
 
-**`profile`** - A profile refers to credentials, i.e. username and token. Default profile is named 'default'. The system is looking for specified profile as follows: it looks into working directory to find a configuration file \(local configuration\), if the file doesn't exist it looks into user directory to find it \(global configuration\). The best way to manage profiles is to have dstack [CLI tools installed.](../open-source/installation.md)
+**`profile`** - A profile refers to credentials, i.e. username and token. Default profile is named 'default'. The system is looking for specified profile as follows: it looks into working directory to find a configuration file \(local configuration\), if the file doesn't exist it looks into user directory to find it \(global configuration\). The best way to manage profiles is to have dstack [CLI tools installed.](../installation.md)
 
-**`auto_push`** - Tells the system to push frame just after commit. It may be useful if you want to see result immediately. Default is `FALSE`.
+**`auto_push`** - Tells the system to push frame just after commit. It may be useful if you want to see result immediately. Default is \code{FALSE}.
 
 **`protocol`** - Protocol to use, usually it is `NULL` it means that `json_protocol` will be used.
 
 **`encryption`** - Encryption method. By default `no_encryption` will be used.
 
-**`check_access`** - Check access to specified stack, default is `TRUE`
+**`check_access`** - Check access to specified stack, default is \code{TRUE}
 {% endtab %}
 
 {% tab title="Example" %}
@@ -125,7 +125,7 @@ push(frame)
 
 ## Commit
 
-Commits Data to the Stack Frame.
+Commits Data to Stack Frame.
 
 This function adds a new view to the stack frame. Multiple views can be added to one frame, but in this case every plot must be supplied with certain parameters to distiguish one view from another. In the case of single plot parameters are not necessary. For multiple views parameters will be automaticaly converted to UI controls like sliders and drop down lists.
 

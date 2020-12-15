@@ -1,10 +1,10 @@
 # Stacks
 
-## What are Stacks?
+### What are Stacks?
 
-Stacks are the heart and soul of dstack.ai. A stack in the English language is a pile of things - typically one that is neatly arranged. With dstack.ai, you can create stacks of **datasets, visualizations**, and **models** to create and save different versions of them, easily share them to collaborate with your team, re-use them as you see fit, and also create [Reports](dashboards.md) with them that help you tell a story with multiple stacks.
+Stacks form the fundamental building block of dstack.ai. You can create stacks of **datasets, visualizations**, and **models** in dstack to easily share and re-use them and also create [Dashboards](dashboards.md) with them.
 
-The `dstack` tool for Python and R lets you push datasets, models and visualizations, and arrange them into reports and interactive reports. You can read more detailed tutorials and examples about how to do this in the [Tutorials](../tutorials/dashboards-tutorial.md) Section.
+The `dstack` tool lets you upload datasets, models and visualizations, and arrange them into reports and interactive dashboards. You can read more detailed tutorials and examples about how to do this in the [Tutorials](tutorials/dashboards-tutorial.md) Section.
 
 {% hint style="info" %}
 Uploading datasets and visualization to dstack.ai is done via the `dstack` package available for both Python and R. These packages can be used from Jupyter notebooks, RMarkdown, Python R scripts, and applications. Learn how to [install and configure](installation.md) `dstack`.
@@ -12,7 +12,7 @@ Uploading datasets and visualization to dstack.ai is done via the `dstack` packa
 
 ## Pushing static visualizations or datasets
 
-Here's a simple example of the code that pushes a data visualization to dstack.ai:
+Here's an example of the code that pushes a data visualization to dstack.ai:
 
 {% tabs %}
 {% tab title="Python" %}
@@ -44,7 +44,7 @@ push_frame("simple", image, "My first plot")
 The `dstack` package can be used with [pandas](https://pandas.pydata.org/), [tidyverse](https://www.tidyverse.org/), [matplotlib](https://matplotlib.org/), [ggplot2](https://ggplot2.tidyverse.org/), [bokeh](https://docs.bokeh.org/en/latest/index.html) and [plotly](https://plot.ly/). The `commit` and `push_frame` methods accept `pandas.core.frame.DataFrame`, `data.frame`, `data.table`, `tibble`, `plotly.graph_objs._figure.Figure`, `bokeh.plotting.figure.Figure`, etc.
 {% endhint %}
 
-You can read more detailed and library-specific tutorials on pushing [datasets](../tutorials/datasets.md) and [visualizations](../tutorials/plotting-libraries.md) under the Tutorials and Guides tab.
+You can read more detailed and library-specific tutorials on pushing [datasets](tutorials/datasets.md) and [visualizations](tutorials/plotting-libraries.md) under the Tutorials and Guides tab.
 
 ## Pushing interactive visualizations and datasets
 
@@ -65,11 +65,11 @@ def line_plot(a):
     return fig
 
 
-frame = ds.frame("line_plot")
+frame = ds.create_frame("line_plot")
 coeff = [0.5, 1.0, 1.5, 2.0]
 
 for c in coeff:
-    frame.add(line_plot(c), 
+    frame.commit(line_plot(c), 
     f"Line plot with the coefficient of {c}", {"Coefficient": c})
 
 frame.push()
@@ -121,10 +121,10 @@ You can have as many parameters as you want. Within one frame, you can combine d
 dstack.ai tracks every submitted frame and lets you rollback between revisions via the web application if needed.
 
 {% hint style="warning" %}
-All visualizations and datasets pushed to dstack.ai follow the privacy settings specified for the registered profile. You can make all data submitted to dstack.ai either public or private. You also can change the privacy settings for individual datasets and visualizations to make them either public or private, or share them only with selected users. [Learn more on sharing and collaboration](../in-cloud/collaboration.md)
+All visualizations and datasets pushed to dstack.ai follow the privacy settings specified for the registered profile. You can make all data submitted to dstack.ai either public or private. You also can change the privacy settings for individual datasets and visualizations to make them either public or private, or share them only with selected users. [Learn more on sharing and collaboration](in-cloud/collaboration.md)
 {% endhint %}
 
-**That is it. Once the data is pushed to dstack.ai, you can share it with the team or arrange into** [**comprehensive reports**](dashboards.md) **📈.**
+**That is it. Once the data is pushed to dstack.ai, you can share it with the team or arrange into** [**comprehensive dashboards**](dashboards.md) **📈.**
 
 {% page-ref page="dashboards.md" %}
 
@@ -159,7 +159,7 @@ $$e^x=\sum_{i=0}^\infty \\frac{1}{i!}x^i$$
 It's sometimes very useful.
 """
 
-ds.push("exponent", fig, description=text)
+ds.push_frame("exponent", fig, description=text)
 ```
 {% endtab %}
 {% endtabs %}

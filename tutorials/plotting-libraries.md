@@ -14,19 +14,19 @@ Once the **dstack profile** is configured, you can publish plots from your Pytho
 
 ```python
 import matplotlib.pyplot as plt
-import dstack as ds
+from dstack import push_frame
 
 fig = plt.figure()
 plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
 
-ds.push("simple", fig, "My first plot")
+push_frame("simple", fig, "My first plot")
 ```
 
 ### Interactive Plot
 
 ```python
 import matplotlib.pyplot as plt
-import dstack as ds
+from dstack import create_frame
 
 def line_plot(a):
     xs = range(0, 21)
@@ -37,7 +37,7 @@ def line_plot(a):
     return fig
 
 
-frame = ds.frame("line_plot")
+frame = create_frame("line_plot")
 coeff = [0.5, 1.0, 1.5, 2.0]
 
 for c in coeff:
@@ -52,13 +52,13 @@ The object type `plotly.graph_objs._figure.Figure` for Plotly plots is support b
 
 ```python
 import plotly.express as px
-import dstack as ds
+from dstack import push_frame
 
 
 df = px.data.gapminder().query("country=='Canada'")
 fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
 
-ds.push("plotly_plot", fig, "My plotly plot")
+push_frame("plotly_plot", fig, "My plotly plot")
 ```
 
 ## Bokeh
@@ -67,7 +67,7 @@ dstack allows you to push `bokeh.plotting.figure.Figure`
 
 ```python
 from bokeh.plotting import figure, output_file, show
-import dstack as ds
+from dstack import push_frame
 
 # prepare some data
 x = [1, 2, 3, 4, 5]
@@ -80,7 +80,7 @@ p = figure(title="simple line example", x_axis_label='x', y_axis_label='y')
 p.line(x, y, legend_label="Temp.", line_width=2)
 
 # show the results
-ds.push("bokeh_plot", p, "My bokeh plot")
+push_frame("bokeh_plot", p, "My bokeh plot")
 ```
 
 ## ggplot2 in R
@@ -94,7 +94,7 @@ library(dstack)
 df <- data.frame(x = c(1, 2, 3, 4), y = c(1, 4, 9, 16))
 image <- ggplot(data = df, aes(x = x, y = y)) + geom_line()
 
-push("simple", image, "My first plot")
+push_frame("simple", image, "My first plot")
 ```
 
 ### Publishing interactive plots in R

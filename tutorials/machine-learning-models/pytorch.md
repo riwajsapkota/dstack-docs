@@ -12,7 +12,7 @@ Let's consider an example in Pytorch where we define our own new Model with a cl
 
 ```python
 import torch
-import dstack as ds
+from dstack import push_frame
 from dstack.torch.handlers import TorchModelEncoder
 
 # define a new model
@@ -39,18 +39,17 @@ TorchModelEncoder.STORE_WHOLE_MODEL = False
 
 ```python
 # finally push the model
-ds.push("my_torch_model", model, "My first PyTorch model")
+push_frame("my_torch_model", model, "My first PyTorch model")
 ```
 
 We stored only model weights, so to pull it we should provide model class to decoder, because `pull` method is not smart enough to guess which particular class to use. The following example shows a common pattern how to use pull in this case:
 
 ## 3. Pulling the Model with a Decoder Parameter
 
-You can also import the Decoder from `dstack.torch.handlers` like this - `from dstack.torch.handlers import TorchModelWeightsDecoder`
-
 ```python
-my_model = ds.pull("my_torch_model", decoder=TorchModelWeightsDecoder(LinearRegression(1, 1)))
-```
+from dstack.torch.handlers import TorchModelWeightsDecoder
+from dstack import pull
 
-That's it! Now we can use this pulled model for any task we'd like and also share it with the rest of the team to collaborate.
+my_model = pull("my_torch_model", decoder=TorchModelWeightsDecoder(LinearRegression(1, 1)))
+```
 

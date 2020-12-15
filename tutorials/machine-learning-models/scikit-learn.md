@@ -10,7 +10,7 @@ We will use the `sklearn.datasets` package to use the diabetes dataset to make a
 
 ### 1. Importing Libraries and dstack
 
-We will first import _scikit-learn_, _numpy_ and _matplotlib_ for plotting and of course the `push` and `pull` methods from _dstack_
+We will first import _scikit-learn_, _numpy_ and _matplotlib_ for plotting and of course the `push_frame` and `pull` methods from _dstack_
 
 ```python
 import matplotlib.pyplot as plt
@@ -20,7 +20,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.linear_model import LinearRegression
 import sklearn
 
-import dstack as ds
+from dstack import push_frame, pull
 ```
 
 ### 2. Loading and Splitting Dataset
@@ -61,7 +61,7 @@ Now that our model is fit and ready, we push it to dstack as a stack using the `
 
 ```python
 # Push the frame
-ds.push("simpleLinearReg", regr, "My first linear model")
+push_frame("simpleLinearReg", regr, "My first linear model")
 ```
 
 ### 5. Pulling from dstack
@@ -70,7 +70,7 @@ Now that you have it pushed on a Stack, you can share it with anyone so they can
 
 ```python
 # Pull from the Stack
-my_model = ds.pull("simpleLinearReg")
+my_model = pull("simpleLinearReg")
 ```
 
 That's it! You have pulled your model. It's that easy.
@@ -97,7 +97,7 @@ You should see the following output.
 
 ![Linear Regression Plot Output](../../.gitbook/assets/unknownd.png)
 
-You can also push this plot onto dstack and create a report with the model, plot as well as the dataset! Read the tutorial on the [plotting libraries](../plotting-libraries.md) to try this out.
+You can also push this plot onto dstack and create a dashboard with the model, plot as well as the dataset! Read the tutorial on the [plotting libraries](scikit-learn.md) to try this out.
 
 ## Common Problems and Debugging
 
