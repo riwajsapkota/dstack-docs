@@ -79,3 +79,11 @@ Wanna know how to deploy ML models and use them from applications? Read the [ML 
 
 {% page-ref page="ml-models.md" %}
 
+### Feedback
+
+Do you have any feedback either minor or critical? Please, file [an issue](https://github.com/dstackai/dstack/issues) in our GitHub repo or write to us on our [Discord Channel](https://discord.com/invite/8xfhEYa).
+
+{% hint style="warning" %}
+**Have you tried `dstack`? Please share your feedback with us using** [**this**](https://forms.gle/4U6Z6hmZhbAtEDK29) **form!**
+{% endhint %}
+
