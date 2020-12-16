@@ -10,6 +10,7 @@
   * [Markdown](applications/markdown.md)
   * [Dependencies](applications/dependencies.md)
 * [ML Models](ml-models.md)
+* [User management](user-management.md)
 * [Tutorials](tutorials-1/README.md)
   * [Minimal Application](tutorials-1/minimal-application.md)
   * [Complex Application](tutorials-1/complex-application.md)
