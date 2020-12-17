@@ -3,7 +3,7 @@
 To install `dstack` locally, use `pip`:
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6dev17
+pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6dev18
 ```
 
 Once the package is installed, you have to run the `dstack` server locally:
