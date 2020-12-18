@@ -67,9 +67,9 @@ If you run it and click the provided URL, you'll see the application:
 
 The user is prompted to choose one of the companies to view its latest market data in form of a candlestick chart.
 
-To learn about how this application works and to see other examples, please check out the [Tutorials](tutorials-1/) page.
+To learn about how this application works and to see other examples, please check out the [Tutorials](tutorials/) page.
 
-{% page-ref page="tutorials-1/" %}
+{% page-ref page="tutorials/" %}
 
  To learn in more detail about what applications consist of and how to use all their features, check out the [Applications](applications/) page. 
 
