@@ -119,8 +119,131 @@ print(result.url)
       <td
       style="text-align:left">No</td>
     </tr>
+    <tr>
+      <td style="text-align:left"><code>optional</code>
+      </td>
+      <td style="text-align:left">bool</td>
+      <td style="text-align:left"><code>True</code> if the filed&apos;s value is required for the application
+        to provide the output. <code>False</code> by default.</td>
+      <td style="text-align:left">No</td>
+    </tr>
   </tbody>
 </table>
 
 #### ComboBox
+
+`dstack.controls.ComboBox`
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameter</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>data</code>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p>It can be one of the following:</p>
+        <ul>
+          <li><code>List[Any]</code>
+          </li>
+          <li><code>typing.Callable</code>
+          </li>
+        </ul>
+        <p></p>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p>It can be one of the following:</p>
+        <ul>
+          <li>A list of items. <em>See example A.</em>
+          </li>
+          <li>A function that returns a list of items. <em>See example B.</em>
+          </li>
+          <li>A function that updates the state of the control. <em>See example C.</em>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>selected</code>
+      </td>
+      <td style="text-align:left">
+        <p>It can be one of the following:</p>
+        <ul>
+          <li><code>int</code>
+          </li>
+          <li><code>List[int]</code>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <p>It can be one of the following:</p>
+        <ul>
+          <li>An index of the currently selected item. Only if multiple set to False.</li>
+          <li>A list of indexes of the currently selected items. Only if <code>multiple</code> set
+            to <code>True</code>.</li>
+        </ul>
+      </td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>multiple</code>
+      </td>
+      <td style="text-align:left"><code>bool</code>
+      </td>
+      <td style="text-align:left"><code>True</code> if multiple selection is allowed. <code>False</code> by
+        default.</td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>label</code>
+      </td>
+      <td style="text-align:left"><code>str</code>
+      </td>
+      <td style="text-align:left">The caption of the combo-box control.</td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>depends</code>
+      </td>
+      <td style="text-align:left">
+        <p>It can be one of the following:</p>
+        <ul>
+          <li><code>List[dstack.controls.Control]</code>
+          </li>
+          <li><code>dstack.controls.Control</code>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">The list of other controls this control depends on. <em>See example D.</em>
+      </td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>require_apply</code>
+      </td>
+      <td style="text-align:left">bool</td>
+      <td style="text-align:left"><code>True</code> if the field requires an <code>Apply</code> button to be
+        clicked for the application to update the output. <code>True</code> by default.</td>
+      <td
+      style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>optional</code>
+      </td>
+      <td style="text-align:left">bool</td>
+      <td style="text-align:left"><code>True</code> if the filed&apos;s value is required for the application
+        to provide the output. <code>False</code> by default.</td>
+      <td style="text-align:left">No</td>
+    </tr>
+  </tbody>
+</table>
 
