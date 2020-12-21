@@ -58,7 +58,7 @@ print(result.url)
         <ul>
           <li><code>str</code>
           </li>
-          <li><code>Callable</code>
+          <li><code>Callable[[], str]</code>
           </li>
         </ul>
       </td>
@@ -69,9 +69,16 @@ print(result.url)
           </li>
           <li>A function that returns a plain text. <em>See example B.</em>
           </li>
-          <li>A function that updates the state of the control. <em>See example C.</em>
-          </li>
         </ul>
+      </td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>handler</code>
+      </td>
+      <td style="text-align:left"><code>Callable</code>
+      </td>
+      <td style="text-align:left">A function that updates the state of the control. <em>See example C.</em>
       </td>
       <td style="text-align:left">No</td>
     </tr>
