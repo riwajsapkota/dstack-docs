@@ -4,11 +4,9 @@ description: Learn which type of controls are supported and how to user them.
 
 # Controls
 
-A control is an element of the user interface that allows the user of the application to change input parameters. A `dstack` application may have any number of controls. Currently, `dstack` supports text fields, drop-downs, sliders, check-boxes. 
+A user control is an element of the user interface that allows the user of the application to change input parameters. A `dstack` application may have any number of controls. Currently, `dstack` supports text fields, drop-downs, sliders, check-boxes. 
 
-All controls must be passed as `**kwargs` to the function `dstack.app`. 
-
-The arguments of the function, that produces the output of the application must exactly match the specified controls.
+All controls must be passed as `**kwargs` to the function `dstack.app`. The arguments of the function, that produces the output of the application must exactly match the specified controls.
 
 Here's a simple example:
 
@@ -60,7 +58,7 @@ print(result.url)
         <ul>
           <li><code>str</code>
           </li>
-          <li><code>typing.Callable</code>
+          <li><code>Callable</code>
           </li>
         </ul>
       </td>
@@ -153,7 +151,7 @@ print(result.url)
         <ul>
           <li><code>List[Any]</code>
           </li>
-          <li><code>typing.Callable</code>
+          <li><code>Callable</code>
           </li>
         </ul>
         <p></p>
@@ -243,6 +241,54 @@ print(result.url)
       <td style="text-align:left"><code>True</code> if the filed&apos;s value is required for the application
         to provide the output. <code>False</code> by default.</td>
       <td style="text-align:left">No</td>
+    </tr>
+  </tbody>
+</table>
+
+### CheckBox
+
+`dstack.controls.CheckBox`
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameter</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>data</code>
+      </td>
+      <td style="text-align:left">
+        <p>It can be one of the following:</p>
+        <ul>
+          <li><code>bool</code>
+          </li>
+          <li><code>Callable</code>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <p>It can be one of the following:</p>
+        <ul>
+          <li>A <code>bool</code>. <em>See example A.</em>
+          </li>
+          <li>A function that returns a <code>bool</code>. <em>See example B.</em>
+          </li>
+          <li>A function that updates the state of the control. <em>See example C.</em>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
   </tbody>
 </table>
