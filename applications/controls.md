@@ -245,7 +245,7 @@ print(result.url)
   </tbody>
 </table>
 
-### CheckBox
+#### CheckBox
 
 `dstack.controls.CheckBox`
 
