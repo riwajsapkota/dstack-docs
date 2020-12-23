@@ -4,11 +4,9 @@ description: Learn which type of controls are supported and how to use them.
 
 # Controls
 
-A control is an element of the user interface that allows the user of the application to change input parameters. A `dstack` application may have any number of controls. Currently, `dstack` supports text fields, drop-downs, sliders, check-boxes. 
+A control is an element of the user interface that allows the user of the application to change input parameters. A `dstack` application may have any number of controls. The supported types of controls include text fields, drop-downs, sliders, and check-boxes. 
 
-All controls must be passed as `**kwargs` to the function `dstack.app`. The arguments of the function, that produces the output of the application must exactly match the specified controls.
-
-Here's a simple example:
+All controls inherit the base class `dstack.controls.Control`. They must be initiated and passed as `**kwargs` to the function `dstack.app()`. The argument of the function that produces the output \(which is also passed to `dstack.app()`\) must match the controls passed to the application. Here's a simple example:
 
 ```python
 from datetime import datetime, timedelta
@@ -33,6 +31,8 @@ app = ds.app(get_chart, symbols=ctrl.ComboBox(['FB', 'AMZN', 'AAPL', 'NFLX', 'GO
 result = ds.push('faang', app)
 print(result.url)
 ```
+
+Controls may use user functions to populate its data \(e.g. load it from a database\). It's also possible to make controls dependant on each other, e.g. to update their state based on the state of other controls.
 
 ### Control API Reference
 
