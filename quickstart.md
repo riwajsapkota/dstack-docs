@@ -28,8 +28,6 @@ What's next?
 To access dstack, click the URL provided in the output. If you try to access dstack without using this URL, it will require you to sign up using a username and a password.
 {% endhint %}
 
-For more details on how to install and run `dstack`, please check the [Installation]() page.
-
 If you open the URL, you'll see the following interface:
 
 ![](.gitbook/assets/screenshot-2020-12-16-at-11.14.23.png)
@@ -72,17 +70,17 @@ If you run it and click the provided URL, you'll see the application:
 
 ![](.gitbook/assets/screenshot-2020-12-16-at-11.09.52.png)
 
-The user is prompted to choose one of the companies to view its latest market data in form of a candlestick chart.
+The user is prompted to choose one of the companies to view its latest market data in form of a candlestick chart. 
+
+To learn about how this application works and to see other examples, please check out the [Tutorials](tutorials/) page.
+
+{% page-ref page="tutorials/" %}
 
 ### What's Next?
 
 To learn in more detail about what applications consist of and how to use all their features, check out the [Concepts](concepts/) page. 
 
 {% page-ref page="concepts/" %}
-
-To learn about how this application works and to see other examples, please check out the [Tutorials](tutorials/) page.
-
-{% page-ref page="tutorials/" %}
 
 ### Feedback
 
