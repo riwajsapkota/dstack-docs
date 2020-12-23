@@ -33,7 +33,7 @@ def get_countries_by_region(self: ctrl.ComboBox, regions: ctrl.ComboBox):
 
 
 regions = ctrl.ComboBox(data=get_regions, label="Region")
-countries = ctrl.ComboBox(handler=get_countries_by_region, label="Country", depends=[regions], require_apply=True)
+countries = ctrl.ComboBox(data=get_countries_by_region, label="Country", depends=[regions])
 
 
 def get_data_by_country(regions: ctrl.ComboBox, countries: ctrl.ComboBox):
@@ -49,7 +49,7 @@ def get_companies():
     return df["Company"].unique().tolist()
 
 
-companies = ctrl.ComboBox(data=get_companies, label="Company")
+companies = ctrl.ComboBox(data=get_companies, label="Company", require_apply=False)
 
 
 @ds.cache()
@@ -116,10 +116,10 @@ After that, we define our combo boxes `Region` and `Country`. Notice, that the s
 
 ```python
 regions = ctrl.ComboBox(data=get_regions, label="Region")
-countries = ctrl.ComboBox(handler=get_countries_by_region, label="Country", depends=[regions], require_apply=True)
+countries = ctrl.ComboBox(data=get_countries_by_region, label="Country", depends=[regions])
 ```
 
-Since we set attribute `require_apply` to `True` in the second control, the resulting application will prompt the user to click the `Apply` button to see the output of the application.
+Since we don't use the set attribute `require_apply` to `False` in the controls, the resulting application will prompt the user to click the `Apply` button to see the output of the application.
 
 **Application output**
 
