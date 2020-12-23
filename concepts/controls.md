@@ -1,10 +1,10 @@
 ---
-description: Learn which type of controls are supported and how to user them.
+description: Learn which type of controls are supported and how to use them.
 ---
 
 # Controls
 
-A user control is an element of the user interface that allows the user of the application to change input parameters. A `dstack` application may have any number of controls. Currently, `dstack` supports text fields, drop-downs, sliders, check-boxes. 
+A control is an element of the user interface that allows the user of the application to change input parameters. A `dstack` application may have any number of controls. Currently, `dstack` supports text fields, drop-downs, sliders, check-boxes. 
 
 All controls must be passed as `**kwargs` to the function `dstack.app`. The arguments of the function, that produces the output of the application must exactly match the specified controls.
 
