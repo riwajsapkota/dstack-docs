@@ -32,7 +32,7 @@ result = ds.push('faang', app)
 print(result.url)
 ```
 
-Controls may use user functions to populate its data \(e.g. load it from a database\). It's also possible to make controls dependant on each other, e.g. to update their state based on the state of other controls.
+Controls may use user functions to populate their data \(e.g. load it from a database\). It's also possible to make controls dependant on each other, e.g. to update their state based on the state of other controls.
 
 ### Control API Reference
 
