@@ -2,7 +2,6 @@
 
 * [👋 Introduction](README.md)
 * [🚀 Quickstart](quickstart.md)
-* [Installation](installation.md)
 * [🧩 Concepts](concepts/README.md)
   * [Overview](concepts/overview.md)
   * [Controls](concepts/controls.md)
