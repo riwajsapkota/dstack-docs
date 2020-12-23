@@ -14,5 +14,5 @@ It supports `pandas`, `matplotlib`, `Plotly`, `Bokeh`, and `Seaborn`.
 
 The dstack framework offers an ML Registry where you can push your models and later pull them to be used within applications. It supports `Scikit-learn`, `Tensorflow`, and `PyTorch` models.
 
-{% page-ref page="ml-models.md" %}
+{% page-ref page="../concepts/ml-models.md" %}
 

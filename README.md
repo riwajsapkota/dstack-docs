@@ -1,11 +1,11 @@
-# Welcome to dstack
+# 👋 Introduction
 
 [dstack](https://dstack.ai) is an open-source Python library that makes it easy to build and manage web applications for data science and machine learning.
 
 Installing and running `dstack` is very easy:
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6dev18
+pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6dev22
 dstack server start
 ```
 
@@ -55,7 +55,7 @@ def get_chart(symbols: ctrl.ComboBox):
     return fig
 
 
-app = ds.app(get_chart, symbols=ctrl.ComboBox(["FB", "AMZN", "AAPL", "NFLX", "GOOG"], require_apply=False))
+app = ds.app(get_chart, symbols=ctrl.ComboBox(["FB", "AMZN", "AAPL", "NFLX", "GOOG"]))
 
 result = ds.push("faang", app)
 print(result.url)
@@ -71,13 +71,13 @@ To learn about how this application works and to see other examples, please chec
 
 {% page-ref page="tutorials/" %}
 
- To learn in more detail about what applications consist of and how to use all their features, check out the [Applications](applications/) page. 
+ To learn in more detail about what applications consist of and how to use all their features, check out the [Applications](concepts/) page. 
 
-{% page-ref page="applications/" %}
+{% page-ref page="concepts/" %}
 
-Wanna know how to deploy ML models and use them from applications? Read the [ML Models](ml-models.md) page.
+Wanna know how to deploy ML models and use them from applications? Read the [ML Models](concepts/ml-models.md) page.
 
-{% page-ref page="ml-models.md" %}
+{% page-ref page="concepts/ml-models.md" %}
 
 ### Feedback
 

@@ -34,7 +34,7 @@ def get_chart(symbols: ctrl.ComboBox):
     return fig
 
 
-app = ds.app(get_chart, symbols=ctrl.ComboBox(["FB", "AMZN", "AAPL", "NFLX", "GOOG"], require_apply=False))
+app = ds.app(get_chart, symbols=ctrl.ComboBox(["FB", "AMZN", "AAPL", "NFLX", "GOOG"]))
 
 result = ds.push("faang", app)
 print(result.url)
@@ -56,7 +56,7 @@ def get_chart(symbols: ctrl.ComboBox):
 Once the function is defined, we call the function `dstack.app` where we pass our function that produces the output and assigns an instance of `ctrl.ComboBox` into the argument named `symbols`. This call creates an instance of an application. The application contains information on the function that produces the visualizations and binds an instance `ctrl.ComboBox` to the name of the argument of the function \(`symbols`\).
 
 ```python
-app = ds.app(get_chart, symbols=ctrl.ComboBox(["FB", "AMZN", "AAPL", "NFLX", "GOOG"], require_apply=False))
+app = ds.app(get_chart, symbols=ctrl.ComboBox(["FB", "AMZN", "AAPL", "NFLX", "GOOG"]))
 ```
 
 Finally, we deploy our application to the `dstack` server by using the function `dstack.push`. The arguments of the call are `"faang"` – the name of the application, and `app` – the instance of our application. If successful, this call returns a push result that has an attribute `url`. This is the URL of the deployed application.
@@ -78,7 +78,7 @@ If you'd like to know how to improve the performance of your application by usin
 
 If you'd like to know how to deploy an application that depends on additional Python modules or third-party packages or simply additional files, check out the [Dependencies](dependencies.md) page.
 
-If you'd like to know how to deploy ML models to dstack and how to use them from your application, check out the [ML models](../ml-models.md) page.
+If you'd like to know how to deploy ML models to dstack and how to use them from your application, check out the [ML models](ml-models.md) page.
 
-{% page-ref page="../ml-models.md" %}
+{% page-ref page="ml-models.md" %}
 
