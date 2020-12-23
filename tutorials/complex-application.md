@@ -2,7 +2,7 @@
 description: Here's a more complex example of an application with a few tabs.
 ---
 
-# Complex Application
+# Simple Application with Multiple Tabs
 
 In this application, the user will see two tabs. In the first tab, the user will be prompted to choose a region and a country, then to see a list of companies and their data. The list of countries will depend on the selected region. In order to see the data, the user will have to confirm the selection by clicking the `Apply` button. In the second tab, the user will be able to see a chart with numbers of purchased licenses per year for the selected country.
 
