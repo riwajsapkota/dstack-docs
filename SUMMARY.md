@@ -10,6 +10,7 @@
   * [ML Models](concepts/ml-models.md)
   * [Markdown](concepts/markdown.md)
   * [Dependencies](concepts/dependencies.md)
+  * [Logging](concepts/logging.md)
 * [📕 Tutorials](tutorials/README.md)
   * [Simple Application with Multiple Tabs](tutorials/complex-application.md)
 * [🤔 What's Next?](whats-next/README.md)
