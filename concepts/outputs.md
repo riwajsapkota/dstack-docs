@@ -37,7 +37,7 @@ Within such a function, it's allowed to return a single object of the type that 
 * `matplotlib.figure.Figure` \(a Matplotlib figure\)
 * `bokeh.plotting.Figure` \(a Bokeh figure\)
 
-Given the supported base types, it's possible to use `Pandas`, `Plotly`, `Bokeh`, `Matplotlib`, and `Seaborn` for the output of the application.
+Given the supported base types, it's possible to use `Pandas`, `Plotly`, `Bokeh`, `Matplotlib`, and `Seaborn` for the output of the application. If you'd like to use something else as an output, please file an issue to the [tracker](https://github.com/dstackai/dstack/issues/).
 
 {% hint style="warning" %}
 Note, currently, it's not allowed to return multiple outputs. Please upvote the [corresponding issue](https://github.com/dstackai/dstack/issues/39) in the tracker.
