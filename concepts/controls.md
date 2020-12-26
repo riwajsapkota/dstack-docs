@@ -54,7 +54,7 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
       <td style="text-align:left"><code>data</code>
       </td>
       <td style="text-align:left">
-        <p>It can be one of the following:</p>
+        <p>Can be one of the following:</p>
         <ul>
           <li><code>str</code>
           </li>
@@ -62,32 +62,23 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
           </li>
         </ul>
       </td>
-      <td style="text-align:left">
-        <p>It can be one of the following:</p>
-        <ul>
-          <li>A plain text. <em>See example A.</em>
-          </li>
-          <li>A function that returns a plain text. <em>See example B.</em>
-          </li>
-        </ul>
-      </td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">The initial text value of the control.</td>
+      <td style="text-align:left">Required if <code>handler</code> is not set.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>handler</code>
       </td>
-      <td style="text-align:left"><code>Callable</code>
+      <td style="text-align:left"><code>Callable[..., None]</code>
       </td>
-      <td style="text-align:left">A function that updates the state of the control. <em>See example C.</em>
-      </td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">The function that updates the state of the control.</td>
+      <td style="text-align:left">Required if <code>data</code> is not set.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>long</code>
       </td>
       <td style="text-align:left"><code>bool</code>
       </td>
-      <td style="text-align:left"><code>True</code> if the field may contain long values. <code>False</code> by
+      <td style="text-align:left"><code>True</code> if the field may contain long values (text paragraphs). <code>False</code> by
         default.</td>
       <td style="text-align:left">No</td>
     </tr>
@@ -96,23 +87,22 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
       </td>
       <td style="text-align:left"><code>str</code>
       </td>
-      <td style="text-align:left">The caption of the text field.</td>
+      <td style="text-align:left">The caption of the control.</td>
       <td style="text-align:left">No</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>depends</code>
       </td>
       <td style="text-align:left">
-        <p>It can be one of the following:</p>
+        <p>Can be one of the following:</p>
         <ul>
-          <li><code>List[dstack.controls.Control]</code>
+          <li><code>List[Control]</code>
           </li>
-          <li><code>dstack.controls.Control</code>
+          <li><code>Control</code>
           </li>
         </ul>
       </td>
-      <td style="text-align:left">The list of other controls this control depends on. <em>See example D.</em>
-      </td>
+      <td style="text-align:left">The other controls this control depends on.</td>
       <td style="text-align:left">No</td>
     </tr>
     <tr>
@@ -127,9 +117,12 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
     <tr>
       <td style="text-align:left"><code>optional</code>
       </td>
-      <td style="text-align:left">bool</td>
+      <td style="text-align:left"><code>bool</code>
+      </td>
       <td style="text-align:left"><code>True</code> if the filed&apos;s value is required for the application
-        to provide the output. <code>False</code> by default.</td>
+        to provide the output. <code>False</code> by default. If it&apos;s <code>False,</code> the <code>data</code> is
+        empty, and the Apply button is required, the <code>Apply</code> button will
+        be disabled.</td>
       <td style="text-align:left">No</td>
     </tr>
   </tbody>
@@ -154,7 +147,7 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
       </td>
       <td style="text-align:left">
         <p></p>
-        <p>It can be one of the following:</p>
+        <p>Can be one of the following:</p>
         <ul>
           <li><code>List[Any]</code>
           </li>
@@ -165,7 +158,7 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
       </td>
       <td style="text-align:left">
         <p></p>
-        <p>It can be one of the following:</p>
+        <p>Can be one of the following:</p>
         <ul>
           <li>A list of items. <em>See example A.</em>
           </li>
@@ -173,22 +166,21 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
           </li>
         </ul>
       </td>
-      <td style="text-align:left">Yes</td>
+      <td style="text-align:left">Required if <code>handler</code> is not set.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>handler</code>
       </td>
-      <td style="text-align:left"><code>Callable</code>
+      <td style="text-align:left"><code>Callable[..., None]</code>
       </td>
-      <td style="text-align:left">A function that updates the state of the control. <em>See example C.</em>
-      </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">The function that updates the state of the control.</td>
+      <td style="text-align:left">Required if <code>data</code> is not set.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>selected</code>
       </td>
       <td style="text-align:left">
-        <p>It can be one of the following:</p>
+        <p>Can be one of the following:</p>
         <ul>
           <li><code>int</code>
           </li>
@@ -197,9 +189,10 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
         </ul>
       </td>
       <td style="text-align:left">
-        <p>It can be one of the following:</p>
+        <p>Can be one of the following:</p>
         <ul>
-          <li>An index of the currently selected item. Only if multiple set to False.</li>
+          <li>An index of the currently selected item. Only if <code>multiple</code> set
+            to <code>False</code>.</li>
           <li>A list of indexes of the currently selected items. Only if <code>multiple</code> set
             to <code>True</code>.</li>
         </ul>
@@ -220,23 +213,22 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
       </td>
       <td style="text-align:left"><code>str</code>
       </td>
-      <td style="text-align:left">The caption of the combo-box control.</td>
+      <td style="text-align:left">The caption of the control.</td>
       <td style="text-align:left">No</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>depends</code>
       </td>
       <td style="text-align:left">
-        <p>It can be one of the following:</p>
+        <p>Can be one of the following:</p>
         <ul>
-          <li><code>List[dstack.controls.Control]</code>
+          <li><code>List[Control]</code>
           </li>
-          <li><code>dstack.controls.Control</code>
+          <li><code>Control</code>
           </li>
         </ul>
       </td>
-      <td style="text-align:left">The list of other controls this control depends on. <em>See example D.</em>
-      </td>
+      <td style="text-align:left">The other controls this control depends on.</td>
       <td style="text-align:left">No</td>
     </tr>
     <tr>
@@ -253,7 +245,9 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
       </td>
       <td style="text-align:left">bool</td>
       <td style="text-align:left"><code>True</code> if the filed&apos;s value is required for the application
-        to provide the output. <code>False</code> by default.</td>
+        to provide the output. <code>False</code> by default. If it&apos;s <code>False,</code> the <code>data</code> is
+        empty, and the Apply button is required, the <code>Apply</code> button will
+        be disabled.</td>
       <td style="text-align:left">No</td>
     </tr>
   </tbody>
@@ -277,7 +271,7 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
       <td style="text-align:left"><code>data</code>
       </td>
       <td style="text-align:left">
-        <p>It can be one of the following:</p>
+        <p>Can be one of the following:</p>
         <ul>
           <li><code>bool</code>
           </li>
@@ -285,24 +279,38 @@ Controls may use user functions to populate their data \(e.g. load it from a dat
           </li>
         </ul>
       </td>
-      <td style="text-align:left">
-        <p>It can be one of the following:</p>
-        <ul>
-          <li>A <code>bool</code>. <em>See example A.</em>
-          </li>
-          <li>A function that returns a <code>bool</code>. <em>See example B.</em>
-          </li>
-        </ul>
-      </td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">The initial value of the control.</td>
+      <td style="text-align:left">Required if <code>handler</code> is not set.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>handler</code>
       </td>
       <td style="text-align:left"><code>Callable</code>
       </td>
-      <td style="text-align:left">A function that updates the state of the control. <em>See example C.</em>
+      <td style="text-align:left">The function that updates the state of the control.</td>
+      <td style="text-align:left">Required if <code>data</code> is not set.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>label</code>
       </td>
+      <td style="text-align:left"><code>str</code>
+      </td>
+      <td style="text-align:left">The caption of the control.</td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>depends</code>
+      </td>
+      <td style="text-align:left">
+        <p>Can be one of the following:</p>
+        <ul>
+          <li><code>List[Control]</code>
+          </li>
+          <li><code>Control</code>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">The other controls this control depends on.</td>
       <td style="text-align:left">No</td>
     </tr>
   </tbody>
