@@ -144,5 +144,5 @@ Now, if we run this code, and open the URL from the output, we'll see the follow
 
 Now, if you push another model, the application will immediately use the new version.
 
-`dstack` supports You `Tensorflow`, `PyTorch`, or `Scikit-Learn` models.
+`dstack` supports `Tensorflow`, `PyTorch`, or `Scikit-Learn` models.
 
