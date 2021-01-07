@@ -58,6 +58,10 @@ If we run this code, it will train the model and push it to `dstack`. In the out
 
 ![](../.gitbook/assets/screenshot-2020-12-31-at-11.56.26.png)
 
+{% hint style="success" %}
+**Live Gallery:** [**https://dstack.cloud/gallery/simple\_sklearn\_ml\_model**](https://dstack.cloud/gallery/simple_sklearn_ml_model)\*\*\*\*
+{% endhint %}
+
 Now, this model is stored with `dstack`'s registry and can be pulled from any application. Let's look at an example of an application that uses this model:
 
 ```python
@@ -142,7 +146,15 @@ Now, if we run this code, and open the URL from the output, we'll see the follow
 
 ![](../.gitbook/assets/screenshot-2020-12-31-at-12.36.11.png)
 
+{% hint style="success" %}
+**Live Gallery:** [**https://dstack.cloud/gallery/simple\_sklearn\_ml\_app**](https://dstack.cloud/gallery/simple_sklearn_ml_app)\*\*\*\*
+{% endhint %}
+
 Now, if you push another model, the application will immediately use the new version.
+
+{% hint style="info" %}
+**Source Code:** [**github.com/dstackai/dstack-examples**](https://github.com/dstackai/dstack-examples/tree/master/simple_sklearn_ml_app)\*\*\*\*
+{% endhint %}
 
 `dstack` supports `Tensorflow`, `PyTorch`, or `Scikit-Learn` models.
 

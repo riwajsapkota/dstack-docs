@@ -74,6 +74,10 @@ result = frame.push()
 print(result.url)
 ```
 
+{% hint style="success" %}
+**Live Gallery:** [**https://dstack.cloud/gallery/simple\_multipage\_app**](https://dstack.cloud/gallery/simple_multipage_app)\*\*\*\*
+{% endhint %}
+
 Let's take a closer look at every step.
 
 In this example, for every tab, we create a separate application and push it along with the name of the tab within a single frame to the `dstack` server.
@@ -209,4 +213,8 @@ print(result.url)
 ```
 
 If we click the URL, we'll see the application. With this application, the user may switch between tabs, change the controls, and see the updating outputs.
+
+{% hint style="info" %}
+**Source Code:** [**github.com/dstackai/dstack-examples**](https://github.com/dstackai/dstack-examples/tree/master/simple_sklearn_ml_app)\*\*\*\*
+{% endhint %}
 

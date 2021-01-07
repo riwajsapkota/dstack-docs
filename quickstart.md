@@ -5,7 +5,7 @@
 Installing and running `dstack` is very easy:
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6dev24
+pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6dev28
 dstack server start
 ```
 
@@ -70,6 +70,10 @@ If you run it and click the provided URL, you'll see the application:
 
 ![](.gitbook/assets/screenshot-2020-12-16-at-11.09.52.png)
 
+{% hint style="success" %}
+**Live Gallery:** [**https://dstack.cloud/gallery/minimal\_app**](https://dstack.cloud/gallery/minimal_app)\*\*\*\*
+{% endhint %}
+
 The user is prompted to choose one of the companies to view its latest market data in form of a candlestick chart. 
 
 Let's take a closer look at this code and describe every step.
@@ -114,6 +118,10 @@ To learn in more detail about what applications consist of and how to use all th
 To see other examples, please check out the [Tutorials](tutorials/) page.
 
 {% page-ref page="tutorials/" %}
+
+{% hint style="info" %}
+**Source Code:** [**github.com/dstackai/dstack-examples**](https://github.com/dstackai/dstack-examples/tree/master/simple_sklearn_ml_app)\*\*\*\*
+{% endhint %}
 
 ### Feedback
 
