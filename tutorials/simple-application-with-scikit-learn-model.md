@@ -1,5 +1,7 @@
 ---
-description: Learn how to use ML registry and how to use ML models in applications.
+description: >-
+  Here's an example of pushing ML model to dstack's ML Registry and using this
+  model in an application.
 ---
 
 # Simple Application with a Scikit-learn ML Model
@@ -150,7 +152,7 @@ Now, if we run this code, and open the URL from the output, we'll see the follow
 **Live Gallery:** [**https://dstack.cloud/gallery/simple\_sklearn\_ml\_app**](https://dstack.cloud/gallery/simple_sklearn_ml_app)\*\*\*\*
 {% endhint %}
 
-Now, if you push another model, the application will immediately use the new version.
+Now, if you push another version of the model using the same name, the application will immediately switch to the new version of the model.
 
 {% hint style="info" %}
 **Source Code:** [**github.com/dstackai/dstack-examples**](https://github.com/dstackai/dstack-examples/tree/master/simple_sklearn_ml_app)\*\*\*\*
