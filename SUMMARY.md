@@ -13,6 +13,7 @@
   * [Logging](concepts/logging.md)
 * [📕 Tutorials](tutorials/README.md)
   * [Simple Application with Multiple Tabs](tutorials/complex-application.md)
+  * [Simple Application with Dependencies](tutorials/simple-application-with-dependencies.md)
 * [🤔 What's Next?](whats-next/README.md)
   * [FAQ](whats-next/faq.md)
   * [Feedback](whats-next/feedback.md)
