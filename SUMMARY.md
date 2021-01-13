@@ -11,6 +11,7 @@
   * [Markdown](concepts/markdown.md)
   * [Dependencies](concepts/dependencies.md)
   * [Logging](concepts/logging.md)
+  * [Sharing](concepts/sharing.md)
 * [🪁 Tutorials](tutorials/README.md)
   * [Simple Application with Multiple Tabs](tutorials/complex-application.md)
   * [Simple Application with Dependencies](tutorials/simple-application-with-dependencies.md)
