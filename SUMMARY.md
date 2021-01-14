@@ -21,4 +21,5 @@
   * [FAQ](whats-next/faq.md)
   * [Feedback](whats-next/feedback.md)
   * [Roadmap](whats-next/roadmap.md)
+  * [What's New](whats-next/whats-new.md)
 
