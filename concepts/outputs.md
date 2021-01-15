@@ -36,6 +36,7 @@ Within such a function, it's allowed to return a single object of the type that 
 * `plotly.graph_objs._figure.Figure` \(a Plotly figure\)
 * `matplotlib.figure.Figure` \(a Matplotlib figure\)
 * `bokeh.plotting.Figure` \(a Bokeh figure\)
+* `dstack.markdown.Markdown` \(a Markdown text, can be created via `dstack.md()`\)
 
 Given the supported base types, it's possible to use `Pandas`, `Plotly`, `Bokeh`, `Matplotlib`, and `Seaborn` for the output of the application. If you'd like to use something else as an output, please file an issue to the [tracker](https://github.com/dstackai/dstack/issues/).
 

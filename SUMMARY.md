@@ -8,7 +8,6 @@
   * [Tabs](concepts/tabs.md)
   * [Caching](concepts/caching.md)
   * [ML Models](concepts/ml-models.md)
-  * [Markdown](concepts/markdown.md)
   * [Dependencies](concepts/dependencies.md)
   * [Logging](concepts/logging.md)
   * [Sharing](concepts/sharing.md)
