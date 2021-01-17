@@ -25,7 +25,7 @@ print(url)
 
 Now, if you click the URL, it will open the following page:
 
-![](../.gitbook/assets/screenshot-2021-01-13-at-20.13.45.png)
+![](../.gitbook/assets/ds_-clf_app.png)
 
 Here you can see the snippet of how to pull the model from an application or from anywhere else:
 
