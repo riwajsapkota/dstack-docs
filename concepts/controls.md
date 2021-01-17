@@ -26,13 +26,68 @@ def get_chart(symbols: ctrl.ComboBox):
     return fig
 
 
-app = ds.app(get_chart, symbols=ctrl.ComboBox(['FB', 'AMZN', 'AAPL', 'NFLX', 'GOOG']))
+app = ds.app(get_chart, symbols=ctrl.ComboBox(["FB", "AMZN", "AAPL", "NFLX", "GOOG"]))
 
-result = ds.push('faang', app)
+result = ds.push("minimal_app", app)
 print(result.url)
 ```
 
+Here's how it looks if you run the code above and open the application:
+
+![](../.gitbook/assets/ds_minimal_app_open_combo_box.png)
+
 Controls may use user functions to populate their data \(e.g. load it from a database\). It's also possible to make controls dependant on each other, e.g. to update their state based on the state of other controls.
+
+Here's another example, where one of the controls depends on the other one:
+
+```python
+import dstack.controls as ctrl
+import dstack as ds
+import pandas as pd
+
+
+@ds.cache()
+def get_data():
+    return pd.read_csv("https://www.dropbox.com/s/cat8vm6lchlu5tp/data.csv?dl=1", index_col=0)
+
+
+def get_regions():
+    df = get_data()
+    return df["Region"].unique().tolist()
+
+
+def get_countries_by_region(self: ctrl.ComboBox, regions: ctrl.ComboBox):
+    df = get_data()
+    self.data = df[df["Region"] == regions.value()]["Country"].unique().tolist()
+
+
+regions = ctrl.ComboBox(data=get_regions, label="Region")
+countries = ctrl.ComboBox(handler=get_countries_by_region, label="Country", depends=[regions])
+
+
+def get_data_by_country(regions: ctrl.ComboBox, countries: ctrl.ComboBox):
+    df = get_data()
+    return df[df["Country"] == countries.value()]
+
+
+app = ds.app(get_data_by_country, regions=regions, countries=countries)
+result = ds.push('dependant_controls_app', app)
+print(result.url)
+```
+
+If you run the code above and open the application, you'll see the following:
+
+![](../.gitbook/assets/ds_dependant_controls_app_open_popup.png)
+
+If you'd like the application to show the output only if the user clicks `Apply`, you can add `require_apply=True` as an argument to your control:
+
+```python
+countries = ctrl.ComboBox(handler=get_countries_by_region, label="Country", depends=[regions], require_apply=True)
+```
+
+Here's how it would look then:
+
+![](../.gitbook/assets/ds_dependant_controls_app_apply.png)
 
 ### Control API Reference
 
