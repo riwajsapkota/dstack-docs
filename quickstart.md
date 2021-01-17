@@ -30,7 +30,7 @@ To access dstack, click the URL provided in the output. If you try to access dst
 
 If you open the URL, you'll see the following interface:
 
-![](.gitbook/assets/screenshot-2020-12-16-at-11.14.23.png)
+![](.gitbook/assets/ds_signed_in_empty.png)
 
 You're logged as the `dstack` user. The current page is `Applications`. It shows you all published applications which you have access to. The sidebar on the left lets you open other pages: `ML Models`, `Settings`, `Documentation`, and `Chat`.
 
@@ -68,7 +68,7 @@ print(result.url)
 
 If you run it and click the provided URL, you'll see the application:
 
-![](.gitbook/assets/screenshot-2020-12-16-at-11.09.52.png)
+![](.gitbook/assets/ds_minimal_app.png)
 
 {% hint style="success" %}
 **Live Gallery:** [**https://dstack.cloud/gallery/minimal\_app**](https://dstack.cloud/gallery/minimal_app)\*\*\*\*
