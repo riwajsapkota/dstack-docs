@@ -6,7 +6,7 @@ description: Here's a more complex example of an application with a few tabs.
 
 In this application, the user will see two tabs. In the first tab, the user will be prompted to choose a region and a country, then to see a list of companies and their data. The list of countries will depend on the selected region. In order to see the data, the user will have to confirm the selection by clicking the `Apply` button. In the second tab, the user will be able to see a chart with numbers of purchased licenses per year for the selected country.
 
-![](https://i.ibb.co/ctB9kGY/Screenshot-2020-11-27-at-17-13-35.png)
+![](../.gitbook/assets/ds_single_multipage_app_companies.png)
 
 Here's the full code of the application:
 
