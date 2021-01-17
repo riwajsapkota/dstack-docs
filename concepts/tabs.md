@@ -32,9 +32,9 @@ print(url)
 
 In order to push an application with multiple tabs, one has to create a frame by using `dstack.frame()`, then call the function `add()` on the frame for every tab and pass there the corresponding output handler, and `params`, a dictionary with the name of the tab mapped to `ds.tab()`. Finally, the function `push` must be called on the frame. Just like `dstack.push()`, it pushes the application and returns its URL.
 
-If you push the application from the example above and then open it's URL, you'll see the following:
+If you push the application from the example above and then open its URL, you'll see the following:
 
-![](../.gitbook/assets/screenshot-2020-12-26-at-16.43.07.png)
+![](../.gitbook/assets/ds_multi_tab.png)
 
 Similar to applications with no tabs, every tab in a multi-tab application may have any number of controls.
 
