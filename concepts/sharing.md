@@ -10,7 +10,9 @@ Inviting users to your `dstack` server can be done from the `Settings`:
 
 You can create a user, copy its invite link, and send it to the user over email or some other way.
 
-Pushing applications to [dstack.cloud](https://dstack.cloud) is also easy and is don the following way:
+#### Cloud
+
+Pushing applications to [dstack.cloud](https://dstack.cloud) is also easy and is done the following way:
 
 Sign up for [dstack.cloud](https://dstack.cloud). Then, sign in, and open `Settings`, click the`Info` icon next to your `Token`:
 
