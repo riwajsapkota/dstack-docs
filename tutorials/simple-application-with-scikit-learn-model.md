@@ -146,7 +146,7 @@ print(url)
 
 Now, if we run this code, and open the URL from the output, we'll see the following:
 
-![](../.gitbook/assets/screenshot-2020-12-31-at-12.36.11.png)
+![](../.gitbook/assets/ds_simple_sklearn_ml_app.png)
 
 {% hint style="success" %}
 **Live Gallery:** [**https://dstack.cloud/gallery/simple\_sklearn\_ml\_app**](https://dstack.cloud/gallery/simple_sklearn_ml_app)\*\*\*\*
