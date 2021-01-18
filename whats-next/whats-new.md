@@ -3,8 +3,8 @@
 ### dstack 0.6.a1
 
 * `Application` is a brand new type of stacks. It allows Python developers to quickly build and publish applications and ML models.
-  * It supports [interactive controls](../concepts/controls.md) \(check-boxes, combo-boxes, text fields, etc\).
-  * It supports [interactive outputs](../concepts/outputs.md) \(plots, tables, text\).
+  * It supports [interactive controls](../concepts/controls.md) \(check-boxes, combo-boxes, text fields, sliders, etc\).
+  * It supports [interactive outputs](../concepts/outputs.md) \(plots, tables, markdown\).
   * It supports the built-in [caching mechanism](../concepts/caching.md).
   * It supports managing application [dependencies](../concepts/dependencies.md) \(local modules and packages as well as dependencies to third-party PyPi libraries\).
   * It supports writing application [logs](../concepts/logging.md).
