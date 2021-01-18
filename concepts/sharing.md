@@ -2,7 +2,7 @@
 
 `dstack` supports two ways to share models and applications with others: inviting users to your `dstack` server or pushing your applications to [dstack.cloud](https://dstack.cloud).
 
-#### Own Server
+### Own Server
 
 Inviting users to your `dstack` server can be done from the `Settings`: 
 
@@ -10,7 +10,7 @@ Inviting users to your `dstack` server can be done from the `Settings`:
 
 You can create a user, copy its invite link, and send it to the user over email or some other way.
 
-#### Cloud
+### Cloud
 
 Pushing applications to [dstack.cloud](https://dstack.cloud) is also easy and is done the following way:
 
