@@ -1,6 +1,6 @@
 # What's New
 
-### dstack 0.6.a1
+### dstack 0.6.0
 
 * `Application` is a brand new type of stacks. It allows Python developers to quickly build and publish applications and ML models.
   * It supports [interactive controls](../concepts/controls.md) \(check-boxes, combo-boxes, text fields, sliders, etc\).
