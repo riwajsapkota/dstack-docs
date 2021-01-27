@@ -158,10 +158,10 @@ def get_companies():
 
 **User controls**
 
-Then, we define this combo box and set `require_apply` to `False` so the tab doesn't require the user to click `Apply` to see the result.
+Then, we define this combo box:
 
 ```python
-companies = ctrl.ComboBox(data=get_companies, label="Company", require_apply=False)
+companies = ctrl.ComboBox(data=get_companies, label="Company")
 ```
 
 **Application output**
