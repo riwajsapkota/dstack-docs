@@ -12,6 +12,7 @@
   * [Logging](concepts/logging.md)
   * [Sharing](concepts/sharing.md)
 * [🪁 Tutorials](tutorials/README.md)
+  * [Simple Application with Multiple Outputs](tutorials/simple-application-with-multiple-outputs.md)
   * [Simple Application with Multiple Tabs](tutorials/complex-application.md)
   * [Simple Application with Dependencies](tutorials/simple-application-with-dependencies.md)
   * [Simple Application with a Scikit-learn ML Model](tutorials/simple-application-with-scikit-learn-model.md)

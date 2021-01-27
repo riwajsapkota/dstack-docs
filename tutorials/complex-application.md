@@ -27,21 +27,22 @@ def get_regions():
     return df["Region"].unique().tolist()
 
 
-def get_countries_by_region(self: ctrl.ComboBox, regions: ctrl.ComboBox):
+def countries_handler(self: ctrl.ComboBox, regions: ctrl.ComboBox):
     df = get_data()
     self.data = df[df["Region"] == regions.value()]["Country"].unique().tolist()
 
 
 regions = ctrl.ComboBox(data=get_regions, label="Region")
-countries = ctrl.ComboBox(handler=get_countries_by_region, label="Country", depends=[regions], require_apply=True)
+countries = ctrl.ComboBox(handler=countries_handler, label="Country", depends=[regions])
 
 
-def get_data_by_country(regions: ctrl.ComboBox, countries: ctrl.ComboBox):
+def country_output_handler(self: ctrl.Output, countries: ctrl.ComboBox):
     df = get_data()
-    return df[df["Country"] == countries.value()]
+    self.data = df[df["Country"] == countries.value()]
 
 
-data_by_country_app = ds.app(get_data_by_country, regions=regions, countries=countries)
+data_by_country_app = ds.app(controls=[regions, countries],
+                             outputs=[ctrl.Output(handler=country_output_handler, depends=[countries])])
 
 
 def get_companies():
@@ -53,7 +54,7 @@ companies = ctrl.ComboBox(data=get_companies, label="Company")
 
 
 @ds.cache()
-def get_data_by_company(companies: ctrl.ComboBox):
+def company_output_handler(self: ctrl.Output, companies: ctrl.ComboBox):
     df = get_data()
     row = df[df["Company"] == companies.value()].filter(["y2015", "y2016", "y2017", "y2018", "y2019"], axis=1)
     row.rename(columns={"y2015": "2015", "y2016": "2016", "y2017": "2017", "y2018": "2018", "y2019": "2019"},
@@ -62,12 +63,13 @@ def get_data_by_company(companies: ctrl.ComboBox):
     col.rename(columns={col.columns[0]: "Licenses"}, inplace=True)
     fig = px.bar(col.reset_index(), x="index", y="Licenses", labels={"index": "Year"})
     fig.update(layout_showlegend=False)
-    return fig
+    self.data = fig
 
 
-data_by_company_app = ds.app(get_data_by_company, companies=companies)
+data_by_company_app = ds.app(controls=[companies],
+                             outputs=[ctrl.Output(handler=company_output_handler)])
 
-frame = ds.frame("comp_data")
+frame = ds.frame("simple_multi_page_app")
 frame.add(data_by_country_app, params={"Companies": ds.tab()})
 frame.add(data_by_company_app, params={"Licenses": ds.tab()})
 result = frame.push()
@@ -75,7 +77,7 @@ print(result.url)
 ```
 
 {% hint style="success" %}
-**Live Gallery:** [**https://dstack.cloud/gallery/simple\_multipage\_app**](https://dstack.cloud/gallery/simple_multipage_app)\*\*\*\*
+**Live Gallery:** [**https://dstack.cloud/gallery/simple\_multi\_page\_app**](https://dstack.cloud/gallery/simple_multi_page_app)\*\*\*\*
 {% endhint %}
 
 Let's take a closer look at every step.
@@ -111,36 +113,35 @@ def get_regions():
 Then, we define a function `get_countries_by_region` that updates the combo box `Country` based on the selection of the combo box `Region`.
 
 ```python
-def get_countries_by_region(self: ctrl.ComboBox, regions: ctrl.ComboBox):
+def countries_handler(self: ctrl.ComboBox, regions: ctrl.ComboBox):
     df = get_data()
     self.data = df[df["Region"] == regions.value()]["Country"].unique().tolist()
 ```
 
-After that, we define our combo boxes `Region` and `Country`. Notice, that the second combo box depends on the first combo box. This is specified by the attribute `depends_on` provided by `dstack.controls.Control` \(and its subclasses such as `dstack.controls.ComboBox`\).
+After that, we define our combo boxes `Region` and `Country`. Notice, that the second combo box depends on the first combo box. This is specified by the attribute `depends` provided by `dstack.controls.Control` \(and its subclasses such as `dstack.controls.ComboBox`\).
 
 ```python
 regions = ctrl.ComboBox(data=get_regions, label="Region")
-countries = ctrl.ComboBox(handler=get_countries_by_region, label="Country", depends=[regions], require_apply=True)
+countries = ctrl.ComboBox(handler=countries_handler, label="Country", depends=[regions])
 ```
-
-Since we set attribute `require_apply` to `True` in the second control, the resulting application will prompt the user to click the `Apply` button to see the output of the application.
 
 **Application output**
 
-Now, we can define the function `get_data_by_country` that produces the output of our application based on selected values in our combo boxes.
+Now, we can define the function `country_output_handler` that produces the output of our application based on selected values in our combo boxes.
 
 ```python
-def get_data_by_country(regions: ctrl.ComboBox, countries: ctrl.ComboBox):
+def country_output_handler(self: ctrl.Output, countries: ctrl.ComboBox):
     df = get_data()
-    return df[df["Country"] == countries.value()]
+    self.data = df[df["Country"] == countries.value()]
 ```
 
 **Application**
 
-Finally, we create an application by using the `dstack.app` function and passing our function `data_by_country_app` and binding its arguments to our controls `regions` and `countries`.
+Finally, we create an application by using the `dstack.app()` function and passing our function `data_by_country_app` and binding its arguments to our controls `regions` and `countries`.
 
 ```python
-data_by_country_app = ds.app(get_data_by_country, regions=regions, countries=countries)
+data_by_country_app = ds.app(controls=[regions, countries],
+                             outputs=[ctrl.Output(handler=country_output_handler, depends=[countries])])
 ```
 
 The application for the first tab is ready, let's move on and create the other one.
@@ -165,11 +166,10 @@ companies = ctrl.ComboBox(data=get_companies, label="Company", require_apply=Fal
 
 **Application output**
 
-Then, we define a function `get_data_by_company` that produces a Plotly chart with numbers of purchased licenses for the selected company grouped by the year.
+Then, we define a function `company_output_handler` that produces a Plotly chart with numbers of purchased licenses for the selected company grouped by the year.
 
 ```python
-@ds.cache()
-def get_data_by_company(companies: ctrl.ComboBox):
+def company_output_handler(self: ctrl.Output, companies: ctrl.ComboBox):
     df = get_data()
     row = df[df["Company"] == companies.value()].filter(["y2015", "y2016", "y2017", "y2018", "y2019"], axis=1)
     row.rename(columns={"y2015": "2015", "y2016": "2016", "y2017": "2017", "y2018": "2018", "y2019": "2019"},
@@ -178,19 +178,16 @@ def get_data_by_company(companies: ctrl.ComboBox):
     col.rename(columns={col.columns[0]: "Licenses"}, inplace=True)
     fig = px.bar(col.reset_index(), x="index", y="Licenses", labels={"index": "Year"})
     fig.update(layout_showlegend=False)
-    return fig
+    self.data = fig
 ```
-
-{% hint style="info" %}
-Here, we also use the annotation `@dstack.cache` to prevent the function to be called when it is not necessary.
-{% endhint %}
 
 **Application**
 
 Now, we're ready to create the second application by using the `dstack.app` function, where we pass our function `get_data_by_company` and bind the name of its argument to the combo box.
 
 ```text
-data_by_company_app = ds.app(get_data_by_company, companies=companies)
+data_by_company_app = ds.app(controls=[companies],
+                             outputs=[ctrl.Output(handler=company_output_handler)])
 ```
 
 #### Deploy applications
@@ -198,7 +195,7 @@ data_by_company_app = ds.app(get_data_by_company, companies=companies)
 Finally, we are ready to push both applications and tabs to the dstack server. Since we push more than one application, we have to first create a frame \(by using the `dstack.frame` function\), and then adding our applications \(by using the `dstack.stack.StackFrame.add` function\).
 
 ```python
-frame = ds.frame("comp_data")
+frame = ds.frame("simple_multi_page_app")
 frame.add(data_by_country_app, params={"Companies": ds.tab()})
 frame.add(data_by_company_app, params={"Licenses": ds.tab()})
 ```
@@ -215,6 +212,6 @@ print(result.url)
 If we click the URL, we'll see the application. With this application, the user may switch between tabs, change the controls, and see the updating outputs.
 
 {% hint style="info" %}
-**Source Code:** [**github.com/dstackai/dstack-examples**](https://github.com/dstackai/dstack-examples/tree/master/simple_sklearn_ml_app)\*\*\*\*
+**Source Code:** [**github.com/dstackai/dstack-examples**](https://github.com/dstackai/dstack-examples/tree/master/simple_multi_page_app)\*\*\*\*
 {% endhint %}
 
