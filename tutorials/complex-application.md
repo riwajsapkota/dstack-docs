@@ -183,7 +183,7 @@ def company_output_handler(self: ctrl.Output, companies: ctrl.ComboBox):
 
 **Application**
 
-Now, we're ready to create the second application by using the `dstack.app` function, where we pass our function `get_data_by_company` and bind the name of its argument to the combo box.
+Now, we're ready to create the second application by using the `dstack.app()` function, where we pass our function `company_output_handler` and bind the name of its argument to the combo box.
 
 ```text
 data_by_company_app = ds.app(controls=[companies],
