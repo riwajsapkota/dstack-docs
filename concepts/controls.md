@@ -4,11 +4,9 @@ description: Learn which type of controls are supported and how to use them.
 
 # Controls
 
-A control is an element of the user interface that allows the user of the application to change input parameters. A `dstack` application may have any number of controls. The supported types of controls include text fields, combo boxes, sliders, check-boxes, and file uploaders. 
+A control is an element of the user interface that allows the user of the application to change input parameters. A `dstack` application may have any number of controls. The supported types of controls include text fields, drop-downs, sliders, and check-boxes. 
 
-All controls inherit the base class `dstack.controls.Control`. They must be initiated and passed as `controls` to the function `dstack.app()`. Each output of the application may depend on any number of controls. By default, outputs depend on all controls if otherwise is not defined.  All controls the output depends on must be listed in the signature of the handler of the corresponding output.
-
-Here's a simple example:
+All controls inherit the base class `dstack.controls.Control`. They must be initiated and passed as `**kwargs` to the function `dstack.app()`. The argument of the function that produces the output \(which is also passed to `dstack.app()`\) must match the controls passed to the application. Here's a simple example:
 
 ```python
 from datetime import datetime, timedelta
@@ -19,23 +17,22 @@ import plotly.graph_objects as go
 import pandas_datareader.data as web
 
 
-def output_handler(self: ctrl.Output, symbols: ctrl.ComboBox):
+def get_chart(symbols: ctrl.ComboBox):
     start = datetime.today() - timedelta(days=30)
     end = datetime.today()
     df = web.DataReader(symbols.value(), 'yahoo', start, end)
     fig = go.Figure(
         data=[go.Candlestick(x=df.index, open=df['Open'], high=df['High'], low=df['Low'], close=df['Close'])])
-    self.data = fig
+    return fig
 
 
-app = ds.app(controls=[ctrl.ComboBox(data=["FB", "AMZN", "AAPL", "NFLX", "GOOG"])],
-             outputs=[ctrl.Output(handler=output_handler)])
+app = ds.app(get_chart, symbols=ctrl.ComboBox(["FB", "AMZN", "AAPL", "NFLX", "GOOG"]))
 
 result = ds.push("minimal_app", app)
 print(result.url)
 ```
 
-If we run the example above and open the link, here's how the application will look like:
+Here's how it looks if you run the code above and open the application:
 
 ![](../.gitbook/assets/ds_minimal_app_open_combo_box.png)
 
@@ -59,23 +56,21 @@ def get_regions():
     return df["Region"].unique().tolist()
 
 
-def countries_handler(self: ctrl.ComboBox, regions: ctrl.ComboBox):
+def get_countries_by_region(self: ctrl.ComboBox, regions: ctrl.ComboBox):
     df = get_data()
     self.data = df[df["Region"] == regions.value()]["Country"].unique().tolist()
 
 
 regions = ctrl.ComboBox(data=get_regions, label="Region")
-countries = ctrl.ComboBox(handler=countries_handler, label="Country", depends=[regions])
+countries = ctrl.ComboBox(handler=get_countries_by_region, label="Country", depends=[regions])
 
 
-def output_handler(self: ctrl.Output, countries: ctrl.ComboBox):
+def get_data_by_country(regions: ctrl.ComboBox, countries: ctrl.ComboBox):
     df = get_data()
-    self.data = df[df["Country"] == countries.value()]
+    return df[df["Country"] == countries.value()]
 
 
-app = ds.app(controls=[regions, countries],
-             outputs=[ds.Output(handler=output_handler, depends=[countries])])
-
+app = ds.app(get_data_by_country, regions=regions, countries=countries)
 result = ds.push('dependant_controls_app', app)
 print(result.url)
 ```
@@ -84,11 +79,10 @@ If you run the code above and open the application, you'll see the following:
 
 ![](../.gitbook/assets/ds_dependant_controls_app_open_popup.png)
 
-If you'd like the application to show the output only if the user clicks `Apply`, you can add `ctrl.Apply()` to the list of controls:
+If you'd like the application to show the output only if the user clicks `Apply`, you can add `require_apply=True` as an argument to your control:
 
 ```python
-app = ds.app(controls=[regions, countries, ctrl.Apply()],
-             outputs=[ds.Output(handler=output_handler, depends=[countries])])
+countries = ctrl.ComboBox(handler=get_countries_by_region, label="Country", depends=[regions], require_apply=True)
 ```
 
 Here's how it would look then:

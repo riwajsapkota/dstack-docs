@@ -5,7 +5,7 @@
 Installing and running `dstack` is very easy:
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6.1.dev2
+pip install dstack==0.6.0
 dstack server start
 ```
 
@@ -51,19 +51,18 @@ import plotly.graph_objects as go
 import pandas_datareader.data as web
 
 
-def output_handler(self: ctrl.Output, symbols: ctrl.ComboBox):
+def get_chart(symbols: ctrl.ComboBox):
     start = datetime.today() - timedelta(days=30)
     end = datetime.today()
     df = web.DataReader(symbols.value(), 'yahoo', start, end)
     fig = go.Figure(
         data=[go.Candlestick(x=df.index, open=df['Open'], high=df['High'], low=df['Low'], close=df['Close'])])
-    self.data = fig
+    return fig
 
 
-app = ds.app(controls=[ctrl.ComboBox(data=["FB", "AMZN", "AAPL", "NFLX", "GOOG"])],
-             outputs=[ctrl.Output(handler=output_handler)])
+app = ds.app(get_chart, symbols=ctrl.ComboBox(["FB", "AMZN", "AAPL", "NFLX", "GOOG"]))
 
-result = ds.push("minimal_app", app)
+result = ds.push("faang", app)
 print(result.url)
 ```
 
@@ -81,33 +80,32 @@ Let's take a closer look at this code and describe every step.
 
 **Application output**
 
-First, we define the function `output_handler` that takes the arguments `self` of the type `ctrl.Output` and `symbols` of the type `ctrl.ComboBox`. The first argument represents the output the function is supposed to update. The second argument represents a combo box control in which the user selects a stock symbol \(e.g. `"FB"`, `"AMZN"`, etc\). Based on the selected symbol \(see `symbols.value()`\), the function fetches the market data for the corresponding stock \(from the Yahoo Financial Services – using the `pandas_datareader` package\), makes a Candlestick chart \(using the `plotly` package\), and updates the attribute `data` of the output with the resulting figure.
+First, we define the function `get_chart` that takes the argument `symbols` of the type `ctrl.ComboBox`. The argument represents a combo box in which the user selects a stock symbol \(e.g. `"FB"`, `"AMZN"`, etc\). Based on the selected symbol \(see `symbols.value()`\), the function fetches the market data for the corresponding stock \(from the Yahoo Financial Services – using the `pandas_datareader` package\), makes a Candlestick chart \(using the `plotly` package\), and returns the resulting figure.
 
 ```python
-def output_handler(self: ctrl.Output, symbols: ctrl.ComboBox):
+def get_chart(symbols: ctrl.ComboBox):
     start = datetime.today() - timedelta(days=30)
     end = datetime.today()
     df = web.DataReader(symbols.value(), 'yahoo', start, end)
     fig = go.Figure(
         data=[go.Candlestick(x=df.index, open=df['Open'], high=df['High'], low=df['Low'], close=df['Close'])])
-    self.data = fig
+    return fig
 ```
 
 **User controls and application**
 
-Once this function is defined, we call the function `dstack.app()` where we pass lists of `controls` and `outputs`.  The attribute`controls` include an instance of `dstack.controls.ComboBox` wehere we pass a list of tickers.  The attribute `outputs` includes an instance of `dstack.controls.Output` where we pass our handler `output_handler`.
+Once the function is defined, we call the function `dstack.app` where we pass our function that produces the output and assigns an instance of `ctrl.ComboBox` into the argument named `symbols`. This call creates an instance of an application. The application contains information on the function that produces the visualizations and binds an instance `ctrl.ComboBox` to the name of the argument of the function \(`symbols`\).
 
 ```python
-app = ds.app(controls=[ctrl.ComboBox(data=["FB", "AMZN", "AAPL", "NFLX", "GOOG"])],
-             outputs=[ctrl.Output(handler=output_handler)])
+app = ds.app(get_chart, symbols=ctrl.ComboBox(["FB", "AMZN", "AAPL", "NFLX", "GOOG"]))
 ```
 
 **Deploy application**
 
-Finally, we deploy our application to the `dstack` server by using the function `dstack.push()`. The arguments of the call are `"minimal_app"` – the name of the application, and `app` – the instance of our application. If successful, this call returns a push result that has an attribute `url`. This is the URL of the deployed application.
+Finally, we deploy our application to the `dstack` server by using the function `dstack.push`. The arguments of the call are `"faang"` – the name of the application, and `app` – the instance of our application. If successful, this call returns a push result that has an attribute `url`. This is the URL of the deployed application.
 
 ```python
-result = ds.push("minimal_app", app)
+result = ds.push("faang", app)
 print(result.url)
 ```
 
