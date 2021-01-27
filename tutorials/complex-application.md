@@ -52,8 +52,6 @@ def get_companies():
 
 companies = ctrl.ComboBox(data=get_companies, label="Company")
 
-
-@ds.cache()
 def company_output_handler(self: ctrl.Output, companies: ctrl.ComboBox):
     df = get_data()
     row = df[df["Company"] == companies.value()].filter(["y2015", "y2016", "y2017", "y2018", "y2019"], axis=1)
