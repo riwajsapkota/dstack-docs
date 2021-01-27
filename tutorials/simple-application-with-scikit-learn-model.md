@@ -73,7 +73,7 @@ import pandas as pd
 
 
 def get_model():
-    return ds.pull("simple_sklearn_ml_model")
+    return ds.pull("churn_demo/lr_model")
 
 
 def transform(X, countries, sectors):
@@ -123,7 +123,7 @@ months_ctrl = ctrl.ComboBox(['Oct', 'Nov', 'Dec'], label="Month")
 churn_ctrl = ctrl.CheckBox(label="Churn", selected=True, require_apply=False)
 
 
-def app_handler(self: ctrl.Output, regions_ctrl: ctrl.ComboBox, months_ctrl: ctrl.ComboBox, churn_ctrl: ctrl.CheckBox):
+def app_handler(regions_ctrl: ctrl.ComboBox, months_ctrl: ctrl.ComboBox, churn_ctrl: ctrl.CheckBox):
     x1, x1a = get_data()
     y1_pred = get_model().predict(x1a)
     data = x1.copy()
@@ -135,15 +135,13 @@ def app_handler(self: ctrl.Output, regions_ctrl: ctrl.ComboBox, months_ctrl: ctr
     data = data[(data["Predicted Churn"] == ("Yes" if churn_ctrl.selected else "No"))]
     data = data[(data["Region"] == regions_ctrl.value())]
     data = data[(data["RenewalMonth"] == months_ctrl.value())]
-    self.data = data
+    return data
 
 
-app = ds.app(controls=[regions_ctrl, months_ctrl, churn_ctrl],
-             outputs=[ctrl.Output(handler=app_handler)])
+app = ds.app(app_handler, regions_ctrl=regions_ctrl, months_ctrl=months_ctrl, churn_ctrl=churn_ctrl)
 
-url = ds.push("simple_sklearn_ml_app", app)
+url = ds.push("churn_demo/app", app)
 print(url)
-
 ```
 
 Now, if we run this code, and open the URL from the output, we'll see the following:
