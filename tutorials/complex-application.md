@@ -29,10 +29,10 @@ def get_regions():
 
 def countries_handler(self: ctrl.ComboBox, regions: ctrl.ComboBox):
     df = get_data()
-    self.data = df[df["Region"] == regions.value()]["Country"].unique().tolist()
+    self.items = df[df["Region"] == regions.value()]["Country"].unique().tolist()
 
 
-regions = ctrl.ComboBox(data=get_regions, label="Region")
+regions = ctrl.ComboBox(items=get_regions, label="Region")
 countries = ctrl.ComboBox(handler=countries_handler, label="Country", depends=[regions])
 
 
@@ -50,7 +50,7 @@ def get_companies():
     return df["Company"].unique().tolist()
 
 
-companies = ctrl.ComboBox(data=get_companies, label="Company")
+companies = ctrl.ComboBox(items=get_companies, label="Company")
 
 def company_output_handler(self: ctrl.Output, companies: ctrl.ComboBox):
     df = get_data()
@@ -119,7 +119,7 @@ def countries_handler(self: ctrl.ComboBox, regions: ctrl.ComboBox):
 After that, we define our combo boxes `Region` and `Country`. Notice, that the second combo box depends on the first combo box. This is specified by the attribute `depends` provided by `dstack.controls.Control` \(and its subclasses such as `dstack.controls.ComboBox`\).
 
 ```python
-regions = ctrl.ComboBox(data=get_regions, label="Region")
+regions = ctrl.ComboBox(items=get_regions, label="Region")
 countries = ctrl.ComboBox(handler=countries_handler, label="Country", depends=[regions])
 ```
 
@@ -159,7 +159,7 @@ def get_companies():
 Then, we define this combo box:
 
 ```python
-companies = ctrl.ComboBox(data=get_companies, label="Company")
+companies = ctrl.ComboBox(items=get_companies, label="Company")
 ```
 
 **Application output**
