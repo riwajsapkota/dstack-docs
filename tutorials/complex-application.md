@@ -210,6 +210,6 @@ print(result.url)
 If we click the URL, we'll see the application. With this application, the user may switch between tabs, change the controls, and see the updating outputs.
 
 {% hint style="info" %}
-**Source Code:** [**github.com/dstackai/dstack-examples**](https://github.com/dstackai/dstack-examples/tree/master/simple_multi_page_app)\*\*\*\*
+**Source Code:** [**https://github.com/dstackai/dstack-examples/tree/master/tabs**](https://github.com/dstackai/dstack-examples/tree/master/tabs)\*\*\*\*
 {% endhint %}
 
