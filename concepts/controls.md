@@ -95,9 +95,9 @@ Here's how it would look then:
 
 ![](../.gitbook/assets/ds_dependant_controls_app_apply.png)
 
-### Control API Reference
+## Control API Reference
 
-#### TextField
+### TextField
 
 `dstack.controls.TextField`
 
@@ -123,16 +123,17 @@ Here's how it would look then:
           </li>
         </ul>
       </td>
-      <td style="text-align:left">The initial text value of the control.</td>
-      <td style="text-align:left">Required if <code>handler</code> is not set.</td>
+      <td style="text-align:left">The text value of the control.</td>
+      <td style="text-align:left">Not required if <code>handler</code> is used.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>handler</code>
       </td>
       <td style="text-align:left"><code>Callable[..., None]</code>
       </td>
-      <td style="text-align:left">The function that updates the state of the control.</td>
-      <td style="text-align:left">Required if <code>data</code> is not set.</td>
+      <td style="text-align:left">The function that initializes or updates the state of the control.</td>
+      <td
+      style="text-align:left">Required if <code>text</code> is not set.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>long</code>
@@ -227,15 +228,16 @@ Here's how it would look then:
           </li>
         </ul>
       </td>
-      <td style="text-align:left">Required if <code>handler</code> is not set.</td>
+      <td style="text-align:left">Not required if <code>handler</code> is used.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>handler</code>
       </td>
       <td style="text-align:left"><code>Callable[..., None]</code>
       </td>
-      <td style="text-align:left">The function that updates the state of the control.</td>
-      <td style="text-align:left">Required if <code>data</code> is not set.</td>
+      <td style="text-align:left">The function that initializes or updates the state of the control.</td>
+      <td
+      style="text-align:left">Required if <code>items</code> is not set.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>selected</code>
@@ -293,15 +295,6 @@ Here's how it would look then:
       <td style="text-align:left">No</td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>require_apply</code>
-      </td>
-      <td style="text-align:left">bool</td>
-      <td style="text-align:left"><code>True</code> if the field requires an <code>Apply</code> button to be
-        clicked for the application to update the output. <code>True</code> by default.</td>
-      <td
-      style="text-align:left">No</td>
-    </tr>
-    <tr>
       <td style="text-align:left"><code>optional</code>
       </td>
       <td style="text-align:left">bool</td>
@@ -314,7 +307,7 @@ Here's how it would look then:
   </tbody>
 </table>
 
-#### CheckBox
+### CheckBox
 
 `dstack.controls.CheckBox`
 
@@ -341,15 +334,16 @@ Here's how it would look then:
         </ul>
       </td>
       <td style="text-align:left">The initial value of the control.</td>
-      <td style="text-align:left">Required if <code>handler</code> is not set.</td>
+      <td style="text-align:left">Not required if <code>handler</code> is used.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>handler</code>
       </td>
       <td style="text-align:left"><code>Callable</code>
       </td>
-      <td style="text-align:left">The function that updates the state of the control.</td>
-      <td style="text-align:left">Required if <code>data</code> is not set.</td>
+      <td style="text-align:left">The function that initializes or updates the state of the control.</td>
+      <td
+      style="text-align:left">Required if <code>selected</code> is not set.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>label</code>
@@ -372,6 +366,198 @@ Here's how it would look then:
         </ul>
       </td>
       <td style="text-align:left">The other controls this control depends on.</td>
+      <td style="text-align:left">No</td>
+    </tr>
+  </tbody>
+</table>
+
+### Slider
+
+`dstack.controls.Slider`
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameter</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>values</code>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p>Can be one of the following:</p>
+        <ul>
+          <li><code>Iterable[float]</code>
+          </li>
+          <li><code>Callable</code>
+          </li>
+        </ul>
+        <p></p>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p>Can be one of the following:</p>
+        <ul>
+          <li>A list of possible values. <em>See example A.</em>
+          </li>
+          <li>A function that returns a list of possible values. <em>See example B.</em>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">Not required if <code>handler</code> is used.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>handler</code>
+      </td>
+      <td style="text-align:left"><code>Callable[..., None]</code>
+      </td>
+      <td style="text-align:left">The function that initializes or updates the state of the control.</td>
+      <td
+      style="text-align:left">Required if <code>items</code> is not set.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>selected</code>
+      </td>
+      <td style="text-align:left">
+        <p>Can be one of the following:</p>
+        <ul>
+          <li><code>int</code>
+          </li>
+          <li><code>List[int]</code>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <p>Can be one of the following:</p>
+        <ul>
+          <li>An index of the currently selected item. Only if <code>multiple</code> set
+            to <code>False</code>.</li>
+          <li>A list of indexes of the currently selected items. Only if <code>multiple</code> set
+            to <code>True</code>.</li>
+        </ul>
+      </td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>label</code>
+      </td>
+      <td style="text-align:left"><code>str</code>
+      </td>
+      <td style="text-align:left">The caption of the control.</td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>depends</code>
+      </td>
+      <td style="text-align:left">
+        <p>Can be one of the following:</p>
+        <ul>
+          <li><code>List[Control]</code>
+          </li>
+          <li><code>Control</code>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">The other controls this control depends on.</td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>optional</code>
+      </td>
+      <td style="text-align:left">bool</td>
+      <td style="text-align:left"><code>True</code> if the filed&apos;s value is required for the application
+        to provide the output. <code>False</code> by default. If it&apos;s <code>False,</code> the <code>data</code> is
+        empty, and the Apply button is required, the <code>Apply</code> button will
+        be disabled.</td>
+      <td style="text-align:left">No</td>
+    </tr>
+  </tbody>
+</table>
+
+### FileUploader
+
+`dstack.controls.FileUploader`
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameter</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>uploads</code>
+      </td>
+      <td style="text-align:left">
+        <p>Can be one of the following:</p>
+        <ul>
+          <li><code>List[Upload]</code>
+          </li>
+          <li><code>Callable[[], List[Upload]]</code>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">The list of uploaded files.</td>
+      <td style="text-align:left">Not required if <code>handler</code> is used.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>handler</code>
+      </td>
+      <td style="text-align:left"><code>Callable[..., None]</code>
+      </td>
+      <td style="text-align:left">The function that initializes or updates the state of the control.</td>
+      <td
+      style="text-align:left">Required if <code>uploads</code> is not set.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>multiple</code>
+      </td>
+      <td style="text-align:left"><code>bool</code>
+      </td>
+      <td style="text-align:left"><code>True</code> if multiple files is allowed. <code>False</code> by default.</td>
+      <td
+      style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>label</code>
+      </td>
+      <td style="text-align:left"><code>str</code>
+      </td>
+      <td style="text-align:left">The caption of the control.</td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>depends</code>
+      </td>
+      <td style="text-align:left">
+        <p>Can be one of the following:</p>
+        <ul>
+          <li><code>List[Control]</code>
+          </li>
+          <li><code>Control</code>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">The other controls this control depends on.</td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>optional</code>
+      </td>
+      <td style="text-align:left"><code>bool</code>
+      </td>
+      <td style="text-align:left"><code>True</code> if the filed&apos;s value is required for the application
+        to provide the output. <code>False</code> by default. If it&apos;s <code>False,</code> the <code>data</code> is
+        empty, and the Apply button is required, the <code>Apply</code> button will
+        be disabled.</td>
       <td style="text-align:left">No</td>
     </tr>
   </tbody>
