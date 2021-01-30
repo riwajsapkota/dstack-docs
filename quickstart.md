@@ -5,7 +5,7 @@
 Installing and running `dstack` is very easy:
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6.1.dev3
+pip install --index-url https://test.pypi.org/simple/ --upgrade --no-cache-dir --extra-index-url=https://pypi.org/simple/ dstack==0.6.1.dev4
 dstack server start
 ```
 
@@ -43,33 +43,30 @@ Here's an elementary example of using `dstack`. The application takes real-time 
 Here's the Python code that you have to run to make such an application:
 
 ```python
-from datetime import datetime, timedelta
-
 import dstack.controls as ctrl
 import dstack as ds
-import plotly.graph_objects as go
-import pandas_datareader.data as web
+import plotly.express as px
 
 
-def output_handler(self: ctrl.Output, symbols: ctrl.ComboBox):
-    start = datetime.today() - timedelta(days=30)
-    end = datetime.today()
-    df = web.DataReader(symbols.value(), 'yahoo', start, end)
-    fig = go.Figure(
-        data=[go.Candlestick(x=df.index, open=df['Open'], high=df['High'], low=df['Low'], close=df['Close'])])
-    self.data = fig
+@ds.cache()
+def get_data():
+    return px.data.stocks()
 
 
-app = ds.app(controls=[ctrl.ComboBox(items=["FB", "AMZN", "AAPL", "NFLX", "GOOG"])],
-             outputs=[ctrl.Output(handler=output_handler)])
+def output_handler(self, ticker):
+    self.data = px.line(get_data(), x='date', y=ticker.value())
 
-result = ds.push("minimal_app", app)
+
+app = ds.app(controls=[(ctrl.ComboBox(items=get_data().columns[1:].tolist()))],
+             outputs=[(ctrl.Output(handler=output_handler))])
+
+result = ds.push("stocks", app)
 print(result.url)
 ```
 
 If you run it and click the provided URL, you'll see the application:
 
-![](.gitbook/assets/ds_minimal_app.png)
+![](.gitbook/assets/dstack_stocks.png)
 
 {% hint style="success" %}
 **Live Gallery:** [**https://dstack.cloud/gallery/minimal\_app**](https://dstack.cloud/gallery/minimal_app)\*\*\*\*
