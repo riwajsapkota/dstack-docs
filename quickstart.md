@@ -25,7 +25,7 @@ What's next?
 ```
 
 {% hint style="warning" %}
-To access dstack, click the URL provided in the output. If you try to access dstack without using this URL, it will require you to sign up using a username and a password.
+To access `dstack`, click the URL provided in the output. If you try to access dstack without using this URL, it will require you to sign up using a username and a password.
 {% endhint %}
 
 If you open the URL, you'll see the following interface:
