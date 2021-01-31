@@ -1,5 +1,11 @@
 # What's New
 
+### dstack 0.6.1
+
+* Applications now support multiple outputs. The signature of the dstack.app\(\) function has changed. Now it has `controls` and `outputs` arguments. Note, it's not yet possible to choose custom layouts. Currently, all outputs are displayed one under another. Watch [\#98](https://github.com/dstackai/dstack/issues/98) to track the progress on multiple layouts.
+* The supported controls now include `dstack.controls.FileUploader` that allows uploading one or multiple files.
+* The application now includes a `Reset` button.
+
 ### dstack 0.6.0
 
 * `Application` is a brand new type of stacks. It allows Python developers to quickly build and publish applications and ML models.
